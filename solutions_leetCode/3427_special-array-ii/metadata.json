@@ -1,0 +1,18 @@
+{
+  "id": 1474650523,
+  "question_id": 3427,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1733772692,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "168 ms",
+  "url": "/submissions/detail/1474650523/",
+  "is_pending": "Not Pending",
+  "title": "Special Array II",
+  "memory": "143.9 MB",
+  "code": "class Solution {\npublic:\n    vector<bool> isArraySpecial(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    map<int, int> group;\n    group[0] = 1;\n\n    for(int i=1;i<nums.size();i++)\n    {\n        if (nums[i] % 2 != nums[i - 1] % 2)\n        {\n            group[i] = group[i - 1];\n        }\n        else\n            group[i] = group[i - 1] + 1;\n    }\n\n    vector<bool> ans;\n    for( auto &v : queries){\n\n        if(group[v[0]]==group[v[1]])\n            ans.push_back(true);\n            else\n                ans.push_back(false);\n    }\n\n    return ans;\n    }\n};",
+  "title_slug": "special-array-ii",
+  "has_notes": false,
+  "flag_type": 1
+}

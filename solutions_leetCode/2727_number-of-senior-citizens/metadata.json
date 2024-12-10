@@ -1,0 +1,18 @@
+{
+  "id": 1341282537,
+  "question_id": 2727,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1722556414,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1341282537/",
+  "is_pending": "Not Pending",
+  "title": "Number of Senior Citizens",
+  "memory": "17.7 MB",
+  "code": "class Solution {\npublic:\n    int countSeniors(vector<string>& details) {\n\n\n    int cnt = 0;\n    for (int i = 0; i < details.size(); i++)\n    {\n        string str = details[i];\n        int num = stoi(str.substr(11, 2));\n\n        if (num > 60)\n            cnt++;\n    }\n\n    return cnt;\n    }\n};",
+  "title_slug": "number-of-senior-citizens",
+  "has_notes": false,
+  "flag_type": 1
+}

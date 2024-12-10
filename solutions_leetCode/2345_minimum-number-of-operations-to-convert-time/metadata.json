@@ -1,0 +1,18 @@
+{
+  "id": 1357048832,
+  "question_id": 2345,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723754601,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1357048832/",
+  "is_pending": "Not Pending",
+  "title": "Minimum Number of Operations to Convert Time",
+  "memory": "8.1 MB",
+  "code": "class Solution {\npublic:\n   int convertTime(string current, string correct)\n{\n\n    int h1 = stoi(current.substr(0, 2));\n    int h2 = stoi(correct.substr(0, 2));\n\n    int m1 = stoi(current.substr(3, 2));\n    int m2 = stoi(correct.substr(3, 2));\n\n    if (m1 > m2)\n    {\n        m2 += 60;\n        h2--;\n    }\n    int op = (h2 - h1);\n\n    int diff = m2 - m1;\n    if (diff >= 15)\n    {\n        op += diff / 15;\n        diff = diff % 15;\n    }\n    if (diff >= 5)\n    {\n        op += diff / 5;\n        diff = diff % 5;\n    }\n\n    op += diff;\n\n    return op;\n}};",
+  "title_slug": "minimum-number-of-operations-to-convert-time",
+  "has_notes": false,
+  "flag_type": 1
+}

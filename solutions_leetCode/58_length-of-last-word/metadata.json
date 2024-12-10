@@ -1,0 +1,18 @@
+{
+  "id": 1127449573,
+  "question_id": 58,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703425386,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1127449573/",
+  "is_pending": "Not Pending",
+  "title": "Length of Last Word",
+  "memory": "41.6 MB",
+  "code": "class Solution {\n    public int lengthOfLastWord(String s) {\n         s=s.trim();\n        if(s.lastIndexOf(\" \")!=-1)\n        return (s.substring(s.lastIndexOf(\" \")+1, s.length()).length());\n        else\n        return s.length();\n    }\n}",
+  "title_slug": "length-of-last-word",
+  "has_notes": false,
+  "flag_type": 1
+}

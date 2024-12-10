@@ -1,0 +1,18 @@
+{
+  "id": 1217619765,
+  "question_id": 3213,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1711741345,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "6 ms",
+  "url": "/submissions/detail/1217619765/",
+  "is_pending": "Not Pending",
+  "title": "Count Subarrays Where Max Element Appears at Least K Times",
+  "memory": "65.8 MB",
+  "code": "\nimport java.util.*;\n\nclass Solution {\n    public long countSubarrays(int[] nums, int k) {\n        long maxNum = Long.MIN_VALUE, count = 0;\n        long left = 0, right = 0, ans = 0;\n        \n        // Find the maximum element in the array\n        for (int num : nums) {\n            maxNum = Math.max(maxNum, num);\n        }\n        \n        while (right < nums.length || left > right) {\n            if (nums[(int)right] == maxNum) {\n                count++;\n            }\n            // If count is greater than or equal to k, calculate subarrays count\n            while (count >= k) {\n                if (nums[(int)left] == maxNum) {\n                    count--;\n                }\n                left++;\n                ans += nums.length - right;\n            }\n            right++;\n        }\n        return ans;\n    }\n}\n\n        \n \n",
+  "title_slug": "count-subarrays-where-max-element-appears-at-least-k-times",
+  "has_notes": false,
+  "flag_type": 1
+}

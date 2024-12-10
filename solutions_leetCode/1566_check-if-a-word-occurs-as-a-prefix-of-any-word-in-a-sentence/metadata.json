@@ -1,0 +1,18 @@
+{
+  "id": 1468586482,
+  "question_id": 1566,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1733164812,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1468586482/",
+  "is_pending": "Not Pending",
+  "title": "Check If a Word Occurs As a Prefix of Any Word in a Sentence",
+  "memory": "8.2 MB",
+  "code": "class Solution {\npublic:\n    int isPrefixOfWord(string sentence, string searchWord) {\n\n\n        vector<string> arr;\n\n        int start=0;\n        for(int i=0;i<sentence.size();i++){\n\n            if(sentence[i]==' '){\n\n                string str= sentence.substr(start,i-start+1);\n                arr.push_back(str);\n\n                start=i+1;\n            }\n        }\n\n\n         string str= sentence.substr(start,str.size()-start-1);\n         arr.push_back(str);\n\n\n        int ind=-1;\n        for(int i=0;i<arr.size();i++){\n            string str=arr[i];\n            if(str.find(searchWord)==0 ){\n                ind=i;\n                break;\n            }\n\n\n        }\n        \n        return ind==-1?ind:ind+1;\n    }\n};",
+  "title_slug": "check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence",
+  "has_notes": false,
+  "flag_type": 1
+}

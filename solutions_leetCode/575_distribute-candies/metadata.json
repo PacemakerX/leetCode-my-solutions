@@ -1,0 +1,18 @@
+{
+  "id": 1235751492,
+  "question_id": 575,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713447086,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "34 ms",
+  "url": "/submissions/detail/1235751492/",
+  "is_pending": "Not Pending",
+  "title": "Distribute Candies",
+  "memory": "45.8 MB",
+  "code": "class Solution {\n    public int distributeCandies(int[] candyType) {\n\n        HashSet<Integer> map = new HashSet<Integer>();\n        for(int i : candyType)\n            map.add(i);\n\n        if(candyType.length/2>map.size())\n            return map.size();\n        else\n        return candyType.length/2;\n        \n    }\n}",
+  "title_slug": "distribute-candies",
+  "has_notes": false,
+  "flag_type": 1
+}

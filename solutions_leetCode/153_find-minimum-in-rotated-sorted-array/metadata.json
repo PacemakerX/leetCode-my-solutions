@@ -1,0 +1,18 @@
+{
+  "id": 1155434932,
+  "question_id": 153,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1706090746,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1155434932/",
+  "is_pending": "Not Pending",
+  "title": "Find Minimum in Rotated Sorted Array",
+  "memory": "41.1 MB",
+  "code": "class Solution {\n    public int findMin(int[] nums) {\n         int start = 0, end = nums.length - 1;\n        int mid = 0;\n        if (nums.length == 1)\n            return nums[0];\n\n        while (start <= end) {\n            mid = start + (end - start) / 2;\n\n            if (nums[mid] < nums[nums.length - 1])\n                end = mid - 1;\n            else if (nums[mid] > nums[nums.length - 1])\n                start = mid + 1;\n            else\n            break;\n\n        }\n        return nums[start]; \n    }\n}",
+  "title_slug": "find-minimum-in-rotated-sorted-array",
+  "has_notes": false,
+  "flag_type": 1
+}

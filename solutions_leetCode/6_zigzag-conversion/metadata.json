@@ -1,0 +1,18 @@
+{
+  "id": 1208940124,
+  "question_id": 6,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710923995,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "6 ms",
+  "url": "/submissions/detail/1208940124/",
+  "is_pending": "Not Pending",
+  "title": "Zigzag Conversion",
+  "memory": "44.4 MB",
+  "code": "class Solution {\n    public String convert(String s, int numRows) {\n        int n = s.length();\n        StringBuffer [] arr = new StringBuffer[numRows]; \n        for(int i=0; i<numRows; i++) arr[i] = new StringBuffer();\n\n        int i=0;\n        while(i<n){\n            /// verticaly downword\n            for(int ind=0; ind<numRows && i<n; ind++){\n                arr[ind].append(s.charAt(i++));\n            }\n            /// bent upword\n            for(int ind=numRows-2; ind>0 && i<n; ind--){\n                arr[ind].append(s.charAt(i++));\n            }\n        }\n        StringBuffer ans = new StringBuffer();\n        for(StringBuffer el : arr){\n            ans.append(el);\n        }\n        return ans.toString();\n    }\n}",
+  "title_slug": "zigzag-conversion",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1267765180,
+  "question_id": 1353,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1716659731,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1267765180/",
+  "is_pending": "Not Pending",
+  "title": "Find Resultant Array After Removing Anagrams",
+  "memory": "44.3 MB",
+  "code": "class Solution {\n    public boolean anagrams(String s1, String s2) {\n        char[] charArray1 = s1.toCharArray();\n        char[] charArray2 = s2.toCharArray();\n        Arrays.sort(charArray1);\n        Arrays.sort(charArray2);\n        return Arrays.equals(charArray1, charArray2);\n    }\n    \n    public List<String> removeAnagrams(String[] words) {\n        List<String> res = new ArrayList<>();\n        res.add(words[0]);\n        for (int i = 1; i < words.length; i++) {\n            if (!anagrams(words[i], words[i - 1])) {\n                res.add(words[i]);\n            }\n        }\n        return res;\n    }\n}",
+  "title_slug": "find-resultant-array-after-removing-anagrams",
+  "has_notes": false,
+  "flag_type": 1
+}

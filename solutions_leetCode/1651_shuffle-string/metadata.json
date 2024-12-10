@@ -1,0 +1,18 @@
+{
+  "id": 1125969602,
+  "question_id": 1651,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703260548,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1125969602/",
+  "is_pending": "Not Pending",
+  "title": "Shuffle String",
+  "memory": "44.2 MB",
+  "code": "class Solution {\r\n    \r\n    public String restoreString(String s, int[] indices) {\r\n        \r\n        char[] result = new char[indices.length];\r\n        for (int i = 0; i < indices.length; i++) \r\n            result[indices[i]] = s.charAt(i);\r\n        \r\n        return new String(result);\r\n    }\r\n}",
+  "title_slug": "shuffle-string",
+  "has_notes": false,
+  "flag_type": 1
+}

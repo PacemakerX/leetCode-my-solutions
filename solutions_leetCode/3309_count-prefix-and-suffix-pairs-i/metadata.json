@@ -1,0 +1,18 @@
+{
+  "id": 1234267552,
+  "question_id": 3309,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713294908,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "/submissions/detail/1234267552/",
+  "is_pending": "Not Pending",
+  "title": "Count Prefix and Suffix Pairs I",
+  "memory": "44.1 MB",
+  "code": "class Solution {\n    public int countPrefixSuffixPairs(String[] words) {\n\n        int count=0;\n        for(int i=0;i<words.length;i++){\n            \n            for(int j=i+1;j<words.length;j++){\n\n                if(isPrefixAndSuffix(words[i],words[j]))\n                    count++;\n            }\n        }\n\n        return count;\n        \n    }\n\n    public boolean isPrefixAndSuffix(String str1,String str2){\n\n        if(str2.length()>=str1.length())\n        return (str1.equals(str2.substring(0,str1.length())) && str1.equals(str2.substring(str2.length()-str1.length(),str2.length())));\n\n        else\n        return false;\n    }\n}",
+  "title_slug": "count-prefix-and-suffix-pairs-i",
+  "has_notes": false,
+  "flag_type": 1
+}

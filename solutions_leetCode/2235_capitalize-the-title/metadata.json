@@ -1,0 +1,18 @@
+{
+  "id": 1345001065,
+  "question_id": 2235,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1722837313,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1345001065/",
+  "is_pending": "Not Pending",
+  "title": "Capitalize the Title",
+  "memory": "7.9 MB",
+  "code": "class Solution {\npublic:\n    string capitalizeTitle(string title)\n{\n    string ans = \"\";\n    string word = \"\";\n    for (auto i : title)\n    {\n\n        if (i != ' ')\n\n            word += i;\n\n        else\n        {\n            transform(word.begin(), word.end(), word.begin(), ::tolower);\n            if (word.length() > 2)\n                word[0] = word[0]-'a' + 'A';\n            ans += word;\n            ans += i;\n            word = \"\";\n        }\n    }\n    transform(word.begin(), word.end(), word.begin(), ::tolower);\n            if (word.length() > 2)\n                word[0] = word[0]-'a' + 'A';\n            ans += word;\n    return ans;\n}\n\n};",
+  "title_slug": "capitalize-the-title",
+  "has_notes": false,
+  "flag_type": 1
+}

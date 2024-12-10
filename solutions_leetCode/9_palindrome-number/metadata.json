@@ -1,0 +1,18 @@
+{
+  "id": 1016726928,
+  "question_id": 9,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1691596722,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1016726928/",
+  "is_pending": "Not Pending",
+  "title": "Palindrome Number",
+  "memory": "42.6 MB",
+  "code": "class Solution {\n    public boolean isPalindrome(int x) {\n        int temp=x, rev=0;\n        while(temp>0){\n            rev=rev*10+temp%10;\n            temp=temp/10;\n        }\n        return rev==x?true:false;\n    }\n}",
+  "title_slug": "palindrome-number",
+  "has_notes": false,
+  "flag_type": 1
+}

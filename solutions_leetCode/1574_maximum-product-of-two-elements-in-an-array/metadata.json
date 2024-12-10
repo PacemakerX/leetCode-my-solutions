@@ -1,0 +1,18 @@
+{
+  "id": 1117806237,
+  "question_id": 1574,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702361474,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1117806237/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Product of Two Elements in an Array",
+  "memory": "41.8 MB",
+  "code": "class Solution {\n    public int maxProduct(int[] nums) {\n   int max = 0;\n        int max2 = 0;\n        for (int i = 0; i < nums.length; i++) {\n            if (max < nums[i]) {\n                max2 = max;\n                max = nums[i];\n            } else if (max2 < nums[i]) {\n                max2 = nums[i];\n            }\n        }\n        return (max - 1) * (max2 - 1);\n    }\n}",
+  "title_slug": "maximum-product-of-two-elements-in-an-array",
+  "has_notes": false,
+  "flag_type": 1
+}

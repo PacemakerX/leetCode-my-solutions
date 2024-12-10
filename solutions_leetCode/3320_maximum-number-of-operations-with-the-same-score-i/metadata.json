@@ -1,0 +1,18 @@
+{
+  "id": 1177881837,
+  "question_id": 3320,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1708181027,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1177881837/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Number of Operations With the Same Score I",
+  "memory": "41.9 MB",
+  "code": "class Solution {\n    public int maxOperations(int[] nums) {\n        \n        int count=0;\n        int prevSum=nums[0]+nums[1];\n        count++;\n        for(int i=2;i<nums.length-1;i+=2){\n            if(prevSum==nums[i]+nums[i+1])\n                count++;\n            else break;\n        }\n        return count;\n        \n    }\n}",
+  "title_slug": "maximum-number-of-operations-with-the-same-score-i",
+  "has_notes": false,
+  "flag_type": 1
+}

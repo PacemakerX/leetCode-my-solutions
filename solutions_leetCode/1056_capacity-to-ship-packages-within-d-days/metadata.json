@@ -1,0 +1,18 @@
+{
+  "id": 1166746474,
+  "question_id": 1056,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1707134936,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "9 ms",
+  "url": "/submissions/detail/1166746474/",
+  "is_pending": "Not Pending",
+  "title": "Capacity To Ship Packages Within D Days",
+  "memory": "47.1 MB",
+  "code": "class Solution {\n   public  int shipWithinDays(int[] weights, int days) {\n\n        int max = 0;\n        for (int i = 0; i < weights.length; i++) {\n            max +=  weights[i];\n        }\n        \n        int start = 0, end = max, mid = 0;\n\n        while (start <= end) {\n            mid = start + (end - start) / 2;\n\n            if (numOfDays(weights, days, mid))\n                end = mid - 1;\n            else\n                start = mid + 1;\n        }\n\n        return start;\n\n    }\n\n    public  boolean numOfDays(int[] weights, int days, int target) {\n        int noOfDays = 0;\n        int weight = 0;\n\n        for (int i = 0; i < weights.length; i++) {\n            if (weights[i] + weight <= target)\n                weight += weights[i];\n            else if (weights[i] > target)\n                return false;\n            else {\n                noOfDays++;\n                weight = weights[i];\n            }\n        }\n        noOfDays += weight == 0 ? 0 : 1;\n        return noOfDays <= days;\n    }\n\n}",
+  "title_slug": "capacity-to-ship-packages-within-d-days",
+  "has_notes": false,
+  "flag_type": 1
+}

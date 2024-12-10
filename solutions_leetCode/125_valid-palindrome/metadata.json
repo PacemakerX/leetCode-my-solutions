@@ -1,0 +1,18 @@
+{
+  "id": 1126557665,
+  "question_id": 125,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703332439,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "10 ms",
+  "url": "/submissions/detail/1126557665/",
+  "is_pending": "Not Pending",
+  "title": "Valid Palindrome",
+  "memory": "44.6 MB",
+  "code": "class Solution {\n    public boolean isPalindrome(String s) {\n         int value = 0;\n        String str = (s.replaceAll(\" \", \"\")).toLowerCase();\n        StringBuilder newStr = new StringBuilder();\n        for (int i = 0; i < str.length(); i++) {\n            value = (int) str.charAt(i);\n            if ((value > 47 && value < 58) || (value < 123 && value > 96))\n                newStr.append(str.charAt(i));\n\n        }\n        int start = 0, end = newStr.length() - 1;\n        while (start < newStr.length() / 2) {\n            if (newStr.charAt(start) == newStr.charAt(end)) {\n                start++;\n                end--;\n            } else\n                return false;\n        }\n        return true;\n    }\n}",
+  "title_slug": "valid-palindrome",
+  "has_notes": false,
+  "flag_type": 1
+}

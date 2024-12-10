@@ -1,0 +1,18 @@
+{
+  "id": 1236830058,
+  "question_id": 824,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713554523,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1236830058/",
+  "is_pending": "Not Pending",
+  "title": "Number of Lines To Write String",
+  "memory": "41.4 MB",
+  "code": "class Solution {\n    public int[] numberOfLines(int[] widths, String s) {\n\n        int lines=1,pixels=0;\n\n        for(int i=0;i<s.length();i++){\n\n            if(pixels+widths[(int)s.charAt(i)-97]>100){\n                lines++;\n                pixels=widths[(int)s.charAt(i)-97];\n            }\n            else\n                pixels+=widths[(int)s.charAt(i)-97];\n        }\n        int [] ans = {lines,pixels};\n\n        return ans;\n    }\n}",
+  "title_slug": "number-of-lines-to-write-string",
+  "has_notes": false,
+  "flag_type": 1
+}

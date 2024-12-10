@@ -1,0 +1,18 @@
+{
+  "id": 1261587882,
+  "question_id": 2211,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1716062510,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "7 ms",
+  "url": "/submissions/detail/1261587882/",
+  "is_pending": "Not Pending",
+  "title": "K Radius Subarray Averages",
+  "memory": "65 MB",
+  "code": "class Solution {\n    public int[] getAverages(int[] nums, int k) {\n\n        int i=0;\n\n        \n        int[] ans = new int[nums.length];\n\n        Arrays.fill(ans,-1);\n            if(nums.length<(2*k+1))\n            return ans;\n\n        long sum=0;\n        \n        while( i<2*k+1){\n            sum+=nums[i];\n            i++;\n        }\n        i=0;\n        int l=k;\n        ans[l++]=(int)(sum/(2*k+1)); \n\n        for(int j=2*k+1;j<nums.length;j++){\n\n            sum= sum-nums[i]+nums[j];\n            ans[l]=(int)(sum/(2*k+1));\n            i++;\n            l++;\n        }\n\n        return ans;\n    }\n}",
+  "title_slug": "k-radius-subarray-averages",
+  "has_notes": false,
+  "flag_type": 1
+}

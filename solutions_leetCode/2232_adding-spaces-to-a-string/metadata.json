@@ -1,0 +1,18 @@
+{
+  "id": 1468789832,
+  "question_id": 2232,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1733188625,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "15 ms",
+  "url": "/submissions/detail/1468789832/",
+  "is_pending": "Not Pending",
+  "title": "Adding Spaces to a String",
+  "memory": "85.8 MB",
+  "code": "class Solution {\npublic:\n    string addSpaces(string s, vector<int>& spaces) {\n\n\n        string ans=\"\";\n\n        int ind=0;\n\n        for(int i=0;i<s.size();i++){\n\n            if(ind < spaces.size() && i==spaces[ind]){\n                ans+=\" \";\n                ind++;\n            }\n\n            ans+=s[i];\n        }\n        \n        return ans;\n    }\n};",
+  "title_slug": "adding-spaces-to-a-string",
+  "has_notes": false,
+  "flag_type": 1
+}

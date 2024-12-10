@@ -1,0 +1,18 @@
+{
+  "id": 1344922566,
+  "question_id": 2163,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1722831577,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "8 ms",
+  "url": "/submissions/detail/1344922566/",
+  "is_pending": "Not Pending",
+  "title": "Kth Distinct String in an Array",
+  "memory": "18.6 MB",
+  "code": "class Solution {\npublic:\n\n\n    string kthDistinct(vector<string>& arr, int k) {\n\n        unordered_map<string,int> mp;\n\n        for(auto i : arr) \n            mp[i]++;\n\n        for(auto i : arr){\n\n            if( mp[i]== 1){\n                k--;\n                if(k==0)\n                    return i;\n            }\n        }\n\n        return \"\";\n\n\n    }\n};",
+  "title_slug": "kth-distinct-string-in-an-array",
+  "has_notes": false,
+  "flag_type": 1
+}

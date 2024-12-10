@@ -1,0 +1,18 @@
+{
+  "id": 1197857299,
+  "question_id": 643,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709921556,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "5 ms",
+  "url": "/submissions/detail/1197857299/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Average Subarray I",
+  "memory": "55.9 MB",
+  "code": "class Solution {\n    public double findMaxAverage(int[] nums, int k) {\n        double sum = 0;\n\n        for(int i = 0; i < k; i++){\n            sum += nums[i];\n        }\n\n        double maxAvgWindow = sum/k;\n\n        for(int i = k; i < nums.length; i++){\n            sum += nums[i] - nums[i - k];\n            maxAvgWindow = Math.max(maxAvgWindow, sum/k);\n        }\n\n        return maxAvgWindow;\n    }\n}",
+  "title_slug": "maximum-average-subarray-i",
+  "has_notes": false,
+  "flag_type": 1
+}

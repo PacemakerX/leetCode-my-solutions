@@ -1,0 +1,18 @@
+{
+  "id": 1157978520,
+  "question_id": 853,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1706333823,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1200 ms",
+  "url": "/submissions/detail/1157978520/",
+  "is_pending": "Not Pending",
+  "title": "Most Profit Assigning Work",
+  "memory": "45.6 MB",
+  "code": "class Solution {\n    public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {\n\n        int max=Integer.MIN_VALUE,maxProfit=0,ind=-1,tempProfit=-1;\n        for(int i=0;i<worker.length;i++){\n            ind=-1;\n            tempProfit=-1;\n            // max=Integer.MIN_VALUE;\n            for(int j=0;j<difficulty.length;j++){\n                if(difficulty[j]<=worker[i] && tempProfit<profit[j]){\n                    // max=difficulty[j];\n                    ind=j;\n                    tempProfit=profit[j];\n                }\n            }\n            maxProfit+=ind==-1?0:profit[ind];\n        }\n        return maxProfit;\n\n        \n    }\n}",
+  "title_slug": "most-profit-assigning-work",
+  "has_notes": false,
+  "flag_type": 1
+}

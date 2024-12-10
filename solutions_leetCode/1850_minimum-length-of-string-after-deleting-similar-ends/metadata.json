@@ -1,0 +1,18 @@
+{
+  "id": 1194916777,
+  "question_id": 1850,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709660848,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1194916777/",
+  "is_pending": "Not Pending",
+  "title": "Minimum Length of String After Deleting Similar Ends",
+  "memory": "45 MB",
+  "code": "class Solution {\n    public int minimumLength(String s) {\n        int left = 0;\n        int right = s.length() - 1;\n        \n        while (left < right && s.charAt(left) == s.charAt(right)) {\n            char current = s.charAt(left);\n            while (left <= right && s.charAt(left) == current) {\n                left++;\n            }\n            while (right >= left && s.charAt(right) == current) {\n                right--;\n            }\n        }\n        \n        return right - left + 1;\n    }\n}\n",
+  "title_slug": "minimum-length-of-string-after-deleting-similar-ends",
+  "has_notes": false,
+  "flag_type": 1
+}

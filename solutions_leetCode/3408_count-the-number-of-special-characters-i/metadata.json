@@ -1,0 +1,18 @@
+{
+  "id": 1237786172,
+  "question_id": 3408,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713667232,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "8 ms",
+  "url": "/submissions/detail/1237786172/",
+  "is_pending": "Not Pending",
+  "title": "Count the Number of Special Characters I",
+  "memory": "42.7 MB",
+  "code": "class Solution {\n    public int numberOfSpecialChars(String word) {\n        \n        String str=\"\";\n        HashSet<Character> set = new HashSet<Character>();\n        for(int i=0;i<word.length();i++){\n            if((int)word.charAt(i)>=97 && (int)word.charAt(i)<=122)\n                str+=word.charAt(i);\n        }\n        \n        for(int i=0;i<str.length();i++){\n            \n            for(int j=0;j<word.length();j++){\n                if(Math.abs((int)str.charAt(i)-(int)word.charAt(j))==32)\n                    set.add(str.charAt(i));\n            }\n            \n        }\n        \n        return set.size();\n        \n    }\n}",
+  "title_slug": "count-the-number-of-special-characters-i",
+  "has_notes": false,
+  "flag_type": 1
+}

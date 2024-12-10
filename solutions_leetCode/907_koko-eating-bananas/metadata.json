@@ -1,0 +1,18 @@
+{
+  "id": 1165038641,
+  "question_id": 907,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1706979030,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "25 ms",
+  "url": "/submissions/detail/1165038641/",
+  "is_pending": "Not Pending",
+  "title": "Koko Eating Bananas",
+  "memory": "45 MB",
+  "code": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n\n                int low = 1, high = findMax(piles);\n\n        //apply binary search:\n        while (low <= high) {\n            int mid = (low + high) / 2;\n            int totalH = calculateTotalHours(piles, mid);\n            if (totalH <= h) {\n                high = mid - 1;\n            } else {\n                low = mid + 1;\n            }\n        }\n        return low;\n\n\n    }\n    public static int findMax(int[] piles) {\n        int maxi = Integer.MIN_VALUE;;\n        int n = piles.length;\n        //find the maximum:\n        for (int i = 0; i < n; i++) {\n            maxi = Math.max(maxi, piles[i]);\n        }\n        return maxi;\n    }\n\n    public static int calculateTotalHours(int[] piles, int hourly) {\n        int totalH = 0;\n        int n = piles.length;\n        //find total hours:\n        for (int i = 0; i < n; i++) {\n            totalH += Math.ceil((double)(piles[i]) / (double)(hourly));\n        }\n        return totalH;\n    }\n}\n",
+  "title_slug": "koko-eating-bananas",
+  "has_notes": false,
+  "flag_type": 1
+}

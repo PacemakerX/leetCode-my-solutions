@@ -1,0 +1,18 @@
+{
+  "id": 1347434945,
+  "question_id": 47,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723013824,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1347434945/",
+  "is_pending": "Not Pending",
+  "title": "Permutations II",
+  "memory": "9.9 MB",
+  "code": "class Solution {\npublic:\n    vector<vector<int>> permuteUnique(vector<int>& nums) {\n          vector<vector<int>> ans;\n\n    sort(nums.begin(),nums.end());\n    do\n    {\n        ans.push_back(nums);\n        /* code */\n    } while (next_permutation(nums.begin(),nums.end()));\n    \n    return ans;\n    }\n};",
+  "title_slug": "permutations-ii",
+  "has_notes": false,
+  "flag_type": 1
+}

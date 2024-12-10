@@ -1,0 +1,18 @@
+{
+  "id": 1383591596,
+  "question_id": 695,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1725825292,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "11 ms",
+  "url": "/submissions/detail/1383591596/",
+  "is_pending": "Not Pending",
+  "title": "Max Area of Island",
+  "memory": "28.6 MB",
+  "code": "class Solution {\npublic:\ntypedef pair<int,int> pii;\ntypedef vector<int> vi;\ntypedef vector<pii> vpii;\ntypedef vector<vi> vvi;\n#define mp make_pair\n#define forn(i, n) for (int i = 0; i < int(n); i++)\n\nvvi vis;\nint n,m;\nvi sz;\n\nvi dx = {-1, 1, 0, 0};\nvi dy = {0, 0, -1, 1};\nvoid dfs(pii node, int compNum,vector<vector<int>>& grid)\n{\n    int x = node.first;\n    int y = node.second;\n    vis[x][y] = compNum;\n    sz[compNum]++;\n\n    forn(i, 4)\n    {\n\n        int nx = x + dx[i];\n        int ny = y + dy[i];\n\n        if ((nx >= 0 && nx < n) && (ny >= 0 && ny < m) &&grid[nx][ny])\n        {\n            if (!vis[nx][ny])\n                dfs(mp(nx, ny), compNum,grid);\n        }\n        \n    }\n}\n    int maxAreaOfIsland(vector<vector<int>>& grid) {\n\n        n=grid.size();\n        m=grid[0].size();\n\n        vis.assign(n,vi(m,0));\n        sz.assign((n*m)+1,0);\n        \n        int compSize = 0;\n    forn(i, n)\n    {\n        forn(j, m)\n        {\n\n            if (grid[i][j] && !vis[i][j])\n            {\n                compSize++;\n                dfs(mp(i, j), compSize,grid);\n            }\n        }\n    }\n\n    int maxArea=0;\n\n    forn(i,n*m+1){\n        maxArea=max(maxArea,sz[i]);\n    }\n\n    return maxArea;\n\n    }\n\n};",
+  "title_slug": "max-area-of-island",
+  "has_notes": false,
+  "flag_type": 1
+}

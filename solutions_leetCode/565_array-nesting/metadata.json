@@ -1,0 +1,18 @@
+{
+  "id": 1240480337,
+  "question_id": 565,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713935366,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1240480337/",
+  "is_pending": "Not Pending",
+  "title": "Array Nesting",
+  "memory": "60.1 MB",
+  "code": "class Solution {\n    public int arrayNesting(int[] nums) {\n\n        int n=nums.length-1;\n        int max=0;\n\n        for(int i=0;i<=n;i++){\n            \n            if(nums[i]!=-1){\n                int j=i;\n                int count=0;\n                while(nums[j]!=-1){\n                    count++;\n                    int k=nums[j];\n                    nums[j]=-1;\n                    j=k;\n\n                }\n                max=Math.max(max,count);\n            }\n\n        }\n        return max;\n    }\n}",
+  "title_slug": "array-nesting",
+  "has_notes": false,
+  "flag_type": 1
+}

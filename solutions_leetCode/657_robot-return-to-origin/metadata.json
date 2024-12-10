@@ -1,0 +1,18 @@
+{
+  "id": 1126015973,
+  "question_id": 657,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703264672,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1126015973/",
+  "is_pending": "Not Pending",
+  "title": "Robot Return to Origin",
+  "memory": "44.7 MB",
+  "code": "class Solution {\n    public boolean judgeCircle(String moves) {\n        \n     int countV = 0, countH = 0;\n        for (char ch : moves.toCharArray()) {\n             if (ch == 'U')\n                countV++;\n            else if (ch == 'D')\n                countV--;\n            else if (ch == 'R')\n                countH++;\n            else if (ch == 'L')\n                countH--;\n        }\n        return (countH == 0) && (countV == 0);\n    }\n}",
+  "title_slug": "robot-return-to-origin",
+  "has_notes": false,
+  "flag_type": 1
+}

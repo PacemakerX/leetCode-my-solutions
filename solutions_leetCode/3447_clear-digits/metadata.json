@@ -1,0 +1,18 @@
+{
+  "id": 1281998480,
+  "question_id": 3447,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1717872093,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1281998480/",
+  "is_pending": "Not Pending",
+  "title": "Clear Digits",
+  "memory": "7.5 MB",
+  "code": "class Solution {\npublic:\n    string clearDigits(string s) {\n        \n        int i=0;\n        while(i<s.length()){\n            int n=(int)s[i];\n            if(n>=48 && n<=57 ){\n                s.erase(s.begin()+i);\n                s.erase(s.begin()+i-1);\n                i--;\n            }\n            else\n                i++;\n        }\n      return s;  \n    }\n};",
+  "title_slug": "clear-digits",
+  "has_notes": false,
+  "flag_type": 1
+}

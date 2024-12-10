@@ -1,0 +1,18 @@
+{
+  "id": 1345012975,
+  "question_id": 520,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1722838102,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1345012975/",
+  "is_pending": "Not Pending",
+  "title": "Detect Capital",
+  "memory": "7.9 MB",
+  "code": "class Solution {\npublic:\n    \n    bool checkUpper(string str){\n        for(int i=0;i<str.length();i++){\n            if(islower(str[i]))\n                return false;\n\n         \n        }\n        return true;\n    }\n    \n    bool checkLower(string str,int k){\n        for(int i=k;i<str.length();i++){\n            if(isupper(str[i]))\n                return false;\n\n         \n        }\n        return true;\n    }\n    bool detectCapitalUse(string word) {\n        \n        return (checkUpper(word)||checkLower(word,0)||(isupper(word[0])&& checkLower (word,1)));\n        \n    }\n};",
+  "title_slug": "detect-capital",
+  "has_notes": false,
+  "flag_type": 1
+}

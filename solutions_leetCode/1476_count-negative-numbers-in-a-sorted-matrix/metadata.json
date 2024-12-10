@@ -1,0 +1,18 @@
+{
+  "id": 1260794531,
+  "question_id": 1476,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1715973337,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1260794531/",
+  "is_pending": "Not Pending",
+  "title": "Count Negative Numbers in a Sorted Matrix",
+  "memory": "45.3 MB",
+  "code": "class Solution{\n\npublic int countNegatives(int[][] grid) {\n        int rows = grid.length;\n        int cols = grid[0].length;\n        int row = 0; \n        int col = grid[0].length-1;\n        int count = 0;\n        while(row < rows && col >= 0){\n            if(grid[row][col] >= 0){\n                row++;\n            } else {\n                count += rows-row;\n                col--;\n            }\n        }\n        return count;\n    }}",
+  "title_slug": "count-negative-numbers-in-a-sorted-matrix",
+  "has_notes": false,
+  "flag_type": 1
+}

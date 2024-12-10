@@ -1,0 +1,18 @@
+{
+  "id": 1206557120,
+  "question_id": 1699,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710699593,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "219 ms",
+  "url": "/submissions/detail/1206557120/",
+  "is_pending": "Not Pending",
+  "title": "Number of Ways Where Square of Number Is Equal to Product of Two Numbers",
+  "memory": "44.5 MB",
+  "code": "class Solution {\n    public int numTriplets(int[] n1, int[] n2) {\n    long res = 0;\n    for (long n : n1)\n        res += twoProduct(n * n, n2);\n    for (long n : n2)\n        res += twoProduct(n * n, n1);\n    return (int)res;\n}\nlong twoProduct(long i, int[] n) {\n    Map<Long, Long> m = new HashMap<>();\n    long cnt = 0;\n    for (long v : n) {\n        if (i % v == 0)\n            cnt += m.getOrDefault(i / v, 0l);\n        m.put(v, m.getOrDefault(v, 0l) + 1);\n    }\n    return cnt;\n}  \n\n}",
+  "title_slug": "number-of-ways-where-square-of-number-is-equal-to-product-of-two-numbers",
+  "has_notes": false,
+  "flag_type": 1
+}

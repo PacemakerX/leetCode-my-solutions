@@ -1,0 +1,18 @@
+{
+  "id": 1119509321,
+  "question_id": 2606,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702548439,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1119509321/",
+  "is_pending": "Not Pending",
+  "title": "Difference Between Ones and Zeros in Row and Column",
+  "memory": "73 MB",
+  "code": "class Solution {\n    public int[][] onesMinusZeros(int[][] grid) {\n        int[] rowOnes = new int[grid.length];\n        int[] colOnes = new int[grid[0].length];\n        for(int i = 0; i < grid.length; i++) {\n            for(int j = 0; j < grid[0].length; j++) {\n                rowOnes[i] += grid[i][j];\n                colOnes[j] += grid[i][j];\n            }\n        }\n        for(int i = 0; i < grid.length; i++) {\n            for(int j = 0; j < grid[0].length; j++) {\n                grid[i][j] = 2 * (rowOnes[i] + colOnes[j]) - grid.length - grid[0].length;\n            }\n        }\n\n        return grid;\n    }\n}",
+  "title_slug": "difference-between-ones-and-zeros-in-row-and-column",
+  "has_notes": false,
+  "flag_type": 1
+}

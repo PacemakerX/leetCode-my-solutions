@@ -1,0 +1,18 @@
+{
+  "id": 1226973261,
+  "question_id": 1802,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1712602358,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1226973261/",
+  "is_pending": "Not Pending",
+  "title": "Number of Students Unable to Eat Lunch",
+  "memory": "41.2 MB",
+  "code": "class Solution {\n    public int countStudents(int[] students, int[] sandwiches) {\n\n        List<Integer> studentList = new ArrayList<>();\n\n        List<Integer> sandwichesList = new ArrayList<>();\n        \n        for(int i =0;i<students.length;i++){\n            studentList.add(students[i]);\n            sandwichesList.add(sandwiches[i]);\n        } \n        int i=0;\n        while(studentList.size()>0 && i<sandwichesList.size() ){\n            if(studentList.get(0)==sandwichesList.get(0)){\n                studentList.remove(0);\n                sandwichesList.remove(0);\n                i=0;\n            }\n            else{\n                i++;\n                studentList.add(studentList.get(0));\n                studentList.remove(0);\n            }\n        }\n\n        return studentList.size();\n    }\n}",
+  "title_slug": "number-of-students-unable-to-eat-lunch",
+  "has_notes": false,
+  "flag_type": 1
+}

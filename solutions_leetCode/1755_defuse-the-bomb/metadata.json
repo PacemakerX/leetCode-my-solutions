@@ -1,0 +1,18 @@
+{
+  "id": 1201255195,
+  "question_id": 1755,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710224457,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1201255195/",
+  "is_pending": "Not Pending",
+  "title": "Defuse the Bomb",
+  "memory": "42 MB",
+  "code": "class Solution {\n    public int[] decrypt(int[] code, int k) {\n        int[] ans = new int[code.length];\n        int n = code.length;\n        if(k > 0){\n            int sum = 0;\n            int i = 1;\n            int window = k;\n            while(window>0){\n                sum += code[i];\n                i =(i+1)%n ;\n                window--;\n            }\n\n            ans[0] = sum;\n\n            for(int j = 1; j<n; j++){\n                sum = sum - code[j] + code[i];\n                i = (i+1)%n;\n                ans[j] = sum;\n            }\n        }else if(k<0){\n            int sum = 0;\n            int i = n-1;\n            int window = -k;\n            while(window>0){\n                sum += code[i];\n                i--;\n                window--;\n            }\n\n            ans[0] = sum;\n\n            for(int j = 1; j<n; j++){\n                i = (i+1)%n; //to protect overflow\n                sum = sum + code[j-1] - code[i];\n                ans[j] = sum;\n            }\n        }\n        return ans; \n    }\n}",
+  "title_slug": "defuse-the-bomb",
+  "has_notes": false,
+  "flag_type": 1
+}

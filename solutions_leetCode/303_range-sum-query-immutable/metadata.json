@@ -1,0 +1,18 @@
+{
+  "id": 1363069866,
+  "question_id": 303,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1724212753,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "8 ms",
+  "url": "/submissions/detail/1363069866/",
+  "is_pending": "Not Pending",
+  "title": "Range Sum Query - Immutable",
+  "memory": "22 MB",
+  "code": "class NumArray {\npublic:\n    vector<int> arr;\n    NumArray(vector<int>& nums) {\n         arr.clear();\n        for(auto i : nums)\n        arr.push_back(i);\n        \n        for(int i=1;i<arr.size();i++){\n            arr[i]+=arr[i-1];\n        }\n    }\n    \n    int sumRange(int left, int right) {\n        int sum= arr[right]- (left>0?arr[left-1]:0);\n        return sum;\n    }\n};\n\n/**\n * Your NumArray object will be instantiated and called as such:\n * NumArray* obj = new NumArray(nums);\n * int param_1 = obj->sumRange(left,right);\n */",
+  "title_slug": "range-sum-query-immutable",
+  "has_notes": false,
+  "flag_type": 1
+}

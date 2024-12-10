@@ -1,0 +1,18 @@
+{
+  "id": 1125999304,
+  "question_id": 742,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703263229,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1125999304/",
+  "is_pending": "Not Pending",
+  "title": "To Lower Case",
+  "memory": "41.5 MB",
+  "code": "class Solution {\n    public String toLowerCase(String s) {\n        return s.toLowerCase();\n    }\n}",
+  "title_slug": "to-lower-case",
+  "has_notes": false,
+  "flag_type": 1
+}

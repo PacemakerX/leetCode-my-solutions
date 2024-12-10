@@ -1,0 +1,18 @@
+{
+  "id": 1135716578,
+  "question_id": 1496,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1704293964,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1135716578/",
+  "is_pending": "Not Pending",
+  "title": "Lucky Numbers in a Matrix",
+  "memory": "45.5 MB",
+  "code": "class Solution {\n    public List<Integer> luckyNumbers (int[][] matrix) {\n    List<Integer> ls = new ArrayList<>();\n        int min = Integer.MAX_VALUE;\n        int index = 0;\n        for (int[] is : matrix) {\n            for (int i = 0; i < is.length; i++) {\n                if (is[i] < min) {\n                    index = i;\n                    min = is[i];\n                }\n            }\n             if (min == checkMax(matrix, index))\n                ls.add(min);\n            min = Integer.MAX_VALUE;\n        }\n        return ls;\n        \n    }\n\n    public  int checkMax(int[][]matrix, int coloumn){\n        int max=Integer.MIN_VALUE;\n        for (int i = 0; i < matrix.length; i++) {\n            max=Math.max(max, matrix[i][coloumn]);\n        }\n        return max;\n    }\n}",
+  "title_slug": "lucky-numbers-in-a-matrix",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1125984078,
+  "question_id": 1899,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703261865,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1125984078/",
+  "is_pending": "Not Pending",
+  "title": "Count Items Matching a Rule",
+  "memory": "50.6 MB",
+  "code": "class Solution {\n    public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {\n         int toCompare = 0;\n        int count = 0;\n        switch (ruleKey) {\n            case \"type\":\n                toCompare = 0;\n                break;\n            case \"color\":\n                toCompare = 1;\n                break;\n            case \"name\":\n                toCompare = 2;\n                break;\n        }\n        for (int index = 0; index < items.size(); index++) {\n            if (items.get(index).get(toCompare).equals(ruleValue))\n                count++;\n        }\n        return count; \n    }\n}",
+  "title_slug": "count-items-matching-a-rule",
+  "has_notes": false,
+  "flag_type": 1
+}

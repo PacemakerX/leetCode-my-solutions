@@ -1,0 +1,18 @@
+{
+  "id": 1447662261,
+  "question_id": 3626,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1731162946,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1447662261/",
+  "is_pending": "Not Pending",
+  "title": "Smallest Divisible Digit Product I",
+  "memory": "8.5 MB",
+  "code": "class Solution {\npublic:\n\n\n    bool check(int a,int b){\n        int rem=1;\n\n        while(a>0){\n            rem*=a%10;\n            a=a/10;\n        }\n\n        return (rem%b==0);\n    }\n    int smallestNumber(int n, int t) {\n\n        for(int i=n;i<INT_MAX;i++){\n            if(check(i,t))\n                return i;\n        }\n\n        return 0;\n    }\n};",
+  "title_slug": "smallest-divisible-digit-product-i",
+  "has_notes": false,
+  "flag_type": 1
+}

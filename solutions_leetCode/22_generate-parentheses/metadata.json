@@ -1,0 +1,18 @@
+{
+  "id": 1469994713,
+  "question_id": 22,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1733301898,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "5 ms",
+  "url": "/submissions/detail/1469994713/",
+  "is_pending": "Not Pending",
+  "title": "Generate Parentheses",
+  "memory": "10.3 MB",
+  "code": "class Solution {\npublic:\n\n\n    bool check(string str){\n\n        int sum=0;\n        for(int i=0;i<str.size();i++){\n\n            if(str[i]=='(')\n                sum++;\n            else\n                sum--;\n\n            if(sum<0)\n                return false;\n\n        }\n        return true;\n    }\n    vector<string> generateParenthesis(int n) {\n\n       string str=\"\";\n\n       vector<string> arr;\n\n\n       for(int i=0;i<n;i++)\n        str+='(';\n\n        for(int i=0;i<n;i++)\n        str+=')';\n\n        do{\n\n            if(check(str))\n                arr.push_back(str);\n\n        }while(next_permutation(str.begin(),str.end()));\n        \n\n        return arr;\n    }\n};",
+  "title_slug": "generate-parentheses",
+  "has_notes": false,
+  "flag_type": 1
+}

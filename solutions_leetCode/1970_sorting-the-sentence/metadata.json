@@ -1,0 +1,18 @@
+{
+  "id": 1126469469,
+  "question_id": 1970,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703322071,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1126469469/",
+  "is_pending": "Not Pending",
+  "title": "Sorting the Sentence",
+  "memory": "41.5 MB",
+  "code": "class Solution {\n    public String sortSentence(String s) {\n          String[] str = s.split(\" \");\n        String[] newStr = new String[str.length];\n        for (int i = 0; i < str.length; i++) {\n            newStr[Character.getNumericValue((str[i].charAt(str[i].length() - 1))) - 1] = str[i].substring(0,\n                    (str[i].length() - 1));\n\n        }\n        StringBuilder str2 = new StringBuilder();\n        for (String string : newStr) {\n            str2.append(string);\n            if (string != newStr[newStr.length - 1])\n                str2.append(\" \");\n        }\n        return str2.toString();\n    }\n}",
+  "title_slug": "sorting-the-sentence",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1166030451,
+  "question_id": 1605,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1707067003,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "21 ms",
+  "url": "/submissions/detail/1166030451/",
+  "is_pending": "Not Pending",
+  "title": "Minimum Number of Days to Make m Bouquets",
+  "memory": "57.8 MB",
+  "code": "class Solution {\n        public  int minDays(int[] bloomDay, int m, int k) {\n\n        if (bloomDay.length <(long)m * k)\n            return -1;\n\n        int max = Integer.MIN_VALUE;\n        int min = Integer.MAX_VALUE;\n        for (int i = 0; i < bloomDay.length; i++) {\n            max = Math.max(max, bloomDay[i]);\n            min = Math.min(min, bloomDay[i]);\n        }\n\n        int start = min, end = max, mid = 0;\n\n        while (start <= end) {\n            mid = start + (end - start) / 2;\n            boolean checkVal = check(bloomDay, mid, m, k);\n            if (checkVal == true)\n                end = mid - 1;\n            else\n                start = mid + 1;\n\n        }\n        return start;\n\n    }\n\n    public  boolean check(int[] bloomDay, int target, int m, int k) {\n\n        int count = 0, totalCount = 0;\n        for (int i = 0; i < bloomDay.length; i++) {\n            if (bloomDay[i] <= target)\n                count++;\n            else{\n                totalCount += count / k;\n                count = 0;\n            }}\n\n            totalCount += count / k;\n\n        if (totalCount >= m)\n            return true;\n        else\n            return false;\n    }\n\n}\n\n",
+  "title_slug": "minimum-number-of-days-to-make-m-bouquets",
+  "has_notes": false,
+  "flag_type": 1
+}

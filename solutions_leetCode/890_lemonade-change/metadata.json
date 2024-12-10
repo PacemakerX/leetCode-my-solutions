@@ -1,0 +1,18 @@
+{
+  "id": 1356593522,
+  "question_id": 890,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723727816,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "73 ms",
+  "url": "/submissions/detail/1356593522/",
+  "is_pending": "Not Pending",
+  "title": "Lemonade Change",
+  "memory": "86 MB",
+  "code": "class Solution {\npublic:\n    bool lemonadeChange(vector<int>& bills) {\n\n\n\n        int count5=0;\n        int count10=0;\n    \n\n        for(int i=0;i<bills.size();i++){\n\n            if(bills[i]==5)\n                count5++;\n            else if(bills[i]==10){\n                if(count5==0)\n                    return false;\n                else{\n                    count10++;\n                    count5--;\n                }\n            }else{\n                if(count10>0 && count5>0){\n                    count10--;\n                    count5--;\n                }else if(count5>2){\n                    count5-=3;\n                }else\n                    return false;\n            }\n        }\n\n        return true;\n        \n    }\n};",
+  "title_slug": "lemonade-change",
+  "has_notes": false,
+  "flag_type": 1
+}

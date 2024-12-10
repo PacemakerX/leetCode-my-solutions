@@ -1,0 +1,18 @@
+{
+  "id": 1116093103,
+  "question_id": 898,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702172300,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1116093103/",
+  "is_pending": "Not Pending",
+  "title": "Transpose Matrix",
+  "memory": "45.1 MB",
+  "code": "class Solution {\n    public int[][] transpose(int[][] matrix) {\n         int[][] Tmatrix = new int[matrix[0].length][matrix.length];\n        for (int i = 0; i < matrix.length; i++) {\n            for (int j = 0; j < matrix[0].length; j++) {\n                Tmatrix[j][i] = matrix[i][j];\n            }\n\n        }\n        return Tmatrix;\n    } \n    }",
+  "title_slug": "transpose-matrix",
+  "has_notes": false,
+  "flag_type": 1
+}

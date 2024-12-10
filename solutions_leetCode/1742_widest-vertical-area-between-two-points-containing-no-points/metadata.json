@@ -1,0 +1,18 @@
+{
+  "id": 1124921695,
+  "question_id": 1742,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703146769,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "41 ms",
+  "url": "/submissions/detail/1124921695/",
+  "is_pending": "Not Pending",
+  "title": "Widest Vertical Area Between Two Points Containing No Points",
+  "memory": "72.5 MB",
+  "code": "class Solution {\n    public int maxWidthOfVerticalArea(int[][] points) {\n        Arrays.sort(points, (a, b) -> Integer.compare(a[0], b[0])); // increasing order\n        int maxWidth=-1;\n        for (int i = 0; i < points.length-1; i++) {\n            if(maxWidth<points[i+1][0]-points[i][0])\n            maxWidth=points[i+1][0]-points[i][0];\n        }\n        return maxWidth;\n    }\n}",
+  "title_slug": "widest-vertical-area-between-two-points-containing-no-points",
+  "has_notes": false,
+  "flag_type": 1
+}

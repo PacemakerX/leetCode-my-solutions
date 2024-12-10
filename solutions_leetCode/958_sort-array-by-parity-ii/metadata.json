@@ -1,0 +1,18 @@
+{
+  "id": 1251134842,
+  "question_id": 958,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1715021475,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1251134842/",
+  "is_pending": "Not Pending",
+  "title": "Sort Array By Parity II",
+  "memory": "46.2 MB",
+  "code": "class Solution {\n    public int[] sortArrayByParityII(int[] nums) {\n        \n        int[] odd= new int[nums.length/2];\n        int[] even= new int[nums.length/2];\n        \n        int i=0,j=0;\n        for(int n : nums){\n            if(n%2==0)\n                even[i++]=n;\n            else\n                odd[j++]=n;\n        }\n        \n        i=0;\n        j=0;\n        \n        for(int k=0;k<nums.length;k++){\n            if(k%2==0)\n                nums[k]=even[i++];\n            else\n                nums[k]=odd[j++];\n        }\n     \nreturn nums;\n        \n    }\n}",
+  "title_slug": "sort-array-by-parity-ii",
+  "has_notes": false,
+  "flag_type": 1
+}

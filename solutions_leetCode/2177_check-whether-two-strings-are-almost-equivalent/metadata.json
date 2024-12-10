@@ -1,0 +1,18 @@
+{
+  "id": 1119006204,
+  "question_id": 2177,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702487819,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "13 ms",
+  "url": "/submissions/detail/1119006204/",
+  "is_pending": "Not Pending",
+  "title": "Check Whether Two Strings are Almost Equivalent",
+  "memory": "41.3 MB",
+  "code": "class Solution {\n     public boolean checkAlmostEquivalent(String word1, String word2) {\n            boolean bool1=true,bool2=true;\n        for (int i = 0; i < word1.length(); i++) {\n            if (Math.abs(ferequency(word1, word1.charAt(i)) - ferequency(word2, word1.charAt(i))) > 3)\n                bool1=false;\n\n        }\n        for (int i = 0; i < word2.length(); i++) {\n            if (Math.abs(ferequency(word1, word2.charAt(i)) - ferequency(word2, word2.charAt(i))) > 3)\n                bool2=false;\n\n        }\n        return bool1 && bool2;\n    }\n\n    public int ferequency(String str, char ch) {\n        int count = 0;\n        for (int i = 0; i < str.length(); i++) {\n            if (str.charAt(i) == ch)\n                count++;\n\n        }\n        return count;\n    }\n}",
+  "title_slug": "check-whether-two-strings-are-almost-equivalent",
+  "has_notes": false,
+  "flag_type": 1
+}

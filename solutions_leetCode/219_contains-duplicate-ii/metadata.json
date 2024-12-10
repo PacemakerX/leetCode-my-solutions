@@ -1,0 +1,18 @@
+{
+  "id": 1201207448,
+  "question_id": 219,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710220752,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "20 ms",
+  "url": "/submissions/detail/1201207448/",
+  "is_pending": "Not Pending",
+  "title": "Contains Duplicate II",
+  "memory": "56.9 MB",
+  "code": "class Solution {\n    public boolean containsNearbyDuplicate(int[] nums, int k) {\n\n        HashMap<Integer,Integer> map = new HashMap<>();\n\n        for(int i =0;i<nums.length;i++){\n\n            if(i>k)\n                map.remove(nums[i-k-1]);\n            \n            if(map.containsKey(nums[i]) && Math.abs(map.get(nums[i])-i)<=k)\n                return true;\n            \n            map.put(nums[i],i);\n        }\n        return false;\n    }\n}",
+  "title_slug": "contains-duplicate-ii",
+  "has_notes": false,
+  "flag_type": 1
+}

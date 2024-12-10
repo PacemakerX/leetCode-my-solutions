@@ -1,0 +1,18 @@
+{
+  "id": 1048302333,
+  "question_id": 2748,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1694602593,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1048302333/",
+  "is_pending": "Not Pending",
+  "title": "Calculate Delayed Arrival Time",
+  "memory": "39.4 MB",
+  "code": "class Solution {\n    public int findDelayedArrivalTime(int arrivalTime, int delayedTime) {\n        return (arrivalTime+delayedTime)%24;\n        \n    }\n}",
+  "title_slug": "calculate-delayed-arrival-time",
+  "has_notes": false,
+  "flag_type": 1
+}

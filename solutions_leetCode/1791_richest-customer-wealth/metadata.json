@@ -1,0 +1,18 @@
+{
+  "id": 1019877666,
+  "question_id": 1791,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1691902850,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1019877666/",
+  "is_pending": "Not Pending",
+  "title": "Richest Customer Wealth",
+  "memory": "41.5 MB",
+  "code": "class Solution {\n    public int maximumWealth(int[][] accounts) {\n        int max =Integer.MIN_VALUE;\n        for (int i = 0; i < accounts.length; i++) {\n            int sum=0;\n            for (int j = 0; j < accounts[i].length; j++) {\n                sum+=accounts[i][j];\n            }\n\n            if(sum>max)\n            max=sum;\n            \n        }\n        return max;\n    }\n}",
+  "title_slug": "richest-customer-wealth",
+  "has_notes": false,
+  "flag_type": 1
+}

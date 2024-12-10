@@ -1,0 +1,18 @@
+{
+  "id": 1137827074,
+  "question_id": 300,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1704477147,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "/submissions/detail/1137827074/",
+  "is_pending": "Not Pending",
+  "title": "Longest Increasing Subsequence",
+  "memory": "44.2 MB",
+  "code": "class Solution {\n    public int lengthOfLIS(int[] nums) {\n        int[] tails = new int[nums.length];\n        int size = 0;\n        for (int x : nums) {\n            int i = 0, j = size;\n            while (i != j) {\n                int m = (i + j) / 2;\n                if (tails[m] < x)\n                    i = m + 1;\n                else\n                    j = m;\n            }\n            tails[i] = x;\n            if (i == size) ++size;\n        }\n        return size;\n    }\n}",
+  "title_slug": "longest-increasing-subsequence",
+  "has_notes": false,
+  "flag_type": 1
+}

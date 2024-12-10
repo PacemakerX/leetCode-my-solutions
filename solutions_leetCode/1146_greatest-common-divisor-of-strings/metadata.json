@@ -1,0 +1,18 @@
+{
+  "id": 1354604258,
+  "question_id": 1146,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723572339,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1354604258/",
+  "is_pending": "Not Pending",
+  "title": "Greatest Common Divisor of Strings",
+  "memory": "8.7 MB",
+  "code": "class Solution {\npublic:\n    string gcdOfStrings(string str1, string str2) {\n        return (str1 + str2 == str2 + str1)? \n        str1.substr(0, gcd(size(str1),size(str2))): \"\";\n    }\n};",
+  "title_slug": "greatest-common-divisor-of-strings",
+  "has_notes": false,
+  "flag_type": 1
+}

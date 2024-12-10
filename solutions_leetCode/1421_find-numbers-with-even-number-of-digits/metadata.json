@@ -1,0 +1,18 @@
+{
+  "id": 1019146048,
+  "question_id": 1421,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1691833813,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1019146048/",
+  "is_pending": "Not Pending",
+  "title": "Find Numbers with Even Number of Digits",
+  "memory": "42.8 MB",
+  "code": "class Solution {\n    public int findNumbers(int[] nums) {\n         int countEven = 0;\n        for (int i : nums) {\n            String s = Integer.toString(i);\n            if (s.length() % 2 == 0)\n                countEven++;\n        }\n        return countEven;\n\n    }\n\n}",
+  "title_slug": "find-numbers-with-even-number-of-digits",
+  "has_notes": false,
+  "flag_type": 1
+}

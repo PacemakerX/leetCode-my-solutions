@@ -1,0 +1,18 @@
+{
+  "id": 1116618400,
+  "question_id": 2274,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702228970,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1116618400/",
+  "is_pending": "Not Pending",
+  "title": "Keep Multiplying Found Values by Two",
+  "memory": "43.9 MB",
+  "code": "class Solution {\n    public int findFinalValue(int[] nums, int original) {\n        for(int i =0;i<nums.length;i++){\n            if(nums[i]==original ){\n\n             return findFinalValue(nums,original*2);\n            }\n        }\n        return original;\n    }\n}",
+  "title_slug": "keep-multiplying-found-values-by-two",
+  "has_notes": false,
+  "flag_type": 1
+}

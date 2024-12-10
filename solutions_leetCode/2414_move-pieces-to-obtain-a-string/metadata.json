@@ -1,0 +1,18 @@
+{
+  "id": 1471328284,
+  "question_id": 2414,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1733430624,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1471328284/",
+  "is_pending": "Not Pending",
+  "title": "Move Pieces to Obtain a String",
+  "memory": "21.9 MB",
+  "code": "class Solution {\npublic:\n    bool canChange(string start, string target) {\n\n\n        if(start==target)\n            return true;\n\n        int i=0,j=0;\n\n        while(i<start.size() || j<target.size()){\n\n            while(i<start.size() && start[i]=='_')\n                i++;\n            \n            while(j<target.size() && target[j]=='_')\n                j++;\n\n            \n            if(start[i]!=target[j] || (start[i]=='L' && j>i) || start[i]=='R' && i>j)\n                return false;\n\n                i++;\n                j++;\n            }\n\n        return true;\n    }\n};",
+  "title_slug": "move-pieces-to-obtain-a-string",
+  "has_notes": false,
+  "flag_type": 1
+}

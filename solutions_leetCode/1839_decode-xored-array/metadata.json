@@ -1,0 +1,18 @@
+{
+  "id": 1202718763,
+  "question_id": 1839,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710349018,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1202718763/",
+  "is_pending": "Not Pending",
+  "title": "Decode XORed Array",
+  "memory": "45.6 MB",
+  "code": "class Solution {\n    public int[] decode(int[] encoded, int first) {\n         int ans[] = new int[encoded.length + 1];\n        ans[0] = first;\n        for (int i = 1; i < ans.length; i++) {\n            ans[i] = ans[i - 1] ^ encoded[i - 1];\n        }\n        return ans;\n        \n    }\n}",
+  "title_slug": "decode-xored-array",
+  "has_notes": false,
+  "flag_type": 1
+}

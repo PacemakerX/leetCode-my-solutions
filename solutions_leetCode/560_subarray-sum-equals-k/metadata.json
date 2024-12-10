@@ -1,0 +1,18 @@
+{
+  "id": 1184038733,
+  "question_id": 560,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1708698916,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "24 ms",
+  "url": "/submissions/detail/1184038733/",
+  "is_pending": "Not Pending",
+  "title": "Subarray Sum Equals K",
+  "memory": "46.6 MB",
+  "code": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n\n         int n = nums.length; // size of the given numsay.\n        Map<Integer,Integer> mpp = new HashMap();\n        int preSum = 0, cnt = 0;\n\n        mpp.put(0, 1); // Setting 0 in the map.\n        for (int i = 0; i < n; i++) {\n\n            preSum += nums[i];\n\n            int remove = preSum - k;\n\n            cnt += mpp.getOrDefault(remove, 0);\n\n\n            mpp.put(preSum, mpp.getOrDefault(preSum, 0) + 1);\n        }\n        return cnt;\n}}",
+  "title_slug": "subarray-sum-equals-k",
+  "has_notes": false,
+  "flag_type": 1
+}

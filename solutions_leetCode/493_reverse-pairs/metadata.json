@@ -1,0 +1,18 @@
+{
+  "id": 1190874729,
+  "question_id": 493,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709318184,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "82 ms",
+  "url": "/submissions/detail/1190874729/",
+  "is_pending": "Not Pending",
+  "title": "Reverse Pairs",
+  "memory": "54.7 MB",
+  "code": "class Solution {\n    public int reversePairs(int[] nums) {\n        return mergeSort(nums,0,nums.length-1);\n        \n    }\n\n    public int mergeSort(int [] nums,int begin, int end){\n        int count=0;\n        if(begin>=end)\n            return count;\n        int mid=begin+(end-begin)/2;\n        count+=mergeSort(nums,begin,mid);\n        count+=mergeSort(nums,mid+1,end);\n        count+=countPairs(nums,begin,mid,end);\n        merge(nums,begin,mid,end);\n        return count;\n    }\n\n    public void merge(int[] nums,int begin,int mid,int end){\n\n        ArrayList<Integer> ls = new ArrayList<>();\n\n        int low=begin;\n        int high=mid+1;\n\n        while(low<=mid && high<=end){\n            if(nums[low]<nums[high])\n                ls.add(nums[low++]);\n            else\n                ls.add(nums[high++]);\n\n        }\n\n        while(low<=mid){\n            ls.add(nums[low++]);\n        }\n\n        while(high<=end){\n            ls.add(nums[high++]);\n        }\n\n        for(int i = begin;i<=end;i++)\n            nums[i]=ls.get(i-begin);\n    }\n\n\n    public int countPairs(int[] arr, int low, int mid, int high) {\n        int right = mid + 1;\n        int cnt = 0;\n        for (int i = low; i <= mid; i++) {\n            while (right <= high && arr[i] >(long) 2 * arr[right]) right++;\n            cnt += (right - (mid + 1));\n        }\n        return cnt;\n    }\n}",
+  "title_slug": "reverse-pairs",
+  "has_notes": false,
+  "flag_type": 1
+}

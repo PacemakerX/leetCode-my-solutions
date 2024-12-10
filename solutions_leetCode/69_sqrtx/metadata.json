@@ -1,0 +1,18 @@
+{
+  "id": 1167299402,
+  "question_id": 69,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1707179558,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1167299402/",
+  "is_pending": "Not Pending",
+  "title": "Sqrt(x)",
+  "memory": "40.2 MB",
+  "code": "class Solution {\n   public  int mySqrt(int x) {\n \n\n        int start = 0, end = x , mid = 0;\n\n        while (start <= end) {\n            mid = start + (end - start) / 2;\n            if (check(mid, x))\n                start = mid + 1;\n            else\n                end = mid - 1;\n        }\n        return end;\n    }\n\n    public  boolean check(int target, int x) {\n        return (long)target * target <= x;\n    }\n}",
+  "title_slug": "sqrtx",
+  "has_notes": false,
+  "flag_type": 1
+}

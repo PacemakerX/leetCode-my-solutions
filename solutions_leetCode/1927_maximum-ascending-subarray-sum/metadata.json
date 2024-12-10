@@ -1,0 +1,18 @@
+{
+  "id": 1196210566,
+  "question_id": 1927,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709772237,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1196210566/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Ascending Subarray Sum",
+  "memory": "40.5 MB",
+  "code": "class Solution {\n    public int maxAscendingSum(int[] nums) {\n\n        int sum=nums[0];\n        int max=nums[0];\n        for(int i=1;i<nums.length;i++){\n\n            if(nums[i]>nums[i-1])\n                sum+=nums[i];\n            else{\n                max=Math.max(max,sum);\n                sum=nums[i];\n            }\n        }\n        return Math.max(max,sum);\n        // return sum;\n        \n    }\n}",
+  "title_slug": "maximum-ascending-subarray-sum",
+  "has_notes": false,
+  "flag_type": 1
+}

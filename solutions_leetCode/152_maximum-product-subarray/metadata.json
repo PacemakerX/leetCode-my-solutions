@@ -1,0 +1,18 @@
+{
+  "id": 1189429014,
+  "question_id": 152,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709189139,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1189429014/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Product Subarray",
+  "memory": "44.1 MB",
+  "code": "class Solution {\n    public int maxProduct(int[] nums) {\n        \n          int n = nums.length; //size of array.\n\n        int pre = 1, suff = 1;\n        int ans = Integer.MIN_VALUE;\n        for (int i = 0; i < n; i++) {\n            if (pre == 0) pre = 1;\n            if (suff == 0) suff = 1;\n            pre *= nums[i];\n            suff *= nums[n - i - 1];\n            ans = Math.max(ans, Math.max(pre, suff));\n        }\n        return ans;\n\n\n    }\n}",
+  "title_slug": "maximum-product-subarray",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1138316554,
+  "question_id": 2283,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1704530850,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1138316554/",
+  "is_pending": "Not Pending",
+  "title": "Sort Even and Odd Indices Independently",
+  "memory": "44.7 MB",
+  "code": "class Solution {\n    public int[] sortEvenOdd(int[] nums) {\n        int [] even=new int[nums.length/2+nums.length%2];\n        int [] odd=new int[nums.length/2];\n        for(int i=0,j=0,k=0; i<nums.length; i++)\n        {\n            if(i%2==0)\n                 even[j++]=nums[i];\n            else \n                 odd[k++]=nums[i];\n        }\n        Arrays.sort(even);\n        Arrays.sort(odd);\n        for(int i=0,j=0,k=odd.length-1; i<nums.length; i++)\n        {\n             if(i%2==0)\n                 nums[i]=even[j++];\n            else \n                 nums[i]=odd[k--];\n        }\n        return nums;\n     }\n}",
+  "title_slug": "sort-even-and-odd-indices-independently",
+  "has_notes": false,
+  "flag_type": 1
+}

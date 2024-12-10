@@ -1,0 +1,18 @@
+{
+  "id": 1248464308,
+  "question_id": 165,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1714759399,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "/submissions/detail/1248464308/",
+  "is_pending": "Not Pending",
+  "title": "Compare Version Numbers",
+  "memory": "41 MB",
+  "code": "class Solution {\n    public int compareVersion(String version1, String version2) {\n\n          \n        int count1 = 0, count2 = 0;\n        for (int i = 0; i < version1.length(); i++) {\n            if (version1.charAt(i) == '.')\n                count1++;\n        }\n\n        for (int i = 0; i < version2.length(); i++) {\n            if (version2.charAt(i) == '.')\n                count2++;\n        }\n        if (count1 < count2)\n            version1 = equaliseVersion(version1, count2 - count1);\n        else if (count2 < count1)\n            version2 = equaliseVersion(version2, count1 - count2);\n        StringBuilder str1 = new StringBuilder(version1);\n        StringBuilder str2 = new StringBuilder(version2);\n\n        int max = Math.max(count1, count2);\n\n        while (max >=0) {\n            if (Integer.parseInt(str1.substring(0, str1.indexOf(\".\")==-1?str1.length():str1.indexOf(\".\"))) < Integer\n                    .parseInt(str2.substring(0, str2.indexOf(\".\")==-1?str2.length():str2.indexOf(\".\"))))\n                return -1;\n            else if (Integer.parseInt(str1.substring(0, str1.indexOf(\".\")==-1?str1.length():str1.indexOf(\".\"))) > Integer\n                    .parseInt(str2.substring(0, str2.indexOf(\".\")==-1?str2.length():str2.indexOf(\".\"))))\n                return 1;\n            else {\n                str1.delete(0, str1.indexOf(\".\")+1);\n                str2.delete(0, str2.indexOf(\".\")+1);\n\n            }\n            max--;\n        }\n        return 0;\n        \n\n    }\n\n    public String equaliseVersion(String str,int k){\n        while(k>0){\n            str+=\".0\";\n            k--;\n        }\n\n        return str;\n    }\n\n}",
+  "title_slug": "compare-version-numbers",
+  "has_notes": false,
+  "flag_type": 1
+}

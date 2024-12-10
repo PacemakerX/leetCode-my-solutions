@@ -1,0 +1,18 @@
+{
+  "id": 1277130027,
+  "question_id": 2556,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1717482264,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1277130027/",
+  "is_pending": "Not Pending",
+  "title": "Convert the Temperature",
+  "memory": "41.7 MB",
+  "code": "class Solution {\n    public double[] convertTemperature(double celsius) {\n\n    return new double[] {celsius+273.15,celsius * 1.80 + 32.00};     \n    }\n}",
+  "title_slug": "convert-the-temperature",
+  "has_notes": false,
+  "flag_type": 1
+}

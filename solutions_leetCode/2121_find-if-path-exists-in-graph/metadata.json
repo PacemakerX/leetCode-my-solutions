@@ -1,0 +1,18 @@
+{
+  "id": 1382465249,
+  "question_id": 2121,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1725739814,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "853 ms",
+  "url": "/submissions/detail/1382465249/",
+  "is_pending": "Not Pending",
+  "title": "Find if Path Exists in Graph",
+  "memory": "320.6 MB",
+  "code": "class Solution {\npublic:\n    vector<vector<int>> g;\n    vector<int> vis;\n    vector<int> dis;\n    void bfs(int source){\n\n        vis[source]=1;\n        dis[source]=0;\n\n        queue<int>q;\n        q.push(source);\n\n        while(!q.empty()){\n            int node=q.front();\n            q.pop();\n            for(auto v : g[node]){\n                if(!vis[v]){\n                    vis[v]=1;\n                    dis[v]=dis[node]+1;\n                    q.push(v);\n                }\n            }\n        }\n    }\n    bool validPath(int n, vector<vector<int>>& edges, int source, int destination) {\n\n        g.resize(n);\n        vis.assign(n,0);\n        dis.assign(n,1e9);\n        for(auto i: edges){\n            g[i[0]].push_back(i[1]);\n            g[i[1]].push_back(i[0]);\n        }\n        \n        bfs(source);\n\n\n        return (!(dis[destination]==1e9));\n\n    }\n};",
+  "title_slug": "find-if-path-exists-in-graph",
+  "has_notes": false,
+  "flag_type": 1
+}

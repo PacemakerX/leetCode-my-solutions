@@ -1,0 +1,18 @@
+{
+  "id": 1130443784,
+  "question_id": 1482,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703758274,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1130443784/",
+  "is_pending": "Not Pending",
+  "title": "How Many Numbers Are Smaller Than the Current Number",
+  "memory": "44.6 MB",
+  "code": "class Solution {\n    public int[] smallerNumbersThanCurrent(int[] nums) {\n         int[] ls = new int[nums.length];\n\n        for (int i = 0; i < nums.length; i++) {\n            ls[i]=nums[i];\n        }\n        Arrays.sort(nums);\n\n        for (int i = 0; i < ls.length; i++) {\n           ls[i]=binSearch(nums,ls[i]);\n        }\n        return ls;\n    }\n\n    public static int binSearch(int[] nums, int target) {\n        int start = 0, end = nums.length - 1;\n        int ans = -1;\n        while (start <= end) {\n            int mid = start + (end - start) / 2;\n\n            if (target > nums[mid])\n                start = mid + 1;\n            else if (target < nums[mid])\n                end = mid - 1;\n            else {\n                ans = mid;\n                end = mid - 1;\n            }\n\n        }\n        return ans;\n    }\n}",
+  "title_slug": "how-many-numbers-are-smaller-than-the-current-number",
+  "has_notes": false,
+  "flag_type": 1
+}

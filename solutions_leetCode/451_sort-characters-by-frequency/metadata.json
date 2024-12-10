@@ -1,0 +1,18 @@
+{
+  "id": 1362801186,
+  "question_id": 451,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1724182567,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "12 ms",
+  "url": "/submissions/detail/1362801186/",
+  "is_pending": "Not Pending",
+  "title": "Sort Characters By Frequency",
+  "memory": "11.2 MB",
+  "code": "class Solution {\npublic:\n    string frequencySort(string s)\n{\n\n    multimap<int, char> mp;\n\n    map<char,int>mpr;\n\n    for (auto ch : s)\n    {\n        mpr[ch]++;\n    }\n\n    for(auto itr=mpr.begin();itr!=mpr.end();itr++)\n        mp.insert(make_pair(itr->second,itr->first));\n\n\n    string ans = \"\";\n    for (auto itr = mp.rbegin(); itr != mp.rend(); ++itr)\n    {\n        int x = itr->first;\n\n        while (x)\n        {\n            ans += itr->second; // Append the value to ans\n            x--;\n        }\n    }\n\n    return ans;\n}\n};",
+  "title_slug": "sort-characters-by-frequency",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1029687049,
+  "question_id": 882,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1692805927,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1029687049/",
+  "is_pending": "Not Pending",
+  "title": "Peak Index in a Mountain Array",
+  "memory": "55.1 MB",
+  "code": "class Solution {\n    public  int peakIndexInMountainArray(int []arr){\n    int start=0;\n    int end=arr.length-1;\n    while(start<end){\n        int mid=start+(end-start)/2;\n        if(arr[mid]<arr[mid+1])\n        start=mid+1;\n        else\n        end=mid;\n\n    }\n    return start;\n}\n}",
+  "title_slug": "peak-index-in-a-mountain-array",
+  "has_notes": false,
+  "flag_type": 1
+}

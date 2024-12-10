@@ -1,0 +1,18 @@
+{
+  "id": 1353497337,
+  "question_id": 808,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723487321,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1003 ms",
+  "url": "/submissions/detail/1353497337/",
+  "is_pending": "Not Pending",
+  "title": "Number of Matching Subsequences",
+  "memory": "49 MB",
+  "code": "class Solution {\npublic:\n\nstring t;\n bool isSubsequence(string s) {\n\n        if(s.length()>t.length())\n            return false;\n        \n        bool isSequence=true;;\n\n            int j=0;\n        for(int i=0;i<t.length();i++){\n\n\n            while(i<t.length()&& j<s.length()){\n                if(s[j]==t[i]){\n                    j++;\n                }\n                    i++;\n            }\n            \n            if(j<s.length())\n                isSequence=false;\n        }\n        \n        return isSequence;\n    }\n    int numMatchingSubseq(string s, vector<string>& words) {\n    \n    t=s;\n     int cnt=0;\n\n    unordered_map<string,int> mp;\n     for(string str : words){\n        mp[str]++;\n     }   \n\n     for(auto itr: mp){\n        cnt+= isSubsequence(itr.first) * itr.second;\n     }\n\n     return cnt;\n    }\n};",
+  "title_slug": "number-of-matching-subsequences",
+  "has_notes": false,
+  "flag_type": 1
+}

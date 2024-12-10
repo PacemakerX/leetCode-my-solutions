@@ -1,0 +1,18 @@
+{
+  "id": 1280803538,
+  "question_id": 372,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1717783287,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "30 ms",
+  "url": "/submissions/detail/1280803538/",
+  "is_pending": "Not Pending",
+  "title": "Super Pow",
+  "memory": "44.2 MB",
+  "code": "import java.math.BigInteger;\n\nclass Solution {\n    public int superPow(int a, int[] b) {\n      StringBuilder str=new StringBuilder();\n      for(int i=0; i<b.length; i++)\n      {\n        str.append(Integer.toString(b[i]));\n      }\n      String st=str.toString();\n      BigInteger exponent=new BigInteger(st);\n      BigInteger base=BigInteger.valueOf(a);\n      BigInteger ans=base.modPow(exponent, BigInteger.valueOf(1337));\n      return ans.intValue();\n    }\n}",
+  "title_slug": "super-pow",
+  "has_notes": false,
+  "flag_type": 1
+}

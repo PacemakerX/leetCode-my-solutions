@@ -1,0 +1,18 @@
+{
+  "id": 1471775773,
+  "question_id": 2304,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1733482560,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "/submissions/detail/1471775773/",
+  "is_pending": "Not Pending",
+  "title": "Cells in a Range on an Excel Sheet",
+  "memory": "11.8 MB",
+  "code": "class Solution {\npublic:\n    vector<string> cellsInRange(string s) {\n\n        char start=s[0];\n        char end=s[3];\n\n        int nstart=(s[1]-'0');\n        int nend=(s[4]-'0');\n\n\n        vector<string> arr;\n        for(char ch=start;ch<=end;ch++){\n            for(int i=nstart;i<=nend;i++){\n\n    \n                arr.push_back(ch+to_string(i));\n\n            }\n        }\n        \n        return arr;\n    }\n};",
+  "title_slug": "cells-in-a-range-on-an-excel-sheet",
+  "has_notes": false,
+  "flag_type": 1
+}

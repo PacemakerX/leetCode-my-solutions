@@ -1,0 +1,18 @@
+{
+  "id": 1140586565,
+  "question_id": 1878,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1704729370,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "/submissions/detail/1140586565/",
+  "is_pending": "Not Pending",
+  "title": "Check if Array Is Sorted and Rotated",
+  "memory": "41 MB",
+  "code": "class Solution {\n    public boolean check(int[] nums) {\n        if(nums.length==1)\n        return true;\n\n          int[] nums2 = new int[nums.length];\n        for (int i = 0; i < nums.length; i++) {\n            nums2[i] = nums[i];\n        }\n        Arrays.sort(nums2);\n        int k = 0;\n        int temp = 0;\n        while (k < nums.length) {\n            temp=nums2[0];\n            for (int i = nums.length - 1; i > 0; i--) {\n                nums2[(i + 1) % nums.length] = nums2[i];\n            }\n            nums2[1] = temp;\n            if (match(nums, nums2))\n                return true;\n            k++;\n        }\n        return false;\n    }\n\n    public static boolean match(int[] nums1, int[] nums2) {\n        for (int i = 0; i < nums1.length; i++) {\n            if (nums1[i] != nums2[i])\n                return false;\n        }\n        return true;\n    }\n}",
+  "title_slug": "check-if-array-is-sorted-and-rotated",
+  "has_notes": false,
+  "flag_type": 1
+}

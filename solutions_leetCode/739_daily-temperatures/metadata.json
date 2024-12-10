@@ -1,0 +1,18 @@
+{
+  "id": 1474734537,
+  "question_id": 739,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1733782820,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "31 ms",
+  "url": "/submissions/detail/1474734537/",
+  "is_pending": "Not Pending",
+  "title": "Daily Temperatures",
+  "memory": "107.5 MB",
+  "code": "class Solution {\npublic:\n    vector<int> dailyTemperatures(vector<int> &temperatures)\n{\n    stack<int> st;\n    vector<int> ans(temperatures.size(), 0);\n    for (int i = 0; i < temperatures.size(); i++)\n    {\n        if (st.empty())\n        {\n            st.push(i);\n        }\n        else\n        {\n\n            while (!st.empty() && temperatures[st.top()] < temperatures[i])\n            {\n                ans[st.top()] = i - st.top();\n                st.pop();\n            }\n\n            st.push(i);\n        }\n    }\n\n    return ans;\n}\n\n};",
+  "title_slug": "daily-temperatures",
+  "has_notes": false,
+  "flag_type": 1
+}

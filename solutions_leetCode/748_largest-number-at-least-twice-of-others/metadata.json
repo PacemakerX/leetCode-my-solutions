@@ -1,0 +1,18 @@
+{
+  "id": 1116633167,
+  "question_id": 748,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702230421,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1116633167/",
+  "is_pending": "Not Pending",
+  "title": "Largest Number At Least Twice of Others",
+  "memory": "40.5 MB",
+  "code": "class Solution {\n    public int dominantIndex(int[] nums) {\n        int max=0;\n        for(int i=0;i<nums.length;i++){\n            if(nums[max]<nums[i])\n            max=i;\n            \n        }\n        for(int i=0;i<nums.length;i++){\n            if(max!=i &&!(nums[max]>=2*nums[i]))\n            return -1;\n            \n        }\n        return max;\n    }\n}",
+  "title_slug": "largest-number-at-least-twice-of-others",
+  "has_notes": false,
+  "flag_type": 1
+}

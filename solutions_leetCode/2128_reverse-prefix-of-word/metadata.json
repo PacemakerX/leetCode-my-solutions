@@ -1,0 +1,18 @@
+{
+  "id": 1246772980,
+  "question_id": 2128,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1714587157,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1246772980/",
+  "is_pending": "Not Pending",
+  "title": "Reverse Prefix of Word",
+  "memory": "41.7 MB",
+  "code": "class Solution {\n    public String reversePrefix(String word, char ch) {\n           if(word.indexOf(ch)==-1)\n        return word;\n        int i = word.indexOf(ch);\n        StringBuilder str = new StringBuilder(word.substring(0, i+1));\n        str.reverse();\n        str.append(word.substring(i+1, word.length()));\n        return str.toString();\n\n    }\n}",
+  "title_slug": "reverse-prefix-of-word",
+  "has_notes": false,
+  "flag_type": 1
+}

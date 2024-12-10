@@ -1,0 +1,18 @@
+{
+  "id": 1349735204,
+  "question_id": 2470,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723191077,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "97 ms",
+  "url": "/submissions/detail/1349735204/",
+  "is_pending": "Not Pending",
+  "title": "Removing Stars From a String",
+  "memory": "27.5 MB",
+  "code": "class Solution {\npublic:\n    string removeStars(string s) {\n        \n        \n        stack<char> st;\n        \n        string ans=\"\";\n        for(auto ch : s){\n            if(ch!='*'){\n                ans+=ch;\n            }\n            else{\n                ans.erase(ans.length()-1);\n            }\n        }\n        return ans;\n    }\n};",
+  "title_slug": "removing-stars-from-a-string",
+  "has_notes": false,
+  "flag_type": 1
+}

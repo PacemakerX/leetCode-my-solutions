@@ -1,0 +1,18 @@
+{
+  "id": 1265022818,
+  "question_id": 3429,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1716394233,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1265022818/",
+  "is_pending": "Not Pending",
+  "title": "Special Array I",
+  "memory": "43 MB",
+  "code": "class Solution {\n    public boolean isArraySpecial(int[] nums) {\n        \n        for(int i=1;i<nums.length;i++){\n            int a=nums[i-1]%2;\n            int b=nums[i]%2;\n            \n            if(a==b)\n                return false;\n            \n        }\n        return true;\n    }\n}",
+  "title_slug": "special-array-i",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1188006922,
+  "question_id": 15,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709059016,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "29 ms",
+  "url": "/submissions/detail/1188006922/",
+  "is_pending": "Not Pending",
+  "title": "3Sum",
+  "memory": "51.4 MB",
+  "code": "class Solution {\n    public List<List<Integer>> threeSum(int[] nums) {\n        int n=  nums.length;\n\n        List<List<Integer>> ans = new ArrayList<>();\n        Arrays.sort(nums);\n\n        for (int i = 0; i < n; i++) {\n            //remove duplicates:\n            if (i != 0 && nums[i] == nums[i - 1]) continue;\n\n            //moving 2 pointers:\n            int j = i + 1;\n            int k = n - 1;\n            while (j < k) {\n                int sum = nums[i] + nums[j] + nums[k];\n                if (sum < 0) {\n                    j++;\n                } else if (sum > 0) {\n                    k--;\n                } else {\n                    List<Integer> temp = Arrays.asList(nums[i], nums[j], nums[k]);\n                    ans.add(temp);\n                    j++;\n                    k--;\n                    //skip the duplicates:\n                    while (j < k && nums[j] == nums[j - 1]) j++;\n                    while (j < k && nums[k] == nums[k + 1]) k--;\n                }\n            }\n        }\n\n        return ans;\n    }\n}",
+  "title_slug": "3sum",
+  "has_notes": false,
+  "flag_type": 1
+}

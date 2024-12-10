@@ -1,0 +1,18 @@
+{
+  "id": 1207177962,
+  "question_id": 56,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710763842,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "8 ms",
+  "url": "/submissions/detail/1207177962/",
+  "is_pending": "Not Pending",
+  "title": "Merge Intervals",
+  "memory": "46.4 MB",
+  "code": "class Solution {\n    public int[][] merge(int[][] intervals) {\n\n         Arrays.sort(intervals, new Comparator<int[]>() {\n            public int compare(int[] a, int[] b) {\n                return a[0] - b[0];\n            }\n        });\n        \n        List<List<Integer>> ls = new ArrayList<>();\n        for(int i =0;i<intervals.length;i++){\n\n          if(ls.isEmpty() || ls.get(ls.size()-1).get(1)<intervals[i][0]){\n\n                ls.add(Arrays.asList(intervals[i][0],intervals[i][1]));\n          }\n          else\n            ls.get(ls.size()-1).set(1,Math.max(ls.get(ls.size()-1).get(1),intervals[i][1]));\n    \n        }\n\n        int ans[][]= new int[ls.size()][2];\n\n        for(int i=0;i<ans.length;i++){\n            ans[i][0]=ls.get(i).get(0);\n            ans[i][1]=ls.get(i).get(1);\n        }\n\n        return ans;\n    }\n}",
+  "title_slug": "merge-intervals",
+  "has_notes": false,
+  "flag_type": 1
+}

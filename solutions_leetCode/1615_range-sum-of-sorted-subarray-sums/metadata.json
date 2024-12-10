@@ -1,0 +1,18 @@
+{
+  "id": 1196189036,
+  "question_id": 1615,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709769644,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "73 ms",
+  "url": "/submissions/detail/1196189036/",
+  "is_pending": "Not Pending",
+  "title": "Range Sum of Sorted Subarray Sums",
+  "memory": "46.3 MB",
+  "code": "class Solution {\n    public int rangeSum(int[] nums, int n, int left, int right) {\n\n\n\n        int[] ans = new int[n * (n + 1) / 2];\n\n        int k = 0;\n\n        for (int i = 0; i < n; i++) {\n            int sum = nums[i];\n            ans[k++] = sum;\n            for (int j = i + 1; j < n; j++) {\n                sum += nums[j];\n                ans[k++] = sum;\n            }\n        }\n\n        Arrays.sort(ans);\n\n        // int sumleft=ans[0];\n        for (k = 1; k < right; k++)\n            ans[k] = (ans[k] + ans[k - 1])% (int)(Math.pow(10,9)+7);\n\n            if(left>=2)\n        return ans[right - 1] - ans[left - 2];\n        else\n            return ans[right-1];\n}}",
+  "title_slug": "range-sum-of-sorted-subarray-sums",
+  "has_notes": false,
+  "flag_type": 1
+}

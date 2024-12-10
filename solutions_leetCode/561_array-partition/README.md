@@ -1,0 +1,26 @@
+# Array Partition
+
+**Question ID**: 561  
+**Language**: Java  
+**Status**: Accepted  
+**Runtime**: 14 ms  
+**Memory**: 47.1 MB  
+
+## Solution Code
+```java
+// https://leetcode.com/problems/array-partition
+
+class Solution {
+    public int arrayPairSum(int[] nums) {
+        
+        Arrays.sort(nums);
+        int sum=0;
+        
+        for(int i=1;i<nums.length;i+=2){
+            sum+=Math.min(nums[i],nums[i-1]);
+        }
+        
+        return sum;
+    }
+}
+```

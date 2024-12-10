@@ -1,0 +1,18 @@
+{
+  "id": 1126811342,
+  "question_id": 1894,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703353190,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1126811342/",
+  "is_pending": "Not Pending",
+  "title": "Merge Strings Alternately",
+  "memory": "41.4 MB",
+  "code": "class Solution {\n    public String mergeAlternately(String word1, String word2) {\n          int l1 = 0, l2 = 0;\n        StringBuilder str = new StringBuilder();\n        while (l1 < word1.length() && l2 < word2.length()) {\n            str.append(word1.charAt(l1));\n            l1++;\n\n            str.append(word2.charAt(l2));\n            l2++;\n\n        }\n        while (l1 < word1.length()) {\n            str.append(word1.charAt(l1));\n            l1++;\n        }\n        while (l2 < word2.length()) {\n            str.append(word2.charAt(l2));\n            l2++;\n        }\n        return str.toString();\n    }\n}",
+  "title_slug": "merge-strings-alternately",
+  "has_notes": false,
+  "flag_type": 1
+}

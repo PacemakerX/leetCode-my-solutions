@@ -1,0 +1,18 @@
+{
+  "id": 1264283726,
+  "question_id": 78,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1716318195,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1264283726/",
+  "is_pending": "Not Pending",
+  "title": "Subsets",
+  "memory": "42.4 MB",
+  "code": "class Solution {\n    public List<List<Integer>> subsets(int[] nums) {\n        List<List<Integer>> result = new ArrayList<>();\n        result.add(new ArrayList<>()); // Add the empty subset\n        for (int num : nums) {\n            int size = result.size();\n            for (int i = 0; i < size; i++) {\n                List<Integer> subset = new ArrayList<>(result.get(i));\n                subset.add(num);\n                result.add(subset);\n            }\n        }\n        return result;\n    }\n}\n",
+  "title_slug": "subsets",
+  "has_notes": false,
+  "flag_type": 1
+}

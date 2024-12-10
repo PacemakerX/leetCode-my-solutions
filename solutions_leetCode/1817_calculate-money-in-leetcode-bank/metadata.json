@@ -1,0 +1,18 @@
+{
+  "id": 1113443101,
+  "question_id": 1817,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1701846544,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1113443101/",
+  "is_pending": "Not Pending",
+  "title": "Calculate Money in Leetcode Bank",
+  "memory": "39.5 MB",
+  "code": "class Solution {\n    public int totalMoney(int n) {\n               int sum=0;\n        for(int i=0,j=1;i<n;i++,j++){\n            if(i%7==0)\n            j=i/7+1;\n            sum+=j;\n        }\n        return sum;\n    } \n    }",
+  "title_slug": "calculate-money-in-leetcode-bank",
+  "has_notes": true,
+  "flag_type": 1
+}

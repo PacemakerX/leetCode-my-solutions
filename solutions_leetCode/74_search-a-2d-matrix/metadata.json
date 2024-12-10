@@ -1,0 +1,18 @@
+{
+  "id": 1156676010,
+  "question_id": 74,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1706203277,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1156676010/",
+  "is_pending": "Not Pending",
+  "title": "Search a 2D Matrix",
+  "memory": "42.6 MB",
+  "code": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        \nint startI = 0, endI = matrix.length - 1, startJ = 0, endJ = matrix[0].length - 1;\n        int midI = 0, midJ = 0;\n\n        while (startI <= endI && startJ <= endJ) {\n            midI = startI + (endI - startI) / 2;\n            midJ = startJ + (endJ - startJ) / 2;\n\n            if (matrix[midI][midJ] == target)\n                return true;\n            else if (matrix[midI][midJ] > target) {\n                if (matrix[midI][0] > target)\n                    endI = midI - 1;\n                else\n                    endJ = midJ - 1;\n\n            } else if (matrix[midI][midJ] < target) {\n                if (matrix[midI][matrix[midI].length - 1] < target)\n                    startI = midI + 1;\n                else\n                    startJ = midJ + 1;\n\n            }\n        }\n        return false;\n\n    }\n}",
+  "title_slug": "search-a-2d-matrix",
+  "has_notes": false,
+  "flag_type": 1
+}

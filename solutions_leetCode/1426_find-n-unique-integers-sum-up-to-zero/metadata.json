@@ -1,0 +1,18 @@
+{
+  "id": 1257080836,
+  "question_id": 1426,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1715617770,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1257080836/",
+  "is_pending": "Not Pending",
+  "title": "Find N Unique Integers Sum up to Zero",
+  "memory": "41.6 MB",
+  "code": "class Solution {\n    public int[] sumZero(int n) {\n\n        int[] ans = new int[n];\n\n        List<Integer> list = new ArrayList();\n\n        if(n%2==1){\n            list.add(0);\n            n--;\n        }\n        for(int i=1;i<n;i++){\n            list.add(i);\n            list.add(-i);\n        }\n\n        for(int i=0;i<ans.length;i++)\n            ans[i]=list.get(i);\n        \n        return ans;\n    }\n}",
+  "title_slug": "find-n-unique-integers-sum-up-to-zero",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1111561871,
+  "question_id": 14,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1701617757,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "9 ms",
+  "url": "/submissions/detail/1111561871/",
+  "is_pending": "Not Pending",
+  "title": "Longest Common Prefix",
+  "memory": "41.7 MB",
+  "code": "class Solution {\n     public  String longestCommonPrefix(String[] strs) {\n       String comm = \"\";\n\n        for (int i = 0; i < strs[0].length(); i++) {\n            int count=0;\n\n            for (int j = 1; j < strs.length && i<strs[j].length(); j++) {\n                if (strs[0].charAt(i) == (strs[j].charAt(i)))\n                    count++;\n\n            }\n            if (count == strs.length - 1)\n                comm += strs[0].charAt(i);\n            else\n                return comm;\n        }\n        return comm;\n    }\n}",
+  "title_slug": "longest-common-prefix",
+  "has_notes": false,
+  "flag_type": 1
+}

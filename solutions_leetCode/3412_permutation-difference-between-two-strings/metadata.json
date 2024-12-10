@@ -1,0 +1,18 @@
+{
+  "id": 1257047386,
+  "question_id": 3412,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1715615394,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1257047386/",
+  "is_pending": "Not Pending",
+  "title": "Permutation Difference between Two Strings",
+  "memory": "42.9 MB",
+  "code": "class Solution {\n    public int findPermutationDifference(String s, String t) {\n\n        HashMap<Character,Integer> map = new HashMap<>();\n\n        for(int i =0;i<t.length();i++)\n            map.put(t.charAt(i),i);\n\n        int sum=0;\n\n        for(int i=0;i<s.length();i++)\n            sum+=Math.abs(i-map.get(s.charAt(i)));\n\n        return sum;\n    }\n}",
+  "title_slug": "permutation-difference-between-two-strings",
+  "has_notes": false,
+  "flag_type": 1
+}

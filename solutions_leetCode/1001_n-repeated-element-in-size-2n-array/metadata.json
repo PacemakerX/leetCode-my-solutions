@@ -1,0 +1,18 @@
+{
+  "id": 1239333608,
+  "question_id": 1001,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713814711,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1239333608/",
+  "is_pending": "Not Pending",
+  "title": "N-Repeated Element in Size 2N Array",
+  "memory": "45.6 MB",
+  "code": "class Solution {\n    public int repeatedNTimes(int[] nums) {\n        int i,j;\n        for(i=0;i<nums.length;i++){\n            for(j=i+1;j<nums.length;j++){\n                if(nums[i]==nums[j]){\n                    return nums[i];\n                }\n            }\n        }\n        return nums[i];\n    }\n}",
+  "title_slug": "n-repeated-element-in-size-2n-array",
+  "has_notes": false,
+  "flag_type": 1
+}

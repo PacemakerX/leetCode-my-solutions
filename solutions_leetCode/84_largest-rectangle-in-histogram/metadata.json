@@ -1,0 +1,18 @@
+{
+  "id": 1357023197,
+  "question_id": 84,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723752443,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "98 ms",
+  "url": "/submissions/detail/1357023197/",
+  "is_pending": "Not Pending",
+  "title": "Largest Rectangle in Histogram",
+  "memory": "79.9 MB",
+  "code": "class Solution {\npublic:\n    int largestRectangleArea(vector<int>& heights) {\n        \n\n        int ans=0;\n\n        stack<int> st;\n\n        int i=0;\n        while(i<heights.size()){\n\n            if(st.empty()|| heights[i]>=heights[st.top()]){\n                st.push(i);\n                i++;\n            }else{\n                    int t=st.top();\n                    st.pop();\n\n                if(st.empty()){\n                    ans=max(ans,i*heights[t]);\n                }else{\n                    ans=max(ans, heights[t]*(i-st.top()-1));\n                }\n            }\n\n        }\n\n        while(!st.empty()){\n             int t=st.top();\n                    st.pop();\n\n                if(st.empty()){\n                    ans=max(ans,i*heights[t]);\n                }else{\n                    ans=max(ans, heights[t]*(i-st.top()-1));\n                }\n        }\n\n        return ans;\n    }\n};",
+  "title_slug": "largest-rectangle-in-histogram",
+  "has_notes": false,
+  "flag_type": 1
+}

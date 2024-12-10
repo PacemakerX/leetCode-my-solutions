@@ -1,0 +1,18 @@
+{
+  "id": 1115887688,
+  "question_id": 268,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702141921,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1115887688/",
+  "is_pending": "Not Pending",
+  "title": "Missing Number",
+  "memory": "44.5 MB",
+  "code": "class Solution {\n   public int missingNumber(int[] nums) {\n        int i = 0;\n        while (i<nums.length ) {\n            if (nums[i] != i && nums[i]!=nums.length) {\n                swap(nums, nums[i], i);\n            }\n            else\n            i++;\n        }\n        for (int j = 0; j < nums.length; j++) {\n            if(j!=nums[j])\n            return j;\n        }\n        return nums.length;\n    }\n    private void swap(int[] nums, int first, int last) {\n        int temp = nums[first];\n        nums[first] = nums[last];\n        nums[last] = temp;\n    }\n}",
+  "title_slug": "missing-number",
+  "has_notes": false,
+  "flag_type": 1
+}

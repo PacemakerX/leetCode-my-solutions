@@ -1,0 +1,18 @@
+{
+  "id": 1113531940,
+  "question_id": 1806,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1701857102,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1113531940/",
+  "is_pending": "Not Pending",
+  "title": "Count of Matches in Tournament",
+  "memory": "39.4 MB",
+  "code": "class Solution {\n    public int numberOfMatches(int n) {\n            if (n == 1)\n            return 0;\n        if(n%2==0)\n        return n/2 +numberOfMatches(n/2);\n        else\n        return (n-1)/2 +numberOfMatches((n-1)/2+1);\n    }\n}",
+  "title_slug": "count-of-matches-in-tournament",
+  "has_notes": false,
+  "flag_type": 1
+}

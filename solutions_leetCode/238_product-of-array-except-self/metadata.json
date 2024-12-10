@@ -1,0 +1,18 @@
+{
+  "id": 1204579837,
+  "question_id": 238,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710522850,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1204579837/",
+  "is_pending": "Not Pending",
+  "title": "Product of Array Except Self",
+  "memory": "53.4 MB",
+  "code": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        \n        int[] ans = new int [nums.length];\n\n        int prefix=1;\n        int postfix=1;\n\n        for(int i=0;i<nums.length;i++){\n            ans[i]=prefix;\n            prefix*=nums[i];\n\n        }\n\n        for(int i=nums.length-1;i>=0;i--){\n            ans[i]*=postfix;\n            postfix*=nums[i];\n\n        }\n\n        return ans;\n    }\n}",
+  "title_slug": "product-of-array-except-self",
+  "has_notes": false,
+  "flag_type": 1
+}

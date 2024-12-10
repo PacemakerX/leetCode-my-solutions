@@ -1,0 +1,18 @@
+{
+  "id": 1265738379,
+  "question_id": 2378,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1716465332,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "52 ms",
+  "url": "/submissions/detail/1265738379/",
+  "is_pending": "Not Pending",
+  "title": "Sender With Largest Word Count",
+  "memory": "49.5 MB",
+  "code": "class Solution {\n    public String largestWordCount(String[] messages, String[] senders) {\n        HashMap<String,Integer> map = new HashMap<>();\n\n        for(int i=0;i<messages.length;i++){\n\n            map.put(senders[i],map.getOrDefault(senders[i], 0)+getWords(messages[i]));\n        }\n\n        int max=0;\n        for( int wordCount: map.values()){\n            max=Math.max(max,wordCount);\n        }\n\n        Arrays.sort(senders);\n\n        for(int i=senders.length-1;i>=0;i--){\n            if(map.get(senders[i])==max)\n                return senders[i];\n        }\n        return \"\";\n    }\n\n    public int getWords(String str){\n\n        int count=0;\n\n        for(int i=0;i<str.length();i++)\n            if(str.charAt(i)==' ')\n                count++;\n\n        return count+1;\n    }\n}",
+  "title_slug": "sender-with-largest-word-count",
+  "has_notes": false,
+  "flag_type": 1
+}

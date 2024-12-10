@@ -1,0 +1,18 @@
+{
+  "id": 1218235689,
+  "question_id": 3381,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1711810162,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1218235689/",
+  "is_pending": "Not Pending",
+  "title": "Shortest Subarray With OR at Least K I",
+  "memory": "42.4 MB",
+  "code": "class Solution {\n    public int minimumSubarrayLength(int[] nums, int k) {\n        \n        int len=51;\n        \n        for(int i=0;i<nums.length;i++){\n            int or =nums[i];\n            for(int j=i;j<nums.length;j++){\n                or= or | nums[j];\n                 if(or>=k){\n                    len=Math.min(len,j-i+1);\n                }\n            }\n\n        }\n        return len==51?-1:len;\n    }\n}",
+  "title_slug": "shortest-subarray-with-or-at-least-k-i",
+  "has_notes": false,
+  "flag_type": 1
+}

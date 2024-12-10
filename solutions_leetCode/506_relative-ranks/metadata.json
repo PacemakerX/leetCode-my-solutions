@@ -1,0 +1,18 @@
+{
+  "id": 1252940212,
+  "question_id": 506,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1715196504,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "8 ms",
+  "url": "/submissions/detail/1252940212/",
+  "is_pending": "Not Pending",
+  "title": "Relative Ranks",
+  "memory": "45.7 MB",
+  "code": "class Solution {\n    public String[] findRelativeRanks(int[] score) {\n        \n        int[] nums =new int[score.length];\n        for(int i=0;i<score.length;i++)\n            nums[i]=score[i];\n        \n        Arrays.sort(nums);\n        HashMap<Integer,String> map= new HashMap<>();\n        for(int i=nums.length-1;i>=0;i--)\n            if(i==nums.length-1)\n                map.put(nums[i],\"Gold Medal\");\n        else if(i==nums.length-2)\n            map.put(nums[i],\"Silver Medal\");\n        else if(i==nums.length-3)\n            map.put(nums[i],\"Bronze Medal\");\n        else\n            map.put(nums[i],nums.length-i+\"\");\n        \n        String[] ans = new String[score.length];\n        \n        for(int i=0;i<score.length;i++)\n            ans[i]=map.get(score[i]);\n\n       return ans; \n        \n    }\n}",
+  "title_slug": "relative-ranks",
+  "has_notes": false,
+  "flag_type": 1
+}

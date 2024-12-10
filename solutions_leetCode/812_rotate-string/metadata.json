@@ -1,0 +1,18 @@
+{
+  "id": 1131563022,
+  "question_id": 812,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703870824,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1131563022/",
+  "is_pending": "Not Pending",
+  "title": "Rotate String",
+  "memory": "41.3 MB",
+  "code": "class Solution {\n    public boolean rotateString(String s, String goal) {\n        if(s.length()!=goal.length())\n        return false;\n        int count=1;\n        StringBuilder str = new StringBuilder(s);\n        while(count<=s.length()){\n            str.append(str.charAt(0));\n            str.deleteCharAt(0);\n            if((str.toString()).equals(goal))\n            return true;\n            count++;\n        }\n        return false;\n        \n    }\n}",
+  "title_slug": "rotate-string",
+  "has_notes": false,
+  "flag_type": 1
+}

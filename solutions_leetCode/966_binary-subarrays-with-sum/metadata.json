@@ -1,0 +1,18 @@
+{
+  "id": 1203047668,
+  "question_id": 966,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710381294,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "21 ms",
+  "url": "/submissions/detail/1203047668/",
+  "is_pending": "Not Pending",
+  "title": "Binary Subarrays With Sum",
+  "memory": "49.8 MB",
+  "code": "class Solution {\r\n\r\n    public int numSubarraysWithSum(int[] nums, int goal) {\r\n\r\n\r\n\r\n        HashMap<Integer,Integer> map = new HashMap<>();\r\n\r\n\r\n\r\n        int sum=0;\r\n\r\n        int count=0,req=0;\r\n\r\n        map.put(0,1);\r\n\r\n        for(int i=0;i<nums.length;i++){\r\n\r\n\r\n\r\n            sum+=nums[i];\r\n\r\n            req=sum-goal;\r\n\r\n\r\n\r\n            \r\n\r\n                count+=map.getOrDefault(req,0);\r\n\r\n\r\n\r\n            map.put(sum,map.getOrDefault(sum,0)+1);\r\n\r\n        }\r\n\r\n    \r\n\r\n    return count;\r\n\r\n}}",
+  "title_slug": "binary-subarrays-with-sum",
+  "has_notes": false,
+  "flag_type": 1
+}

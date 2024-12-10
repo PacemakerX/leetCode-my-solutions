@@ -1,0 +1,18 @@
+{
+  "id": 1344519362,
+  "question_id": 239,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1722792638,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "176 ms",
+  "url": "/submissions/detail/1344519362/",
+  "is_pending": "Not Pending",
+  "title": "Sliding Window Maximum",
+  "memory": "137.4 MB",
+  "code": "class Solution {\npublic:\n\n    struct monotone_deque {\n\n        deque<int> dq;\n\n        void insert(int x){\n            while(!dq.empty() && dq.back()<x)\n                dq.pop_back();\n\n            dq.push_back(x);\n        }\n        void remove(int x){\n            if(dq.front()==x)\n                dq.pop_front();\n        }\n\n        int  getMax(){\n            return dq.front();\n        }\n    };\n    vector<int> maxSlidingWindow(vector<int>& nums, int k) {\n        \n        monotone_deque mt;\n\n        vector<int> ans;\n        for(int i=0;i<nums.size();i++){\n            mt.insert(nums[i]);\n\n            if(i-k>=0)\n                mt.remove(nums[i-k]);\n            if(i>=k-1)\n                ans.push_back(mt.getMax());\n        }\n\n        return ans;\n    }\n};",
+  "title_slug": "sliding-window-maximum",
+  "has_notes": false,
+  "flag_type": 1
+}

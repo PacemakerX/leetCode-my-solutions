@@ -1,0 +1,18 @@
+{
+  "id": 1190898431,
+  "question_id": 3055,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709320144,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1190898431/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Odd Binary Number",
+  "memory": "42.7 MB",
+  "code": "class Solution {\n    public String maximumOddBinaryNumber(String s) {\n\n\n        int numOfOne=0;\n        int numOfZero=0;\n\n        for(int i=0;i<s.length();i++){\n            if(s.charAt(i)=='1')\n                numOfOne++;\n            else\n                numOfZero++;\n        }\n        \n        StringBuilder str = new StringBuilder();\n         str.append('1');\n         numOfOne--;\n\n         while(numOfZero>0){\n            str.append('0');\n            numOfZero--;\n         }\n        while(numOfOne>0){\n            str.append('1');\n        numOfOne--;\n        }\n\n        return str.reverse().toString();\n    }\n}",
+  "title_slug": "maximum-odd-binary-number",
+  "has_notes": false,
+  "flag_type": 1
+}

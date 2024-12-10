@@ -1,0 +1,18 @@
+{
+  "id": 1120399627,
+  "question_id": 121,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702652210,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1120399627/",
+  "is_pending": "Not Pending",
+  "title": "Best Time to Buy and Sell Stock",
+  "memory": "61.4 MB",
+  "code": "class Solution {\n    public int maxProfit(int[] prices) {\n        int lsf = Integer.MAX_VALUE;\n        int op = 0;\n        int pist = 0;\n        \n        for(int i = 0; i < prices.length; i++){\n            if(prices[i] < lsf){\n                lsf = prices[i];\n            }\n            pist = prices[i] - lsf;\n            if(op < pist){\n                op = pist;\n            }\n        }\n        return op;\n    }\n}",
+  "title_slug": "best-time-to-buy-and-sell-stock",
+  "has_notes": false,
+  "flag_type": 1
+}

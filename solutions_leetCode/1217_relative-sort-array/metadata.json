@@ -1,0 +1,18 @@
+{
+  "id": 1139715326,
+  "question_id": 1217,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1704647826,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1139715326/",
+  "is_pending": "Not Pending",
+  "title": "Relative Sort Array",
+  "memory": "41.8 MB",
+  "code": "class Solution {\n    public int[] relativeSortArray(int[] arr1, int[] arr2) {\n            int max = -1;\n        for (int i : arr1) {\n            max = Math.max(max, i);\n\n        }\n        int[] fre = new int[max + 1];\n        for (int i : arr1) {\n            fre[i]++;\n\n        }\n        int i = 0;\n        for (int j = 0; j < arr2.length; j++) {\n            while (fre[arr2[j]] > 0) {\n                arr1[i] = arr2[j];\n                fre[arr2[j]]--;\n                i++;\n            }\n\n        }\n        for (int k = 0; k < fre.length; k++) {\n            while(fre[k] != 0) {\n                arr1[i] = k;\n                i++;\n                fre[k]--;\n\n            }\n\n        }\n        return arr1;\n\n    }\n}",
+  "title_slug": "relative-sort-array",
+  "has_notes": false,
+  "flag_type": 1
+}

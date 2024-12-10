@@ -1,0 +1,18 @@
+{
+  "id": 1130464713,
+  "question_id": 1505,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703760423,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1130464713/",
+  "is_pending": "Not Pending",
+  "title": "Create Target Array in the Given Order",
+  "memory": "41.9 MB",
+  "code": "class Solution {\n    public int[] createTargetArray(int[] nums, int[] index) {\n            ArrayList<Integer> ls = new ArrayList<>(nums.length);\n\n        for (int i = 0; i < nums.length; i++) {\n            ls.add(index[i], nums[i]);\n        }\n        for (int i = 0; i < nums.length; i++) {\n            nums[i] = ls.get(i);\n\n        }\n        return nums;\n    }\n}",
+  "title_slug": "create-target-array-in-the-given-order",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1198833236,
+  "question_id": 2634,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710011825,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1198833236/",
+  "is_pending": "Not Pending",
+  "title": "Minimum Common Value",
+  "memory": "62.7 MB",
+  "code": "class Solution {\n    public int getCommon(int[] nums1, int[] nums2) {\n\n        int left=0, right=0,num=-1;\n\n        while(left<nums1.length && right<nums2.length){\n\n            if(nums1[left]<nums2[right])\n                left++;\n            else if(nums1[left]>nums2[right])\n                right++;\n            else{\n                 num=nums1[left];\n                break;\n            }\n\n        }\n        return num;\n        \n    }\n}",
+  "title_slug": "minimum-common-value",
+  "has_notes": false,
+  "flag_type": 1
+}

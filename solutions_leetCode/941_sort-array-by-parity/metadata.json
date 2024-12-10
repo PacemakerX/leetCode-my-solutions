@@ -1,0 +1,18 @@
+{
+  "id": 1116352691,
+  "question_id": 941,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702198408,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "55 ms",
+  "url": "/submissions/detail/1116352691/",
+  "is_pending": "Not Pending",
+  "title": "Sort Array By Parity",
+  "memory": "43.7 MB",
+  "code": "class Solution {\n    public int[] sortArrayByParity(int[] nums) {\n         for (int i = 0; i < nums.length - 1; i++) {\n            for (int j = i + 1; j > 0; j--) {\n                if (nums[j] % 2 == 0 && nums[j - 1] % 2 != 0)\n                    swap(nums, j, j - 1);\n                else\n                    break;\n\n            }\n\n        }\n        return nums;\n    }\n\n    public static void swap(int[] nums, int first, int last) {\n        int temp = nums[first];\n        nums[first] = nums[last];\n        nums[last] = temp;\n    }\n    }",
+  "title_slug": "sort-array-by-parity",
+  "has_notes": false,
+  "flag_type": 1
+}

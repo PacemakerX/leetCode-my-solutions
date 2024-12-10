@@ -1,0 +1,18 @@
+{
+  "id": 1170833135,
+  "question_id": 441,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1707502049,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1170833135/",
+  "is_pending": "Not Pending",
+  "title": "Arranging Coins",
+  "memory": "41.1 MB",
+  "code": "class Solution {\n    public int arrangeCoins(int n) {\n\n    int start=1,end=n,mid=0;\n\n    while(start<=end){\n    mid=start+(end-start)/2;\n\n    if((long)mid*(mid+1)/2>n)\n        end=mid-1;\n    else\n    start=mid+1;\n        \n    }\n    return end;\n}}",
+  "title_slug": "arranging-coins",
+  "has_notes": false,
+  "flag_type": 1
+}

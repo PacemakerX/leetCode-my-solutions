@@ -1,0 +1,18 @@
+{
+  "id": 1110910302,
+  "question_id": 27,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1701532704,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1110910302/",
+  "is_pending": "Not Pending",
+  "title": "Remove Element",
+  "memory": "40.7 MB",
+  "code": "class Solution {\n      public  int removeElement(int[] nums, int val) {\n        int k = 0;\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] != val) {\n                nums[k] = nums[i];\n                k++;\n            }\n        }\n        return k;\n    }\n\n}",
+  "title_slug": "remove-element",
+  "has_notes": false,
+  "flag_type": 3
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1220443135,
+  "question_id": 2800,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1712000183,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "10 ms",
+  "url": "/submissions/detail/1220443135/",
+  "is_pending": "Not Pending",
+  "title": "Minimum String Length After Removing Substrings",
+  "memory": "44.3 MB",
+  "code": "class Solution {\n    public int minLength(String s) {\n\n        StringBuilder str= new StringBuilder(s);\n\n        while(s.contains(\"AB\") || s.contains(\"CD\")){\n            if(s.contains(\"AB\"))\n                str.delete(str.indexOf(\"AB\"),str.indexOf(\"AB\")+2);\n\n            if(s.contains(\"CD\"))\n                str.delete(str.indexOf(\"CD\"),str.indexOf(\"CD\")+2);\n            \n            s=str.toString();\n        }\n        \n        return s.length();\n    }\n}",
+  "title_slug": "minimum-string-length-after-removing-substrings",
+  "has_notes": false,
+  "flag_type": 1
+}

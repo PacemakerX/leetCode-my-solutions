@@ -1,0 +1,18 @@
+{
+  "id": 1240440107,
+  "question_id": 561,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713932154,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "14 ms",
+  "url": "/submissions/detail/1240440107/",
+  "is_pending": "Not Pending",
+  "title": "Array Partition",
+  "memory": "47.1 MB",
+  "code": "class Solution {\n    public int arrayPairSum(int[] nums) {\n        \n        Arrays.sort(nums);\n        int sum=0;\n        \n        for(int i=1;i<nums.length;i+=2){\n            sum+=Math.min(nums[i],nums[i-1]);\n        }\n        \n        return sum;\n    }\n}",
+  "title_slug": "array-partition",
+  "has_notes": false,
+  "flag_type": 1
+}

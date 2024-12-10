@@ -1,0 +1,18 @@
+{
+  "id": 1192151151,
+  "question_id": 3347,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709433826,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1192151151/",
+  "is_pending": "Not Pending",
+  "title": "Distribute Elements Into Two Arrays I",
+  "memory": "44.8 MB",
+  "code": "class Solution {\n    public int[] resultArray(int[] nums) {\n        \n        List<Integer> ls1 = new ArrayList<>();\n        List<Integer> ls2 = new ArrayList<>();\n        \n        ls1.add(nums[0]);\n        ls2.add(nums[1]);\n        \n        int i=2;\n        int n=2;\n        while(n<=nums.length && i<nums.length){\n            \n            if(ls1.get(ls1.size()-1) >ls2.get(ls2.size()-1))\n                ls1.add(nums[i]);\n            else\n                ls2.add(nums[i]);\n            i++;\n            n++;\n        }\n        ls1.addAll(ls2);\n        for(int j=0;j<nums.length;j++){\n            nums[j]=ls1.get(j);\n        }\n        \n        return nums;\n    }\n}",
+  "title_slug": "distribute-elements-into-two-arrays-i",
+  "has_notes": false,
+  "flag_type": 1
+}

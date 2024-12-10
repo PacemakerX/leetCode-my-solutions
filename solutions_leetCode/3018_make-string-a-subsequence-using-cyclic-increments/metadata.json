@@ -1,0 +1,18 @@
+{
+  "id": 1469989086,
+  "question_id": 3018,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1733301346,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "8 ms",
+  "url": "/submissions/detail/1469989086/",
+  "is_pending": "Not Pending",
+  "title": "Make String a Subsequence Using Cyclic Increments",
+  "memory": "17.1 MB",
+  "code": "class Solution {\npublic:\n    bool canMakeSubsequence(string str1, string str2) {\n\n        int i=0,j=0,n1=str1.size(),n2=str2.size();\n        int len=0;\n        while(i<n1){\n            while(i<n1 && j<n2){\n                if(str1[i]==str2[j]){\n                    len++;\n                   j++;\n                }else if(('a' + (str1[i] - 'a' + 1) % 26)==str2[j]){\n                 j++;\n                 len++;\n               }\n\n                   i++;\n            }\n               i++;\n        }\n\n       \n\n        return (len==n2);\n    }\n};",
+  "title_slug": "make-string-a-subsequence-using-cyclic-increments",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1177227219,
+  "question_id": 475,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1708110228,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "16 ms",
+  "url": "/submissions/detail/1177227219/",
+  "is_pending": "Not Pending",
+  "title": "Heaters",
+  "memory": "46.5 MB",
+  "code": "class Solution {\n    public int findRadius(int[] houses, int[] heaters) {\n        Arrays.sort(heaters);\n        int ans = 0;\n        for(int ele : houses){\n            int lo = 0, hi = heaters.length - 1;\n            int justSmaller = -1, justLarger = -1;\n            while(lo <= hi){\n                int mid = (lo + hi) / 2;\n                if(heaters[mid] == ele){\n                    justSmaller = heaters[mid];\n                    justLarger = heaters[mid];\n                    break;\n                }\n                else if(heaters[mid] < ele){\n                    justSmaller = heaters[mid];\n                    lo = mid + 1;\n                }\n                else{\n                    justLarger = heaters[mid];\n                    hi = mid - 1;\n                }\n            }\n            justSmaller = justSmaller == -1 ? Integer.MAX_VALUE : ele - justSmaller;\n            justLarger = justLarger == -1 ? Integer.MAX_VALUE : justLarger - ele;\n            ans = Math.max(ans, Math.min(justSmaller, justLarger));\n        }\n        return ans;\n    }\n}\n\n\n\n\n\n\n\n\n\n\n",
+  "title_slug": "heaters",
+  "has_notes": false,
+  "flag_type": 1
+}

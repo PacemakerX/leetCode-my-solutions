@@ -1,0 +1,18 @@
+{
+  "id": 1145214317,
+  "question_id": 2271,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1705166085,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "/submissions/detail/1145214317/",
+  "is_pending": "Not Pending",
+  "title": "Rearrange Array Elements by Sign",
+  "memory": "76.9 MB",
+  "code": "class Solution {\n    public int[] rearrangeArray(int[] nums) {\n        \n         int[] newNums= new int[nums.length];\n        \n        int eveNums=0,oddNums=1;\n        for (int i : nums) {\n            if(i>0){\n                newNums[eveNums]=i;\n                eveNums+=2;\n\n            }\n            else{\n                newNums[oddNums]=i;\n                oddNums+=2;\n            }\n        }\n        return newNums;\n    }\n}",
+  "title_slug": "rearrange-array-elements-by-sign",
+  "has_notes": false,
+  "flag_type": 1
+}

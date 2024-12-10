@@ -1,0 +1,18 @@
+{
+  "id": 1347433303,
+  "question_id": 46,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723013723,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "/submissions/detail/1347433303/",
+  "is_pending": "Not Pending",
+  "title": "Permutations",
+  "memory": "9 MB",
+  "code": "class Solution {\npublic:\n    vector<vector<int>> permute(vector<int>& nums) {\n    \n    vector<vector<int>> ans;\n\n    sort(nums.begin(),nums.end());\n    do\n    {\n        ans.push_back(nums);\n        /* code */\n    } while (next_permutation(nums.begin(),nums.end()));\n    \n    return ans;\n    }\n};",
+  "title_slug": "permutations",
+  "has_notes": false,
+  "flag_type": 1
+}

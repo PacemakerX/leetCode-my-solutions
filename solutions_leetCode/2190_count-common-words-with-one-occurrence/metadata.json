@@ -1,0 +1,18 @@
+{
+  "id": 1344966347,
+  "question_id": 2190,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1722834871,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "34 ms",
+  "url": "/submissions/detail/1344966347/",
+  "is_pending": "Not Pending",
+  "title": "Count Common Words With One Occurrence",
+  "memory": "24.2 MB",
+  "code": "class Solution {\npublic:\n    int countWords(vector<string>& words1, vector<string>& words2) {\n\n        unordered_map <string,int> c1;\n                unordered_map <string,int> c2;\n\n        for(auto word : words1)\n            c1[word]++;\n        \n        for(auto word : words2)\n            c2[word]++;\n\n        int cnt=0;\n\n\n        for(auto word : words1){\n            if(c1[word]==1 && c1[word]==c2[word])\n                cnt++;\n        }\n\n        return cnt;\n    }\n};",
+  "title_slug": "count-common-words-with-one-occurrence",
+  "has_notes": false,
+  "flag_type": 1
+}

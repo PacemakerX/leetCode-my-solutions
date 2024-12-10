@@ -1,0 +1,18 @@
+{
+  "id": 1355766274,
+  "question_id": 258,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723662390,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1355766274/",
+  "is_pending": "Not Pending",
+  "title": "Add Digits",
+  "memory": "8.5 MB",
+  "code": "class Solution {\npublic:\n    int addDigits(int num) {\n        \n        while(num>9){\n            int temp=0;\n        while(num>0){\n            temp+=num%10;\n            num/=10;\n        }\n        num=temp;\n        }\n\n        return num;\n    }\n};",
+  "title_slug": "add-digits",
+  "has_notes": false,
+  "flag_type": 1
+}

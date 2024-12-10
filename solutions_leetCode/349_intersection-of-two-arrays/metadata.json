@@ -1,0 +1,18 @@
+{
+  "id": 1115230853,
+  "question_id": 349,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702057812,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "6 ms",
+  "url": "/submissions/detail/1115230853/",
+  "is_pending": "Not Pending",
+  "title": "Intersection of Two Arrays",
+  "memory": "42.3 MB",
+  "code": "class Solution {\n     public  int[] intersection(int[] nums1, int[] nums2) {\n        ArrayList<Integer> inter = new ArrayList<>();\n        for (int a : nums1) {\n            if (search(a, nums2) && !inter.contains(a))\n                inter.add(a);\n\n        }\n        int[] arr = inter.stream().mapToInt(i -> i).toArray();\n        return arr;\n    }\n\n    public  boolean search(int target, int[] a) {\n        for (int i : a) {\n            if (target == i)\n                return true;\n        }\n        return false;\n\n    }\n}",
+  "title_slug": "intersection-of-two-arrays",
+  "has_notes": false,
+  "flag_type": 1
+}

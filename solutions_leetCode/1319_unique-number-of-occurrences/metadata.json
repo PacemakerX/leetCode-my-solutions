@@ -1,0 +1,18 @@
+{
+  "id": 1148683888,
+  "question_id": 1319,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1705485536,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1148683888/",
+  "is_pending": "Not Pending",
+  "title": "Unique Number of Occurrences",
+  "memory": "42.2 MB",
+  "code": "class Solution {\n    public boolean uniqueOccurrences(int[] arr) {\n            Map<Integer, Integer> countMap = new HashMap<>();\n\n        // Count occurrences of each value in the array\n        for (int num : arr) {\n            countMap.put(num, countMap.getOrDefault(num, 0) + 1);\n        }\n\n        // Check if the counts are unique using a HashSet\n        Set<Integer> occurrencesSet = new HashSet<>(countMap.values());\n\n        // If the sizes are the same, counts are unique; otherwise, they are not\n        return occurrencesSet.size() == countMap.size();\n    }\n\n    \n}",
+  "title_slug": "unique-number-of-occurrences",
+  "has_notes": false,
+  "flag_type": 1
+}

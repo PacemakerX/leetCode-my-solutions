@@ -1,0 +1,18 @@
+{
+  "id": 1277110589,
+  "question_id": 2106,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1717480978,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1277110589/",
+  "is_pending": "Not Pending",
+  "title": "Find Greatest Common Divisor of Array",
+  "memory": "43.2 MB",
+  "code": "class Solution {\n    public int findGCD(int[] nums) {\n        \n        int min=1001,max=0;\n\n        for(int i=0;i<nums.length;i++){\n            min=Math.min(min,nums[i]);\n            max=Math.max(max,nums[i]);\n        }\n\n        return calculate(min,max);\n    }\n\n    int calculate(int a,int b){\n        if(b==0)\n            return a;\n        else\n            return calculate(b,a%b);\n    }\n}",
+  "title_slug": "find-greatest-common-divisor-of-array",
+  "has_notes": false,
+  "flag_type": 1
+}

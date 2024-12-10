@@ -1,0 +1,18 @@
+{
+  "id": 1125791213,
+  "question_id": 1537,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703241279,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "7 ms",
+  "url": "/submissions/detail/1125791213/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Score After Splitting a String",
+  "memory": "41.5 MB",
+  "code": "class Solution {\n      public int maxScore(String s) {\n        int max = -1;\n        for (int i = 1; i < s.length(); i++) {\n            int score = getScore(s, i);\n            if (max < score)\n                max = score;\n        }\n        return max;\n\n    }\n\n    public int getScore(String str, int i) {\n          int count = 0;\n        for (int j = 0; j < str.length(); j++) {\n            if (j < i) {\n                if (str.charAt(j) == '0')\n                    count++;\n            } else if ((str.charAt(j) == '1'))\n                count++;\n\n        }\n        return count;\n    }\n}",
+  "title_slug": "maximum-score-after-splitting-a-string",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1268776267,
+  "question_id": 551,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1716749555,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1268776267/",
+  "is_pending": "Not Pending",
+  "title": "Student Attendance Record I",
+  "memory": "41.3 MB",
+  "code": "class Solution {\n    public boolean checkRecord(final String s) {\n        int absent = 0, late = 0;\n\n        for(int i = 0; i < s.length(); ++i) {\n            final char c = s.charAt(i);\n\n            if(c == 'A') {\n                absent++;\n                late = 0;\n            } else if(c == 'L') {\n                late++;\n            } else {\n                late = 0;\n            }\n\n            if(absent > 1 || late > 2)\n                return false;\n        }\n\n        return true;\n    }\n}",
+  "title_slug": "student-attendance-record-i",
+  "has_notes": false,
+  "flag_type": 1
+}

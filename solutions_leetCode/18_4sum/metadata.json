@@ -1,0 +1,18 @@
+{
+  "id": 1191842625,
+  "question_id": 18,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709401410,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "17 ms",
+  "url": "/submissions/detail/1191842625/",
+  "is_pending": "Not Pending",
+  "title": "4Sum",
+  "memory": "43.9 MB",
+  "code": "class Solution {\n    public List<List<Integer>> fourSum(int[] nums, int target) {\n\n        List<List<Integer>> ls = new ArrayList<>();\n\n        Arrays.sort(nums);\n\n        \n\n        for(int i=0;i<nums.length;i++){\n        \n            if(i>0 && nums[i]==nums[i-1])\n                continue;\n            for(int j=i+1;j<nums.length;j++){\n\n                if(j>i+1 && nums[j]==nums[j-1])\n                    continue;\n\n                int k=j+1;\n                int l=nums.length-1;\n\n                while(k<l){\n                long sum=(long)nums[i]+(long)nums[j]+(long)nums[k]+(long)nums[l];\n                    if(sum==target){\n                        List<Integer> temp = new ArrayList<>();\n                        temp.add(nums[i]);\n                        temp.add(nums[j]);\n                        temp.add(nums[k]);\n                        temp.add(nums[l]);\n\n                        ls.add(temp);\n\n                        k++;\n                        l--;\n\n                        while(k<l && nums[k]==nums[k-1])\n                            k++;\n                        while(k<l && nums[l]==nums[l+1])\n                            l--;\n                    }\n                    else if(sum<target)\n                        k++;\n                    else\n                        l--;\n                \n                }\n            }\n        }   \n        return ls;\n    }\n}",
+  "title_slug": "4sum",
+  "has_notes": false,
+  "flag_type": 1
+}

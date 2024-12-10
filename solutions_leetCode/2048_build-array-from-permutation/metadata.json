@@ -1,0 +1,18 @@
+{
+  "id": 1193878630,
+  "question_id": 2048,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1709576101,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1193878630/",
+  "is_pending": "Not Pending",
+  "title": "Build Array from Permutation",
+  "memory": "45.2 MB",
+  "code": "class Solution {\n    public int[] buildArray(int[] nums) {\n    \n    int[] ans = new int[nums.length];\n\n    for(int i=0;i<nums.length;i++)\n        ans[i]=nums[nums[i]];\n    return ans;\n}}",
+  "title_slug": "build-array-from-permutation",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1144370906,
+  "question_id": 485,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1705077706,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1144370906/",
+  "is_pending": "Not Pending",
+  "title": "Max Consecutive Ones",
+  "memory": "45.6 MB",
+  "code": "class Solution {\n    public int findMaxConsecutiveOnes(int[] nums) {\n         int max = 0, prevMax = 0;\n\n        for (int i = 0; i < nums.length; i++) {\n            if (nums[i] == 1) {\n                max++;\n                if (i == nums.length - 1) {\n                    if (prevMax < max) \n                        prevMax = max;\n                        max = 0;\n                    \n                }\n            } else if (nums[i] == 0) {\n                if (prevMax < max) \n                    prevMax = max;\n                    max = 0;\n            }\n        }\n        return prevMax;\n        \n    }\n}",
+  "title_slug": "max-consecutive-ones",
+  "has_notes": false,
+  "flag_type": 1
+}

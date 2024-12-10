@@ -1,0 +1,18 @@
+{
+  "id": 1203035020,
+  "question_id": 1445,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710379626,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "/submissions/detail/1203035020/",
+  "is_pending": "Not Pending",
+  "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+  "memory": "60.5 MB",
+  "code": "class Solution {\n    public int numOfSubarrays(int[] arr, int k, int threshold) {\n\n        int n=0;\n        int count=0;\n        long sum=0;\n        while(n<k){\n            sum+=arr[n];\n            n++;\n        }\n        \n        if(sum/k>=threshold)\n            count++;\n        \n        for(int i=k;i<arr.length;i++){\n           sum=sum-arr[i-k]+arr[i];\n            \n            if(sum/k>=threshold)\n            count++;\n        }\n\n        return count;\n    }\n}",
+  "title_slug": "number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold",
+  "has_notes": false,
+  "flag_type": 1
+}

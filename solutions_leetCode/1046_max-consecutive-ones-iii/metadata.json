@@ -1,0 +1,18 @@
+{
+  "id": 1350793382,
+  "question_id": 1046,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1723280805,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "37 ms",
+  "url": "/submissions/detail/1350793382/",
+  "is_pending": "Not Pending",
+  "title": "Max Consecutive Ones III",
+  "memory": "58.2 MB",
+  "code": "class Solution {\npublic:\n    int longestOnes(vector<int>& nums, int k) {\n        int i=0,j=0;\n        while(j<nums.size()){\n            if(nums[j]==0){\n                k--;\n            }\n            if(k<0){\n                if(nums[i]==0){\n                    k++;\n                }\n                i++;\n            }\n            j++;\n        }\n        return j-i;\n    }\n};",
+  "title_slug": "max-consecutive-ones-iii",
+  "has_notes": false,
+  "flag_type": 1
+}

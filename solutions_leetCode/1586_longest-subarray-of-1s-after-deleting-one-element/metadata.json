@@ -1,0 +1,18 @@
+{
+  "id": 1200663198,
+  "question_id": 1586,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1710171886,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1200663198/",
+  "is_pending": "Not Pending",
+  "title": "Longest Subarray of 1's After Deleting One Element",
+  "memory": "57 MB",
+  "code": "class Solution {\n    public int longestSubarray(int[] nums) {\n\n        int max=Integer.MIN_VALUE;\n        int count=0,prev1=0;\n        boolean check=true;\n\n        for(int n : nums){\n            \n            if(n==0){\n                check=false;\n                max=Math.max(max,prev1+count);\n                prev1=count;\n                count=0;\n                \n            }\n            else\n                count++;\n        }\n        max=Math.max(max,prev1+count);\n\n        return check==true?max-1:max;\n    }\n}",
+  "title_slug": "longest-subarray-of-1s-after-deleting-one-element",
+  "has_notes": false,
+  "flag_type": 1
+}

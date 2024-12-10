@@ -1,0 +1,18 @@
+{
+  "id": 1234662033,
+  "question_id": 566,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713338328,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1234662033/",
+  "is_pending": "Not Pending",
+  "title": "Reshape the Matrix",
+  "memory": "45.2 MB",
+  "code": "class Solution {\n    public int[][] matrixReshape(int[][] mat, int r, int c) {\n\n         if (mat.length * mat[0].length != r * c)\n            return mat;\n\n        int[][] ans = new int[r][c];\n        int p = 0,q = 0;\n        for (int i = 0; i < mat.length; i++) {\n\n            for (int j = 0; j < mat[0].length; j++) {\n\n                if (q == ans[0].length) {\n                    q = 0;\n                    p++;\n                }\n                ans[p][q++] = mat[i][j];\n\n            }\n        }\n        return ans;\n    }\n}",
+  "title_slug": "reshape-the-matrix",
+  "has_notes": false,
+  "flag_type": 1
+}

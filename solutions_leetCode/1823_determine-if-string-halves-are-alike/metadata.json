@@ -1,0 +1,18 @@
+{
+  "id": 1126006782,
+  "question_id": 1823,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703263886,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "12 ms",
+  "url": "/submissions/detail/1126006782/",
+  "is_pending": "Not Pending",
+  "title": "Determine if String Halves Are Alike",
+  "memory": "41.7 MB",
+  "code": "class Solution {\n    public boolean halvesAreAlike(String s) {\n         s = s.toLowerCase();\n        int countA = 0, countB = 0;\n        for (int i = 0; i < s.length() / 2; i++) {\n            if (s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o'\n                    || s.charAt(i) == 'u')\n                countA++;\n            if (s.charAt(s.length() - 1 - i) == 'a' || s.charAt(s.length() - 1 - i) == 'e' || s.charAt(s.length() - 1 - i) == 'i' || s.charAt(s.length() - 1 - i) == 'o'\n                    || s.charAt(s.length() - 1 - i) == 'u')\n                countB++;\n\n        }\n        return countA == countB; \n    }\n}",
+  "title_slug": "determine-if-string-halves-are-alike",
+  "has_notes": false,
+  "flag_type": 1
+}

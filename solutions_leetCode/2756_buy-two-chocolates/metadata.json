@@ -1,0 +1,18 @@
+{
+  "id": 1123899305,
+  "question_id": 2756,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703045071,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1123899305/",
+  "is_pending": "Not Pending",
+  "title": "Buy Two Chocolates",
+  "memory": "43.2 MB",
+  "code": "class Solution {\n    public int buyChoco(int[] prices, int money) {\n         int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;\n        for (int i = 0; i < prices.length; i++) {\n            if (min1 > prices[i]) {\n                min2 = min1;\n                min1 = prices[i];\n            } else if (min2 >= prices[i])\n                min2 = prices[i];\n\n        }\n        return money-(min1+min2)>=0?money-(min1+min2):money;\n       }\n}",
+  "title_slug": "buy-two-chocolates",
+  "has_notes": false,
+  "flag_type": 1
+}

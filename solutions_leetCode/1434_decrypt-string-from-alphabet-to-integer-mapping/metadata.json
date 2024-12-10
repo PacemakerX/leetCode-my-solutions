@@ -1,0 +1,18 @@
+{
+  "id": 1126478381,
+  "question_id": 1434,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703323131,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1 ms",
+  "url": "/submissions/detail/1126478381/",
+  "is_pending": "Not Pending",
+  "title": "Decrypt String from Alphabet to Integer Mapping",
+  "memory": "41.4 MB",
+  "code": "class Solution {\n    public String freqAlphabets(String s) {\n         String alpha = \"abcdefghijklmnopqrstuvwxyz\";\n        StringBuilder mappedString = new StringBuilder();\n        for (int i = 0; i < s.length(); i++) {\n            if (i + 2 < s.length() && s.charAt(i + 2) == '#') {\n                mappedString.append(alpha.charAt(Integer.valueOf(s.substring(i, i + 2)) - 1));\n                i += 2;\n            } else\n                mappedString.append(alpha.charAt(Character.getNumericValue(s.charAt(i) - 1)));\n\n        }\n        return mappedString.toString();\n    }\n}",
+  "title_slug": "decrypt-string-from-alphabet-to-integer-mapping",
+  "has_notes": false,
+  "flag_type": 1
+}

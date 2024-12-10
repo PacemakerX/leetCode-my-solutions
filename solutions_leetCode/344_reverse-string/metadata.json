@@ -1,0 +1,18 @@
+{
+  "id": 1131545180,
+  "question_id": 344,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1703869427,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "2 ms",
+  "url": "/submissions/detail/1131545180/",
+  "is_pending": "Not Pending",
+  "title": "Reverse String",
+  "memory": "49 MB",
+  "code": "class Solution {\n    public void reverseString(char[] s) {\n        char ch='a';\n        int start=0;\n        while(start<s.length/2){\n            ch=s[start];\n            s[start]=s[s.length-1-start];\n            s[s.length-1-start]=ch;\n            start++;\n    }\n    }\n}",
+  "title_slug": "reverse-string",
+  "has_notes": false,
+  "flag_type": 1
+}

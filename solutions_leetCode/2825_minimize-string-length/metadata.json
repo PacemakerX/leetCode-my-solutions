@@ -1,0 +1,18 @@
+{
+  "id": 1225108146,
+  "question_id": 2825,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1712433120,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "8 ms",
+  "url": "/submissions/detail/1225108146/",
+  "is_pending": "Not Pending",
+  "title": "Minimize String Length",
+  "memory": "45.1 MB",
+  "code": "class Solution {\n    public int minimizedStringLength(String s) {\n        HashSet<Character>hs = new HashSet<>();\n        for (char c : s.toCharArray()) {\n            hs.add(c);\n        }\n        return hs.size();\n        \n    }\n}",
+  "title_slug": "minimize-string-length",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": 1121951276,
+  "question_id": 1273,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1702833583,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "1336 ms",
+  "url": "/submissions/detail/1121951276/",
+  "is_pending": "Not Pending",
+  "title": "Compare Strings by Frequency of the Smallest Character",
+  "memory": "45.2 MB",
+  "code": "class Solution {\n    public  int[] numSmallerByFrequency(String[] queries, String[] words) {\n        int[] frequency = new int[queries.length];\n        for (int i = 0; i < queries.length; i++) {\n            for (int j = 0; j < words.length; j++) {\n                if (smallestFrequenc(queries[i]) < smallestFrequenc(words[j]))\n                    frequency[i]++;\n\n            }\n        }\n        return frequency;\n\n    }\n\n    public  int smallestFrequenc(String str) {\n        char[] ch = str.toCharArray();\n        Arrays.sort(ch);\n        int count=0;\n        for (int i = 0; i < ch.length; i++) {\n            if ( ch[i] == ch[0])\n                count++;\n\n        }\n        return count;\n    }\n}",
+  "title_slug": "compare-strings-by-frequency-of-the-smallest-character",
+  "has_notes": false,
+  "flag_type": 1
+}

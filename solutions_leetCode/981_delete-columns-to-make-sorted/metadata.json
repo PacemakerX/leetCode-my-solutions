@@ -1,0 +1,18 @@
+{
+  "id": 1236837129,
+  "question_id": 981,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1713555220,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "8 ms",
+  "url": "/submissions/detail/1236837129/",
+  "is_pending": "Not Pending",
+  "title": "Delete Columns to Make Sorted",
+  "memory": "44.5 MB",
+  "code": "class Solution {\n    public int minDeletionSize(String[] strs) {\n\n        int m=strs[0].length(),n=strs.length,columns=0;\n\n        int prev=0;\n        for(int i=0;i<m;i++){\n            \n            prev=(int)strs[0].charAt(i);\n\n            for(int j=1;j<n;j++){\n                \n                if(prev>(int)strs[j].charAt(i)){\n                    columns++;\n                    break;\n                }\n                else\n                    prev=(int)strs[j].charAt(i);\n            }\n        }\n        \n        return columns;\n    }\n}",
+  "title_slug": "delete-columns-to-make-sorted",
+  "has_notes": false,
+  "flag_type": 1
+}

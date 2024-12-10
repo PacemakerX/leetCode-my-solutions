@@ -1,0 +1,18 @@
+{
+  "id": 1066022656,
+  "question_id": 35,
+  "lang": "java",
+  "lang_name": "Java",
+  "timestamp": 1696349512,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "/submissions/detail/1066022656/",
+  "is_pending": "Not Pending",
+  "title": "Search Insert Position",
+  "memory": "43.3 MB",
+  "code": "class Solution {\n      public int searchInsert(int[] nums, int target) {\n        int low = 0;\n        int high = nums.length - 1;\n        while (low <= high) {\n        int mid = low + (high - low) / 2;\n            if (target == nums[mid])\n                return mid;\n            else if (target > nums[mid])\n                low = mid + 1;\n            else if (target < nums[mid])\n                high = mid - 1;\n        }\n       return low;\n    }\n}",
+  "title_slug": "search-insert-position",
+  "has_notes": false,
+  "flag_type": 1
+}
