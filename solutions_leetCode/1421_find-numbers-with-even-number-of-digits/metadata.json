@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find Numbers with Even Number of Digits",
   "memory": "42.8 MB",
-  "code": "class Solution {\n    public int findNumbers(int[] nums) {\n         int countEven = 0;\n        for (int i : nums) {\n            String s = Integer.toString(i);\n            if (s.length() % 2 == 0)\n                countEven++;\n        }\n        return countEven;\n\n    }\n\n}",
   "title_slug": "find-numbers-with-even-number-of-digits",
   "has_notes": false,
   "flag_type": 1

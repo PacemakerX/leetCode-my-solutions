@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "XOR Queries of a Subarray",
   "memory": "58.8 MB",
-  "code": "class Solution {\n    public int[] xorQueries(int[] arr, int[][] queries) {\n        for (int i = 1; i < arr.length; i++) \n            arr[i] = arr[i] ^ arr[i-1];\n        \n        int[] ans = new int[queries.length];\n        for (int i = 0; i < queries.length; i++) {\n            int[] query = queries[i];\n            if (query[0] == 0) ans[i] = arr[query[1]];\n            else ans[i] = arr[query[1]] ^ arr[query[0] - 1];\n        }\n        return ans;\n    }\n}",
   "title_slug": "xor-queries-of-a-subarray",
   "has_notes": false,
   "flag_type": 1

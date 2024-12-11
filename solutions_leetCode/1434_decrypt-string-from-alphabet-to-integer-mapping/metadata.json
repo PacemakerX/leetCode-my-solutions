@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Decrypt String from Alphabet to Integer Mapping",
   "memory": "41.4 MB",
-  "code": "class Solution {\n    public String freqAlphabets(String s) {\n         String alpha = \"abcdefghijklmnopqrstuvwxyz\";\n        StringBuilder mappedString = new StringBuilder();\n        for (int i = 0; i < s.length(); i++) {\n            if (i + 2 < s.length() && s.charAt(i + 2) == '#') {\n                mappedString.append(alpha.charAt(Integer.valueOf(s.substring(i, i + 2)) - 1));\n                i += 2;\n            } else\n                mappedString.append(alpha.charAt(Character.getNumericValue(s.charAt(i) - 1)));\n\n        }\n        return mappedString.toString();\n    }\n}",
   "title_slug": "decrypt-string-from-alphabet-to-integer-mapping",
   "has_notes": false,
   "flag_type": 1

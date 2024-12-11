@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "To Lower Case",
   "memory": "41.5 MB",
-  "code": "class Solution {\n    public String toLowerCase(String s) {\n        return s.toLowerCase();\n    }\n}",
   "title_slug": "to-lower-case",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Plus One",
   "memory": "41 MB",
-  "code": "class Solution {\n    public int[] plusOne(int[] digits) {\n                if (digits[digits.length - 1] != 9) {\n\n            digits[digits.length - 1] += 1;\n            return digits;\n        }\n        digits[digits.length - 1] += 1;\n        for (int i = digits.length - 1; i >=0; i--) {\n            if(i==0 && digits[i]==10){\n                digits[i]%=10;\n                int [] digitsA =Arrays.copyOfRange(digits,0,digits.length+1);\n                digitsA[0]=1;\n                return digitsA;\n            }\n            if(digits[i]>9 ){\n                digits[i]%=10;\n                digits[i-1]+=1;\n            }\n\n        }\n        return digits;\n\n    }\n}",
   "title_slug": "plus-one",
   "has_notes": false,
   "flag_type": 1

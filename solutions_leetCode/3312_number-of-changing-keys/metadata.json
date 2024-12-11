@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Number of Changing Keys",
   "memory": "42.6 MB",
-  "code": "\nclass Solution {\n    public int countKeyChanges(String s) {\n\n        // count variable to count the different characters\n        int count = 0;\n\n        /* converting string into lower case because small and capital letters are same*/\n        s = s.toLowerCase();\n\n        for(int i = 1; i<s.length(); i++)\n        {\n            /* if there is different character occures, The count value will increase by 1  */\n            if(s.charAt(i-1) != s.charAt(i))\n            {\n                count++;\n            }\n        }\n        return count;\n    }\n}",
   "title_slug": "number-of-changing-keys",
   "has_notes": false,
   "flag_type": 1

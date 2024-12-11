@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Sign of the Product of an Array",
   "memory": "44.4 MB",
-  "code": "class Solution {\n    public int arraySign(int[] nums) {\n\n       int sign=1;\n\n        for(int n: nums){\n            if(n==0)\n                return 0;\n            else if(n<0)\n               sign*=-1;\n        }\n        \n        return sign;\n    }\n}",
   "title_slug": "sign-of-the-product-of-an-array",
   "has_notes": false,
   "flag_type": 1

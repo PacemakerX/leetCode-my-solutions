@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Number of Islands",
   "memory": "17.1 MB",
-  "code": "class Solution {\npublic:\n    int n,m;\n    vector<vector<int>> vis;\n\n\nvoid dfs(int a, int b,vector<vector<char>>& grid)\n{\n    if (a < 0 || a >= n || b < 0 || b >= m || grid[a][b] == '0' || vis[a][b])\n        return;\n    else\n    {\n\n        vis[a][b] = 1;\n\n        dfs(a - 1, b,grid);\n        dfs(a + 1, b,grid);\n        dfs(a, b - 1,grid);\n        dfs(a, b + 1,grid);\n    }\n}\n\n    \n    int numIslands(vector<vector<char>>& grid) {\n        \n\n        n=grid.size();\n        m=grid[0].size();\n        // vis.clear();\n        vis.assign(n,vector<int>(m,0));\n\n        int count=0;\n        for(int i=0;i<n;i++){\n            for(int j=0;j<m;j++){\n                if(!vis[i][j] && grid[i][j]=='1'){\n                    count++;\n                    dfs(i,j,grid);\n\n                }\n            }\n        }\n\n        return count;\n    }\n};",
   "title_slug": "number-of-islands",
   "has_notes": false,
   "flag_type": 1

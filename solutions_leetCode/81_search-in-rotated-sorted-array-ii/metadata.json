@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Search in Rotated Sorted Array II",
   "memory": "43.6 MB",
-  "code": "class Solution {\n    public boolean search(int[] nums, int target) {\n\n        int pvt=0,max=Integer.MIN_VALUE;\n        for(int i=0;i<nums.length;i++){\n            if(nums[i]>max){\n                max=nums[i];\n                pvt=i;\n                while(i<nums.length-1 && nums[i+1]==max){\n                pvt++;\n                i++;\n                }\n            }\n        }\n\n        if(target>nums[pvt])\n        return false;\n        else if(target <=nums[pvt] && target >= nums[0])\n        return binSearch(nums,0,pvt,target);\n        else\n        return binSearch( nums, pvt+1,nums.length-1,target);\n    }\n\n    public boolean binSearch(int [] nums,int start,int end,int target){\n        int mid=0;\n        while(start<=end){\n            \n            mid=start+(end-start)/2;\n\n            if(nums[mid]<target)\n                start=mid+1;\n            else if(nums[mid]>target)\n                end=mid-1;\n            else\n            return true;\n        }\n        return false;\n    }\n}",
   "title_slug": "search-in-rotated-sorted-array-ii",
   "has_notes": false,
   "flag_type": 1

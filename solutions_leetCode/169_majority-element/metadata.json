@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Majority Element",
   "memory": "50.2 MB",
-  "code": "class Solution {\n    public int majorityElement(int[] nums) {\n        int count = 0;\n        int candidate = 0;\n        \n        for (int num : nums) {\n            if (count == 0) {\n                candidate = num;\n            }\n            \n            if (num == candidate) {\n                count++;\n            } else {\n                count--;\n            }\n        }\n        \n        return candidate;\n    }\n}",
   "title_slug": "majority-element",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Majority Element II",
   "memory": "48 MB",
-  "code": "class Solution {\n    public List<Integer> majorityElement(int[] nums) {\n\n        List<Integer> ls = new ArrayList<>();\n        int el1=Integer.MIN_VALUE,el2=Integer.MIN_VALUE;\n        int cnt1=0,cnt2=0;\n\n        for(int n:nums){\n\n            if(cnt1==0 && n !=el2)\n                el1=n;\n            if(cnt2==0 && n!=el1)\n                el2=n;\n            if(n==el1)\n                cnt1++;\n            else if(n==el2) \n                cnt2++;\n            else{\n                cnt1--;\n                cnt2--;\n            }\n        }\n        cnt1=0;\n        cnt2=0;\n        \n        for(int num: nums){\n\n            if(num==el1)\n                cnt1++;\n            if(num==el2)\n                cnt2++;\n        }\n        if(cnt1 >Math.floor(nums.length/3))\n            ls.add(el1);\n        if(cnt2 >Math.floor(nums.length/3))\n            ls.add(el2);\n        return ls;\n    }\n}",
   "title_slug": "majority-element-ii",
   "has_notes": false,
   "flag_type": 1

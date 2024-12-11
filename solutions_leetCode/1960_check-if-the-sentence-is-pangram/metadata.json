@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Check if the Sentence Is Pangram",
   "memory": "41.2 MB",
-  "code": "class Solution {\n    public boolean checkIfPangram(String sentence) {\n        for (int i = 97; i < 123; i++) {\n            if (sentence.indexOf((char) i) == -1)\n                return false;\n\n        }\n        return true; \n    }\n}",
   "title_slug": "check-if-the-sentence-is-pangram",
   "has_notes": false,
   "flag_type": 1

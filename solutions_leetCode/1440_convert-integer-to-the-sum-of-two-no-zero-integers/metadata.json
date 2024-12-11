@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Convert Integer to the Sum of Two No-Zero Integers",
   "memory": "41.1 MB",
-  "code": "class Solution {\n    public int[] getNoZeroIntegers(int n) {\n\n        for(int i=1;i<n;i++){\n            int req=n-i;\n            if(!String.valueOf(i).contains(\"0\") && !String.valueOf(req).contains(\"0\") )\n                return new int[] {i,req};\n        }\n     return null;   \n    }\n}",
   "title_slug": "convert-integer-to-the-sum-of-two-no-zero-integers",
   "has_notes": false,
   "flag_type": 1

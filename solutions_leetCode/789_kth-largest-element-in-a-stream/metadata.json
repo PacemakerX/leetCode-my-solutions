@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Kth Largest Element in a Stream",
   "memory": "27.2 MB",
-  "code": "class KthLargest {\npublic:\n\n    multiset<int> mSet;\n    int _k;\n    KthLargest(int k, vector<int>& nums) {\n       mSet.clear();\n        _k=k;\n        for(auto i : nums)\n            mSet.insert(i);\n\n        while(mSet.size()>k){\n            mSet.erase(mSet.begin());\n        }\n\n    }\n    \n    int add(int val) {\n\n        mSet.insert(val);\n\n        while(mSet.size()>_k){\n            mSet.erase(mSet.begin());\n        }\n        return  *mSet.begin();\n        \n    }\n};\n\n/**\n * Your KthLargest object will be instantiated and called as such:\n * KthLargest* obj = new KthLargest(k, nums);\n * int param_1 = obj->add(val);\n */",
   "title_slug": "kth-largest-element-in-a-stream",
   "has_notes": false,
   "flag_type": 1

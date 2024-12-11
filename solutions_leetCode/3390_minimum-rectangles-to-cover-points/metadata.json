@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Minimum Rectangles to Cover Points",
   "memory": "97.1 MB",
-  "code": "class Solution {\n    public int minRectanglesToCoverPoints(int[][] points, int w) {\n        \n        \n        Arrays.sort(points, new Comparator<int[]>() {\n            public int compare(int[] a, int[] b) {\n                return a[0] - b[0];\n            }\n        });\n        int i = 0;\n\n        int start = 0;\n        int count = 0;\n\n        while (i < points.length) {\n            start = points[i][0];\n\n            while (i < points.length && points[i][0] <= start + w) {\n                i++;\n            }\n            count++;\n        }\n        return count;\n    }\n}",
   "title_slug": "minimum-rectangles-to-cover-points",
   "has_notes": false,
   "flag_type": 1

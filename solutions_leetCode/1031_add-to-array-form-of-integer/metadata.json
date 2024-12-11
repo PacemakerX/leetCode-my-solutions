@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Add to Array-Form of Integer",
   "memory": "45.8 MB",
-  "code": "class Solution {\n    public List<Integer> addToArrayForm(int[] num, int k) {\n        \n        List<Integer> ls = new ArrayList<>();\n        int i = num.length - 1, count = 0;\n        while (i >= 0 && k > 0) {\n            ls.addFirst((num[i] + k % 10 + count) % 10);\n            count = (num[i] + k % 10 + count) / 10;\n            i--;\n            k /= 10;\n\n        }\n        while (i >= 0) {\n            ls.addFirst((num[i] + count) % 10);\n            count = (num[i] + count) / 10;\n            i--;\n        }\n        k = k + count;\n        while (k > 0) {\n            ls.addFirst(k % 10);\n            k = k / 10;\n        }\n\n        return ls;\n    }\n}",
   "title_slug": "add-to-array-form-of-integer",
   "has_notes": false,
   "flag_type": 1

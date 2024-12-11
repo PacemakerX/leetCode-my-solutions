@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "First Missing Positive",
   "memory": "54.8 MB",
-  "code": "class Solution {\n    public int firstMissingPositive(int[] nums) {\n       int i = 0;\n        while (i < nums.length) {\n            if ( nums[i] <= nums.length && nums[i] > 0 && nums[nums[i] - 1] != nums[i] ) {\n                swap(nums, nums[i] - 1, i); \n            } else\n                i++;\n        }\n        for (int j = 0; j < nums.length; j++) {\n            if (j != nums[j] - 1)\n                return j + 1;\n        }\n        return nums.length + 1;\n    }\n\n    public static void swap(int[] nums, int first, int last) {\n        int temp = nums[first];\n        nums[first] = nums[last];\n        nums[last] = temp;\n    }\n}\n\n\n\n\n\n",
   "title_slug": "first-missing-positive",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Construct the Rectangle",
   "memory": "40.6 MB",
-  "code": "class Solution {\n    public int[] constructRectangle(int area) {\n         int[] param = { Integer.MAX_VALUE/2, Integer.MIN_VALUE/2 };\n        if(area ==1){\n            param[0]=1;\n            param [1]=1;\n            return param;\n        }\n        for (int i = 1; i <= area / 2; i++) {\n            if (area % i == 0) {\n                if (param[0] - param[1] >= Math.abs(i - area / i)) {\n                    param[0] = i >= area / i ? i : area / i;\n                    param[1] = area / param[0];\n                }\n            }\n\n        }\n        return param;\n    }\n}",
   "title_slug": "construct-the-rectangle",
   "has_notes": false,
   "flag_type": 1

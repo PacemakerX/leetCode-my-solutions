@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Spiral Matrix II",
   "memory": "7.9 MB",
-  "code": "class Solution {\npublic:\n    vector<vector<int>> generateMatrix(int n)\n{\n\n    int top = 0, bottom = n - 1, left = 0, right = n - 1;\n\n    vector<vector<int>> ans(n, vector<int>(n));\n\n    int k = 1;\n    while (top <= bottom && left <= right)\n    {\n\n        for (int i = left; i <= right; i++)\n        {\n            ans[top][i] = k++;\n        }\n        top++;\n\n        for (int i = top; i <= bottom; i++)\n        {\n            ans[i][right] = k++;\n        }\n        right--;\n\n        for (int i = right; i >= left; i--)\n        {\n            ans[bottom][i] = k++;\n        }\n        bottom--;\n\n        for (int i = bottom; i >= top; i--)\n        {\n            ans[i][left] = k++;\n        }\n        left++;\n    }\n\n    return ans;\n}\n\n};",
   "title_slug": "spiral-matrix-ii",
   "has_notes": false,
   "flag_type": 1

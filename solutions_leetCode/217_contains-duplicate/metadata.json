@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Contains Duplicate",
   "memory": "58 MB",
-  "code": "class Solution {\n    public boolean containsDuplicate(int[] nums) {\n\n        HashSet<Integer> set = new HashSet();\n\n        for(int i=0;i<nums.length;i++){\n            if(set.contains(nums[i]))\n                return true;\n            else\n                set.add(nums[i]);\n        }\n        return false;\n        \n    }\n}",
   "title_slug": "contains-duplicate",
   "has_notes": false,
   "flag_type": 1

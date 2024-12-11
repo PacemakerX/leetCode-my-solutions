@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Rank Transform of an Array",
   "memory": "62.3 MB",
-  "code": "class Solution {\n        public int[] arrayRankTransform(int[] arr) {\n\n HashMap<Integer,Integer> map = new HashMap<>();\n        int[] ans = new int[arr.length];\n        for(int i=0;i<arr.length;i++){\n            ans[i]=arr[i];\n        }\n\n        Arrays.sort(ans);\n        int count=1;\n        for(int i=0;i<ans.length;i++){\n            if(!map.containsKey(ans[i]))\n                map.put(ans[i],count++);\n        }\n        \n        for(int i=0;i<arr.length;i++){\n            arr[i]=map.get(arr[i]);\n        }\n\n        return arr;\n        }\n}",
   "title_slug": "rank-transform-of-an-array",
   "has_notes": false,
   "flag_type": 1

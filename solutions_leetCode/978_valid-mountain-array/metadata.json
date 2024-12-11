@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Valid Mountain Array",
   "memory": "45.3 MB",
-  "code": "class Solution {\n    public boolean validMountainArray(int[] arr) {\n        if (arr.length < 3)\n            return false;\n        int max = arr[0], index = 0;\n        for (int i = 0; i < arr.length; i++) {\n            if (arr[i] > max) {\n                max = arr[i];\n                index = i;\n            }\n        }\n        if(index==0 || index ==arr.length-1) return false;\n        return isIncreasing(arr, index) && isDecreasing(arr, index);\n    }\n\n    public static boolean isIncreasing(int arr[], int index) {\n        for (int i = 0; i < index; i++) {\n            if (arr[i + 1] <= arr[i])\n                return false;\n        }\n        return true;\n    }\n     public static boolean isDecreasing(int arr[], int index) {\n        for (int i = index; i < arr.length-1; ++i) {\n            if (arr[i + 1] >= arr[i])\n                return false;\n        }\n        return true;\n    }\n}",
   "title_slug": "valid-mountain-array",
   "has_notes": false,
   "flag_type": 1

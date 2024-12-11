@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Set Mismatch",
   "memory": "45.3 MB",
-  "code": "class Solution {\n    public int[] findErrorNums(int[] nums) {\n        \n    int i = 0;\n        int[] arr = new int[2];\n        while (i < nums.length) {\n            if (nums[i] != nums[nums[i] - 1] ) {\n                swap(nums, nums[i]-1, i);\n            } else\n                i++;\n        }\n        for (int j = 0; j < nums.length; j++) {\n            if (j != nums[j]-1) {\n                arr[0] = nums[j];\n                arr[1] = j + 1;\n                break;\n            }\n        }\n        return arr;\n    }\n\n    public static void swap(int[] nums, int first, int last) {\n        int temp = nums[first];\n        nums[first] = nums[last];\n        nums[last] = temp;\n    }\n}\n",
   "title_slug": "set-mismatch",
   "has_notes": false,
   "flag_type": 1

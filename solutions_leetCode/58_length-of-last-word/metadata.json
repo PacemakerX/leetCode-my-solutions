@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Length of Last Word",
   "memory": "41.6 MB",
-  "code": "class Solution {\n    public int lengthOfLastWord(String s) {\n         s=s.trim();\n        if(s.lastIndexOf(\" \")!=-1)\n        return (s.substring(s.lastIndexOf(\" \")+1, s.length()).length());\n        else\n        return s.length();\n    }\n}",
   "title_slug": "length-of-last-word",
   "has_notes": false,
   "flag_type": 1

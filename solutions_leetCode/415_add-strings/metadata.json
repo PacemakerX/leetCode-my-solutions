@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Add Strings",
   "memory": "45.4 MB",
-  "code": "class Solution {\n    public String addStrings(String num1, String num2) {\n\n        if(num1.length()>num2.length())\n            num2=paddString(num2,num1.length()-num2.length());\n        else if(num1.length()<num2.length())\n                num1=paddString(num1,num2.length()-num1.length());\n\n        String result =\"\";\n        int carry=0;\n\n        for(int i=num2.length()-1;i>=0;i--){\n            int number =(num1.charAt(i) -'0') +(num2.charAt(i)-'0') +carry;\n            result= number%10 +result;\n            carry=number/10;\n        }\n        if(carry==1)\n            result=carry+result;\n        \n        return result;\n        \n    }\n\n    public String paddString(String str, int k){\n        while(k> 0){\n            str=0+str;\n            k--;\n        }\n        return str;\n    }\n}",
   "title_slug": "add-strings",
   "has_notes": false,
   "flag_type": 1

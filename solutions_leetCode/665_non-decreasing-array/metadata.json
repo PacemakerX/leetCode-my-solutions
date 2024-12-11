@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Non-decreasing Array",
   "memory": "44 MB",
-  "code": "class Solution {\n    public boolean checkPossibility(int[] N) {\n        for (int i = 1, err = 0; i < N.length; i++)\n            if (N[i] < N[i-1])\n                if (err++ > 0 || (i > 1 && i < N.length - 1 && N[i-2] > N[i] && N[i+1] < N[i-1]))\n                    return false;\n        return true;\n    }\n}",
   "title_slug": "non-decreasing-array",
   "has_notes": false,
   "flag_type": 1

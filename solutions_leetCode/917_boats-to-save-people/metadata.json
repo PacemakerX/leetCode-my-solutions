@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Boats to Save People",
   "memory": "54.8 MB",
-  "code": "class Solution {\n    public int numRescueBoats(int[] people, int limit) {\n\n           \n        int boat=0;\n        int cap=0;\n        int i=0,j=people.length-1;\n        Arrays.sort(people);\n        while( i<=j){\n            cap=people[i]+people[j];\n            if(cap<=limit){\n                boat++;\n                i++; \n                j--;\n            }else{\n                boat++;\n                j--;\n            }\n        \n            }\n            return boat;\n    }\n}",
   "title_slug": "boats-to-save-people",
   "has_notes": false,
   "flag_type": 1

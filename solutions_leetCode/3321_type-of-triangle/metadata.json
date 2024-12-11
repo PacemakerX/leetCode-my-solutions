@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Type of Triangle",
   "memory": "42.1 MB",
-  "code": "class Solution {\n    public String triangleType(int[] nums) {\n\n        HashSet<Integer> set = new HashSet<Integer>();\n        \n        if(!isTriangle(nums[0],nums[1],nums[2]))\n            return \"none\";\n        \n        set.add(nums[0]);\n        set.add(nums[1]);\n        set.add(nums[2]);\n\n        if(set.size()==1)\n            return \"equilateral\";\n        else if(set.size()==2)\n            return \"isosceles\";\n        else\n            return \"scalene\";\n        \n    }\n\n\n    public boolean isTriangle(int a,int b,int c){\n\n        if((a+b>c) && (a+c>b) && (c+b>a))\n            return true;\n        \n        return false;\n    }\n}",
   "title_slug": "type-of-triangle",
   "has_notes": false,
   "flag_type": 1

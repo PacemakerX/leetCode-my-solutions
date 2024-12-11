@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Make The String Great",
   "memory": "41.6 MB",
-  "code": "class Solution {\n    public String makeGood(String s) {\n\n        StringBuilder str = new StringBuilder(s);\n\n        int i=0;\n\n        while(i<=str.length()-2){\n            if(Math.abs((str.charAt(i)-'0')-(str.charAt(i+1)-'0'))==32){\n                str.delete(i,i+2);\n                i=0;\n            }\n            else\n            i++;\n        }       \n        return str.toString();\n    }\n}",
   "title_slug": "make-the-string-great",
   "has_notes": false,
   "flag_type": 1

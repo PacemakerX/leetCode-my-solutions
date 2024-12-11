@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Maximum Number of Vowels in a Substring of Given Length",
   "memory": "12.1 MB",
-  "code": "class Solution {\npublic:\n\n    struct monotone {\n        deque<char> dq;\n\n        int maxSize=0;\n\n        void insert(char ch){\n            dq.push_back(ch);\n        }\n        void remove(char ch){\n            if(dq.front()==ch)\n                dq.pop_front();\n        }\n\n    void maxLength()\n    {\n        if (dq.size() > maxSize)\n            maxSize = dq.size();\n    }\n    };\n\n    bool checkVowel(char ch){\n        if(ch =='a' || ch=='e'|| ch=='i' || ch=='o' || ch=='u')\n            return true;\n\n        return false;\n    }\n    int maxVowels(string s, int k) {\n        \n        monotone mp;\n\n        for(int i=0;i<s.length();i++){\n\n            char ch=s[i];\n            if(checkVowel(ch)){\n\n                mp.insert(ch);\n            }    \n                if((i-k)>=0)\n                    mp.remove(s[i-k]);\n                if((i-k)>=-1)\n                    mp.maxLength();\n        }\n\n        return mp.maxSize;\n    }\n};",
   "title_slug": "maximum-number-of-vowels-in-a-substring-of-given-length",
   "has_notes": false,
   "flag_type": 1

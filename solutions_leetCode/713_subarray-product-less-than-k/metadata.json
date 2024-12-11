@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Subarray Product Less Than K",
   "memory": "47.9 MB",
-  "code": "class Solution {\n    public int numSubarrayProductLessThanK(int[] nums, int k) {\n        if (k == 0) return 0;\n        int cnt = 0;\n        int pro = 1;\n        for (int i = 0, j = 0; j < nums.length; j++) {\n            pro *= nums[j];\n            while (i <= j && pro >= k) {\n                pro /= nums[i++];\n            }\n            cnt += j - i + 1;\n        }\n        return cnt;        \n    }\n}",
   "title_slug": "subarray-product-less-than-k",
   "has_notes": false,
   "flag_type": 1

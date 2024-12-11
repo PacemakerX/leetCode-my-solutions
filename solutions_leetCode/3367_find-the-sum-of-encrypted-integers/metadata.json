@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find the Sum of Encrypted Integers",
   "memory": "42.3 MB",
-  "code": "class Solution {\n    public int sumOfEncryptedInt(int[] nums) {\n        \n        int sum=0;\n\n        for(int i : nums)\n            sum+=findMax(i);\n\n        return sum;\n    }\n\n    public int findMax(int a){\n        int max=0;\n\n        int temp1=a,newNum=0;\n        \n\n        while(temp1>0){\n            max=Math.max(max,temp1%10);\n            temp1/=10;\n        }\n\n        while(a>0){\n                newNum=newNum*10+max;\n                a=a/10;\n        }\n\n        return newNum;\n    }\n}",
   "title_slug": "find-the-sum-of-encrypted-integers",
   "has_notes": false,
   "flag_type": 1

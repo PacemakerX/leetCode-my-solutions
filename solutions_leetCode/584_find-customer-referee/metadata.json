@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find Customer Referee",
   "memory": "0B",
-  "code": "# Write your MySQL query statement below\nSELECT name \nFROM Customer\nWHERE referee_id IS NULL OR referee_id!=2;",
   "title_slug": "find-customer-referee",
   "has_notes": false,
   "flag_type": 1

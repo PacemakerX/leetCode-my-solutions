@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find the Integer Added to Array I",
   "memory": "42.8 MB",
-  "code": "class Solution {\n    public int addedInteger(int[] nums1, int[] nums2) {\n        Arrays.sort(nums1);\n        Arrays.sort(nums2);\n        \n        return nums2[0]-nums1[0];\n\n        \n    }\n}",
   "title_slug": "find-the-integer-added-to-array-i",
   "has_notes": false,
   "flag_type": 1

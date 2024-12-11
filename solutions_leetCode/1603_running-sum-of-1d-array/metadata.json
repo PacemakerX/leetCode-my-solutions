@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Running Sum of 1d Array",
   "memory": "10.5 MB",
-  "code": "class Solution {\npublic:\n    vector<int> runningSum(vector<int>& nums) {\n\n        for(int i=1;i<nums.size();i++)\n            nums[i]+=nums[i-1];\n        return nums;\n    }\n};",
   "title_slug": "running-sum-of-1d-array",
   "has_notes": false,
   "flag_type": 1

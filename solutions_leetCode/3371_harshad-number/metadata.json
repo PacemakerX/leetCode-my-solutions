@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Harshad Number",
   "memory": "39.6 MB",
-  "code": "class Solution {\n    public int sumOfTheDigitsOfHarshadNumber(int x) {\n\n        int temp=x;\n\n        int num=0;\n\n        while(temp>0){\n            num+=temp%10;\n            temp=temp/10;\n        }\n\n        if(x%num==0)\n            return num;\n        \n        return -1;\n        \n    }\n}",
   "title_slug": "harshad-number",
   "has_notes": false,
   "flag_type": 1

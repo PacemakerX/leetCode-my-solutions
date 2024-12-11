@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Maximum Product Difference Between Two Pairs",
   "memory": "44.2 MB",
-  "code": "class Solution {\n    public int maxProductDifference(int[] nums) {\n        int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE, max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE;\n        for (int i = 0; i < nums.length; i++) {\n            if (max1 < nums[i]) {\n                max2 = max1;\n                max1 = nums[i];\n            } else if (max2 <= nums[i])\n                max2 = nums[i];\n            if (min1 > nums[i]) {\n                min2 = min1;\n                min1 = nums[i];\n            } else if (min2 >= nums[i])\n                min2 = nums[i];\n\n        }\n        return ((max1 * max2) - (min1 * min2));\n    }\n}",
   "title_slug": "maximum-product-difference-between-two-pairs",
   "has_notes": false,
   "flag_type": 1

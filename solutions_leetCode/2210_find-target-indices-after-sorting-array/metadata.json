@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find Target Indices After Sorting Array",
   "memory": "43.1 MB",
-  "code": "class Solution {\n    public List<Integer> targetIndices(int[] nums, int target) {\n        Arrays.sort(nums);\n        List<Integer> m=new ArrayList<>();\n        for(int i=0;i<nums.length;i++)\n        {\n            if(nums[i]==target)\n            {\n                m.add(i);\n            }\n        }\n        return m;\n    }\n}",
   "title_slug": "find-target-indices-after-sorting-array",
   "has_notes": false,
   "flag_type": 1

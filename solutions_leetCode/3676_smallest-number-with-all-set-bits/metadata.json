@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Smallest Number With All Set Bits",
   "memory": "8.2 MB",
-  "code": "class Solution {\npublic:\n    int smallestNumber(int n) {\n\n        \n    int ans=1;\n        while(ans<=n)\n            ans=ans*2;\n\n        return ans-1;\n    }\n};",
   "title_slug": "smallest-number-with-all-set-bits",
   "has_notes": false,
   "flag_type": 1

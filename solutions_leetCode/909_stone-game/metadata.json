@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Stone Game",
   "memory": "9.5 MB",
-  "code": "class Solution {\npublic:\n    bool stoneGame(vector<int>& piles) {\n\n        int low=0,high=0;\n\n\n        int aliceSum=0,bobSum=0;\n\n        int i=1;\n        while(low<=high){\n            int x;\n            if(piles[low]>=piles[high]){\n                x=piles[low];\n                low++;\n            }else{\n                x=piles[high];\n                    high--;\n            }\n\n            if(i%2)\n                aliceSum+=x;\n            else\n                bobSum+=x;\n\n            i++;\n        }\n        \n        return aliceSum>bobSum;\n    }\n};",
   "title_slug": "stone-game",
   "has_notes": false,
   "flag_type": 1

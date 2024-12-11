@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Squares of a Sorted Array",
   "memory": "47.2 MB",
-  "code": "\nclass Solution {\n    public int[] sortedSquares(int[] nums) {\n        int n = nums.length;\n        int[] ans = new int[n];\n        int start = 0, end = n - 1;\n        for (int i = n - 1; i >= 0; i--) {\n            if (Math.abs(nums[start]) >= Math.abs(nums[end])) {\n                ans[i] = nums[start] * nums[start];\n                start++;\n            } else {\n                ans[i] = nums[end] * nums[end];\n                end--;\n            }\n        }\n        return ans;\n    }\n}\n",
   "title_slug": "squares-of-a-sorted-array",
   "has_notes": false,
   "flag_type": 1

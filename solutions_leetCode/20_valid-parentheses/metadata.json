@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Valid Parentheses",
   "memory": "42.3 MB",
-  "code": "class Solution {\n    public boolean isValid(String s) {\n          if(s.length()%2==1)\n        return false;\n        StringBuilder str = new StringBuilder(s);\n        int i=0;\n        while(i<str.length()-1){\n            if((str.substring(i, i+2).equals(\"()\") || str.substring(i, i+2).equals(\"{}\") || str.substring(i, i+2).equals(\"[]\"))){\n\n                str.delete(i, i+2);\n                if(str.length()==0)\n                return true;\n                if(i!=0)\n                i--;\n            }\n            else i++;\n        }\n        return false;\n    }\n}",
   "title_slug": "valid-parentheses",
   "has_notes": true,
   "flag_type": 1

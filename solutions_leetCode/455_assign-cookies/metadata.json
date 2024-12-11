@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Assign Cookies",
   "memory": "45.6 MB",
-  "code": "class Solution {\n    public int findContentChildren(int[] g, int[] s) {\n        Arrays.sort(g);\n        Arrays.sort(s);\n        int i=g.length-1,j=s.length-1,count=0;\n        while(i>=0 &&j>=0){\n            if(s[j]>=g[i]){\n            count++;\n            i--;\n            j--;\n            }\n            else\n            i--;\n        }\n        return count;\n    }\n}",
   "title_slug": "assign-cookies",
   "has_notes": false,
   "flag_type": 1

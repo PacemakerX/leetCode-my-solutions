@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Sort Colors",
   "memory": "41.2 MB",
-  "code": "class Solution {\n    public void sortColors(int[] nums) {\n         for (int i = 0; i < nums.length; i++) {\n            boolean swapped = false;\n\n            for (int j = 1; j < nums.length - i; j++) {\n                if (nums[j] < nums[j - 1]) {\n                    int temp = nums[j - 1];\n                    nums[j - 1] = nums[j];\n                    nums[j] = temp;\n                    swapped = true;\n                }\n            }\n            if (!swapped)\n                break;\n         }\n    }\n}",
   "title_slug": "sort-colors",
   "has_notes": false,
   "flag_type": 1

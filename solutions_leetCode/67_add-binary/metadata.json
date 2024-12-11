@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Add Binary",
   "memory": "41.9 MB",
-  "code": "class Solution {\n    public String addBinary(String a, String b) {\n            StringBuilder res = new StringBuilder();\n            int i = a.length() - 1;\n            int j = b.length() - 1;\n            int carry = 0;\n            while(i >= 0 || j >= 0){\n                int sum = carry;\n                if(i >= 0) sum += a.charAt(i--) - '0';\n                if(j >= 0) sum += b.charAt(j--) - '0';\n                carry = sum > 1 ? 1 : 0;\n                res.append(sum % 2);\n            }\n            if(carry != 0) res.append(carry);\n            return res.reverse().toString();\n    }\n}",
   "title_slug": "add-binary",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Valid Palindrome II",
   "memory": "45 MB",
-  "code": "class Solution {\n    public boolean validPalindrome(String s) {\n        int i = 0;\n        int j = s.length() - 1;\n        \n        while(i <= j){\n            if(s.charAt(i) == s.charAt(j)){\n                i++;\n                j--;\n            }\n            else return isPalindrome(s, i + 1, j) || isPalindrome(s, i, j - 1);\n        }\n        return true;\n    }\n    public boolean isPalindrome(String s, int i, int j){\n        while(i <= j){\n            if(s.charAt(i) == s.charAt(j)){\n                i++;\n                j--;\n            }\n            else return false;\n        }\n        return true;\n    }\n}",
   "title_slug": "valid-palindrome-ii",
   "has_notes": false,
   "flag_type": 1

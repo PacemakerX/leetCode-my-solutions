@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "First Bad Version",
   "memory": "39.6 MB",
-  "code": "/* The isBadVersion API is defined in the parent class VersionControl.\n      boolean isBadVersion(int version); */\n\npublic class Solution extends VersionControl {\n    public int firstBadVersion(int n) {\n        int first=1;\n        int last =n;\n        int mid=0;\n        while(first<last){\n            mid=first+(last-first)/2;\n            if(isBadVersion(mid))\n            last=mid;\n            else\n            first=mid+1;\n        }\n       return first; \n\n\n    }\n}",
   "title_slug": "first-bad-version",
   "has_notes": false,
   "flag_type": 1

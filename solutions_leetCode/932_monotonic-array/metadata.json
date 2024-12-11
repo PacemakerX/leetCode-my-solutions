@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Monotonic Array",
   "memory": "55 MB",
-  "code": "class Solution {\n    public boolean isMonotonic(int[] A) {\n        return increasing(A) || decreasing(A);\n    }\n\n    public boolean increasing(int[] A) {\n        for (int i = 0; i < A.length - 1; ++i)\n            if (A[i] > A[i+1]) return false;\n        return true;\n    }\n\n    public boolean decreasing(int[] A) {\n        for (int i = 0; i < A.length - 1; ++i)\n            if (A[i] < A[i+1]) return false;\n        return true;\n    }\n\n}",
   "title_slug": "monotonic-array",
   "has_notes": false,
   "flag_type": 1

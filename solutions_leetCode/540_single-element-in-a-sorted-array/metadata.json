@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Single Element in a Sorted Array",
   "memory": "50 MB",
-  "code": "class Solution {\n    public int singleNonDuplicate(int[] nums) {\n        int left = 0, right = nums.length - 1;\n        while (left < right) {\n            int mid = (left + right) / 2;\n            if (mid % 2 == 1) {\n                mid--;\n            }\n            if (nums[mid] != nums[mid + 1]) {\n                right = mid;\n            } else {\n                left = mid + 2;\n            }\n        }\n        return nums[left];\n    }\n}\n",
   "title_slug": "single-element-in-a-sorted-array",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Valid Word",
   "memory": "41.4 MB",
-  "code": "public class Solution {\n    public boolean isValid(String s) {\n        int n = s.length();\n        if (n < 3) {\n            return false;\n        }\n\n        int vowels = 0;\n        int consonants = 0;\n\n        for (char c : s.toCharArray()) {\n            if (Character.isLetter(c)) {\n                // Check for vowels (case-insensitive)\n                if (\"aeiouAEIOU\".indexOf(c) != -1) {\n                    vowels++;\n                } else {\n                    consonants++;\n                }\n            } else if (!Character.isDigit(c)) {\n                return false; // Invalid character if not a letter or digit\n            }\n        }\n\n        return vowels >= 1 && consonants >= 1;\n    }\n}\n",
   "title_slug": "valid-word",
   "has_notes": false,
   "flag_type": 1

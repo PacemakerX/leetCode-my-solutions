@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Unique Morse Code Words",
   "memory": "41.3 MB",
-  "code": "class Solution {\n    public int uniqueMorseRepresentations(String[] words) {\n\n        String[] morse = {\".-\",\"-...\",\"-.-.\",\"-..\",\".\",\"..-.\",\"--.\",\"....\",\"..\",\".---\",\"-.-\",\".-..\",\"--\",\"-.\",\"---\",\".--.\",\"--.-\",\".-.\",\"...\",\"-\",\"..-\",\"...-\",\".--\",\"-..-\",\"-.--\",\"--..\"};\n\n        HashSet<String> map = new HashSet<String>();\n        StringBuilder str= new StringBuilder();\n        for(String word : words){\n            str.delete(0,str.length());\n            for(int i =0;i<word.length();i++){\n\n                str.append(morse[(int)word.charAt(i) -97]);\n\n            }\n            map.add(str.toString());\n        }\n        \n        return map.size();\n    }\n}",
   "title_slug": "unique-morse-code-words",
   "has_notes": false,
   "flag_type": 1

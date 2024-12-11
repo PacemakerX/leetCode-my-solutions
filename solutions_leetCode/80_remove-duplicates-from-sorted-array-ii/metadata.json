@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Remove Duplicates from Sorted Array II",
   "memory": "44 MB",
-  "code": "class Solution {\n    public int removeDuplicates(int[] nums) {\n        \n        int i=0;\n        for(int ele: nums ){\n            \n            if(i==0 || i== 1 || nums[i-2]!=ele)\nnums[i++]=ele;\n\n\n\n        }\n        return i;\n    }\n}",
   "title_slug": "remove-duplicates-from-sorted-array-ii",
   "has_notes": false,
   "flag_type": 1

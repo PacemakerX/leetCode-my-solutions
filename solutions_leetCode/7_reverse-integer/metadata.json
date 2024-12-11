@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Reverse Integer",
   "memory": "40.7 MB",
-  "code": "class Solution {\n    public int reverse(int x) {\n\n        int temp=x;\n        if(x<0)\n            temp*=-1;\n        int newX=0;\n        while(temp>0){\n            \n            if(newX>(Integer.MAX_VALUE-temp%10)/10)\n            return 0;\n            newX = newX*10+temp%10;\n            temp=temp/10;\n        }\n\n        return x<0?newX*-1:newX;\n    }\n}",
   "title_slug": "reverse-integer",
   "has_notes": false,
   "flag_type": 1

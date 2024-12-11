@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Cells with Odd Values in a Matrix",
   "memory": "41.5 MB",
-  "code": "class Solution {\n    public int oddCells(int m, int n, int[][] indices) {\n     int[][] nums = new int[m][n];\n        \n        int count = 0;\n        for (int[] is : indices) {\n            increaseRows(nums, is[0]);\n            increaseColoumns(nums, is[1]);\n        }\n\n        for (int i = 0; i < nums.length; i++) {\n            for (int j = 0; j < nums[0].length; j++) {\n                if (nums[i][j] % 2 != 0)\n                    count++;\n            }\n\n        }\n\n        return count;\n    }\n\n    public  void increaseRows(int[][] nums, int rows) {\n        for (int i = 0; i < nums[0].length; i++) {\n            nums[rows][i]++;\n            \n\n        }\n    }\n\n    public  void increaseColoumns(int[][] nums, int coloumns) {\n        for (int i = 0; i < nums.length; i++) {\n            nums[i][coloumns]++;\n            \n\n        }\n     \n    }\n}",
   "title_slug": "cells-with-odd-values-in-a-matrix",
   "has_notes": false,
   "flag_type": 1

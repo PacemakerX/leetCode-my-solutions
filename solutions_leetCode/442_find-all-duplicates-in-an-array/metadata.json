@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find All Duplicates in an Array",
   "memory": "53.1 MB",
-  "code": "class Solution {\n    public static List<Integer> findDuplicates(int[] nums) {\n        int i = 0;\n        List<Integer> list = new ArrayList<Integer>();\n        while (i < nums.length) {\n            if (nums[i] != nums[nums[i] - 1]) {\n                swap(nums, nums[i] - 1, i);\n            } else\n                i++;\n        }\n        for (int j = 0; j < nums.length; j++) {\n            if (j != nums[j] - 1)\n                list.add(nums[j]);\n        }\n        return list;\n    }\n\n    public static void swap(int[] nums, int first, int last) {\n        int temp = nums[first];\n        nums[first] = nums[last];\n        nums[last] = temp;\n    }\n}",
   "title_slug": "find-all-duplicates-in-an-array",
   "has_notes": false,
   "flag_type": 1

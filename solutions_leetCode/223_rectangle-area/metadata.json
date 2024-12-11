@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Rectangle Area",
   "memory": "9.9 MB",
-  "code": "class Solution {\npublic:\n    int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {\n        \n\n        int x5=max(ax1,bx1),x6=min(ax2,bx2),y5=max(ay1,by1),y6=min(ay2,by2);\n\n         int ari = 0;\n\n    if (x5 <= x6 && y5 <= y6)\n        ari = (x6 - x5) * (y6 - y5);\n\n\n        int ans= ((ax2-ax1)*(ay2-ay1)) +((bx2-bx1)*(by2-by1));\n\n        return ans-ari;\n    }\n};",
   "title_slug": "rectangle-area",
   "has_notes": false,
   "flag_type": 1

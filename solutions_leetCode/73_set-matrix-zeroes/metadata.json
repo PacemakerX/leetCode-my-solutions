@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Set Matrix Zeroes",
   "memory": "45.7 MB",
-  "code": "class Solution {\n        public void setZeroes(int[][] matrix) {\n            \n               int[] row = new int[200];\n        int[] column = new int[200];\n        int k = 0;\n\n        for (int i = 0; i < matrix.length; i++) {\n            for (int j = 0; j < matrix[0].length; j++) {\n                if (matrix[i][j] == 0) {\n                    row[k] = i;\n                    column[k] = j;\n                    k++;\n                }\n\n            }\n\n        }\n        k = 0;\n\n        for (int i = 0; i < matrix.length; i++) {\n            for (int j = 0; j < matrix[0].length; j++) {\n                if (matrix[i][j]==0 && (row[k] == i && column[k] == j)) {\n                    setRowZero(matrix, i);\n                    setColumnZero(matrix, j);\n                    k++;\n                }\n\n            }\n\n        }\n    }\n\n    public  void setRowZero(int[][] matrix, int row) {\n        for (int i = 0; i < matrix[row].length; i++) {\n            matrix[row][i] = 0;\n\n        }\n    }\n\n    public  void setColumnZero(int[][] matrix, int column) {\n        for (int i = 0; i < matrix.length; i++) {\n            matrix[i][column] = 0;\n\n        }\n    }\n}",
   "title_slug": "set-matrix-zeroes",
   "has_notes": false,
   "flag_type": 1

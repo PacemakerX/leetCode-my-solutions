@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Matrix Diagonal Sum",
   "memory": "44.4 MB",
-  "code": "class Solution {\n    public int diagonalSum(int[][] mat) {\n        int sum=0;\n        for(int i =0;i<mat.length;i++){\n            sum+=mat[i][i];\n            if(i!=(mat.length-1-i))\n            sum+=mat[i][mat.length-1-i];\n        }\n        return sum;\n    }\n}",
   "title_slug": "matrix-diagonal-sum",
   "has_notes": false,
   "flag_type": 1

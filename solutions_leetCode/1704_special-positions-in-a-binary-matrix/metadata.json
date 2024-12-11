@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Special Positions in a Binary Matrix",
   "memory": "43.7 MB",
-  "code": "class Solution {\n   \n    public  int numSpecial(int[][] mat) {\n        int count = 0, countl = 0, index = 0;\n        for (int i = 0; i < mat.length; i++) {\n            for (int j = 0; j < mat[0].length; j++) {\n                if (mat[i][j] == 1) {\n\n                    count++;\n                    index = j;\n                }\n            }\n            if (count == 1 && check(mat, i, index))\n                countl++;\n            count = 0;\n        }\n        return countl;\n    }\n\n    public  boolean check(int[][] mat, int i, int j) {\n        for (int k = 0; k < mat.length; k++) {\n            if (i != k && mat[k][j] == 1)\n                return false;\n        }\n        return true;\n    }\n}",
   "title_slug": "special-positions-in-a-binary-matrix",
   "has_notes": false,
   "flag_type": 1

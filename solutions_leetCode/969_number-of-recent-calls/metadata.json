@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Number of Recent Calls",
   "memory": "62.4 MB",
-  "code": "class RecentCounter {\npublic:\n\n    deque<int> dq;\n    RecentCounter() {\n        dq.clear();\n    }\n    \n    int ping(int t) {\n\n        dq.push_back(t);\n        while(dq.front()<t-3000){\n            dq.pop_front();\n        }\n\n        return dq.size();\n        \n    }\n};\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * RecentCounter* obj = new RecentCounter();\n * int param_1 = obj->ping(t);\n */",
   "title_slug": "number-of-recent-calls",
   "has_notes": false,
   "flag_type": 1

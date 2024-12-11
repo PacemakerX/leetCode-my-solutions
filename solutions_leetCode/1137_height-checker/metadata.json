@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Height Checker",
   "memory": "41.1 MB",
-  "code": "class Solution {\n    public int heightChecker(int[] heights) {\n        int[] arr=Arrays.copyOf(heights,heights.length);\n        Arrays.sort(arr);\n        int count=0;\n        \n        for (int i=0;i<heights.length;i++)\n            if(heights [i]!=arr[i])\n                count++;\n            \n        return count;\n    }\n}",
   "title_slug": "height-checker",
   "has_notes": false,
   "flag_type": 1

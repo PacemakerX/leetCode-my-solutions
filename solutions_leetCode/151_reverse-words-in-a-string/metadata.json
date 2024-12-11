@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Reverse Words in a String",
   "memory": "42.4 MB",
-  "code": "class Solution {\n    public String reverseWords(String s) {\n        \n  s=\" \"+s.trim();\n     int prevInd=s.length();\n     StringBuilder str = new StringBuilder();\n     for(int i=s.length()-1;i>=0;i--){\n        if(s.charAt(i)==' '){\n            str.append(s.substring(i+1,prevInd));\n            str.append(\" \");\n            while(i>=0 && s.charAt(i)==' '){\n                prevInd=i;\n                i--;\n            }\n        }\n     }\n     return (str.toString()).trim();\n\n    }\n}",
   "title_slug": "reverse-words-in-a-string",
   "has_notes": true,
   "flag_type": 1

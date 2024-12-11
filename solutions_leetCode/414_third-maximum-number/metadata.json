@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Third Maximum Number",
   "memory": "44.6 MB",
-  "code": "class Solution {\n    public int thirdMax(int[] nums) {\n\n        Arrays.sort(nums);\n\n        List<Integer> list = new ArrayList();\n        for(int n : nums)\n            if(!list.contains(n))\n                list.add(n);\n\n        if(list.size()<3)\n            return list.get(list.size()-1);\n        else\n            return list.get(list.size()-3);\n\n    }\n}",
   "title_slug": "third-maximum-number",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Asteroid Collision",
   "memory": "20.9 MB",
-  "code": "class Solution {\npublic:\n   vector<int> asteroidCollision(vector<int> &asteroids)\n{\n\n    vector<int> ans;\n\n    stack<int> st;\n    for (auto i : asteroids)\n    {\n        int target = i;\n\n        while (!st.empty() && target != 0 && (st.top()>0 && target < 0))\n        {\n\n            if (abs(st.top()) > abs(target))\n                target = 0;\n            else if (abs(st.top()) < abs(target))\n                st.pop();\n            else\n            {\n                target = 0;\n                st.pop();\n            }\n        }\n\n        if (target != 0)\n            st.push(target);\n    }\n\n    while (!st.empty())\n    {\n        ans.push_back(st.top());\n        st.pop();\n    }\n\n    reverse(ans.begin(), ans.end());\n\n    return ans;\n}\n};",
   "title_slug": "asteroid-collision",
   "has_notes": false,
   "flag_type": 1

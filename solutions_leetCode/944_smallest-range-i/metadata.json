@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Smallest Range I",
   "memory": "17.7 MB",
-  "code": "\nusing namespace std;\nclass Solution {\npublic:\n    int smallestRangeI(vector<int>& nums, int k) {\n\n        int maxInd=0,minInd=0;\n\n        for(int i=0;i<nums.size();i++){\n            if(nums.at(i)>nums.at(maxInd))\n                maxInd=i;\n            if(nums.at(i)<nums.at(minInd))\n                minInd=i;\n        }\n        \n        return max(0,(nums.at(maxInd)-k)-(nums.at(minInd)+k));\n    }\n};",
   "title_slug": "smallest-range-i",
   "has_notes": false,
   "flag_type": 1

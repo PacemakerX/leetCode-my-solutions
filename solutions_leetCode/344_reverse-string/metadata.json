@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Reverse String",
   "memory": "49 MB",
-  "code": "class Solution {\n    public void reverseString(char[] s) {\n        char ch='a';\n        int start=0;\n        while(start<s.length/2){\n            ch=s[start];\n            s[start]=s[s.length-1-start];\n            s[s.length-1-start]=ch;\n            start++;\n    }\n    }\n}",
   "title_slug": "reverse-string",
   "has_notes": false,
   "flag_type": 1

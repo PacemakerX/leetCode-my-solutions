@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Largest Positive Integer That Exists With Its Negative",
   "memory": "44.7 MB",
-  "code": "class Solution {\n    public int findMaxK(int[] nums) {\n      int max=-1;\n        Arrays.sort(nums);\n        Set<Integer> set = new HashSet<Integer>();\n        for(int n: nums){\n            if(n<0)\n                set.add(n);\n            else if(set.contains(n*-1)){\n                    max=Math.max(max,n);\n                }\n            }\n        \nreturn max;\n    }}\n\n",
   "title_slug": "largest-positive-integer-that-exists-with-its-negative",
   "has_notes": false,
   "flag_type": 1

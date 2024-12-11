@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Append K Integers With Minimal Sum",
   "memory": "106 MB",
-  "code": "class Solution {\npublic:\n    long long minimalKSum(vector<int>& nums, int k) {\n    \n    set<int> s;\n\n    for (auto v : nums)\n        s.insert(v);\n\n    auto it = s.begin();\n    long long sum = 0;\n\n    for (int i = 1;; i++)\n    {\n\n        if (it != s.end())\n        {\n\n            if (*it != i)\n            {\n                sum += i;\n                k--;\n            }\n            else\n                it++;\n        }\n        else\n        {\n            sum += i;\n            k--;\n        }\n\n        if (k == 0)\n            break;\n    }\n\n    return sum;\n    }\n};",
   "title_slug": "append-k-integers-with-minimal-sum",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Pow(x, n)",
   "memory": "42.2 MB",
-  "code": "class Solution {\n    public double myPow(double x, int n) {\n\n        double ans = 1.0;\n        long nn = n;\n        if(n<0) nn=nn*-1;\n\n        while (nn>0){\n            if(nn%2==1){\n                ans =ans*x;\n                nn=nn-1;\n            }\n            else{\n                x=x*x;\n                nn/=2;\n            }\n        }\n        if(n<0) ans = (double)(1.0)/(double)(ans);\n        return ans;\n        \n    }\n}",
   "title_slug": "powx-n",
   "has_notes": false,
   "flag_type": 1

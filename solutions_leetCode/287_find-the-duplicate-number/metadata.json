@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find the Duplicate Number",
   "memory": "56.7 MB",
-  "code": "class Solution {\n     public  int findDuplicate(int[] nums) {\n        int i = 0;\n        while (i < nums.length) {\n            if (nums[i] != nums[nums[i] - 1]) {\n                swap(nums, nums[i] - 1, i);\n            } else\n                i++;\n        }\n        for (int j = 0; j < nums.length; j++) {\n            if (j != nums[j] - 1)\n                return nums[j];\n        }\n        return -1;\n    }\n\n    public  void swap(int[] nums, int first, int last) {\n        int temp = nums[first];\n        nums[first] = nums[last];\n        nums[last] = temp;\n    }\n}",
   "title_slug": "find-the-duplicate-number",
   "has_notes": false,
   "flag_type": 1

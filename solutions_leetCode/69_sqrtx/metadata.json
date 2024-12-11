@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Sqrt(x)",
   "memory": "40.2 MB",
-  "code": "class Solution {\n   public  int mySqrt(int x) {\n \n\n        int start = 0, end = x , mid = 0;\n\n        while (start <= end) {\n            mid = start + (end - start) / 2;\n            if (check(mid, x))\n                start = mid + 1;\n            else\n                end = mid - 1;\n        }\n        return end;\n    }\n\n    public  boolean check(int target, int x) {\n        return (long)target * target <= x;\n    }\n}",
   "title_slug": "sqrtx",
   "has_notes": false,
   "flag_type": 1

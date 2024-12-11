@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Next Permutation",
   "memory": "42.9 MB",
-  "code": "class Solution {\n    public void nextPermutation(int[] nums) {\n        int ind1=-1;\n        int ind2=-1;\n        // step 1 find breaking point \n        for(int i=nums.length-2;i>=0;i--){\n            if(nums[i]<nums[i+1]){\n                ind1=i;\n                break;\n            }\n        }\n        // if there is no breaking  point \n        if(ind1==-1){\n            reverse(nums,0);\n        }\n        \n        else{\n            // step 2 find next greater element and swap with ind2\n            for(int i=nums.length-1;i>=0;i--){\n                if(nums[i]>nums[ind1]){\n                    ind2=i;\n                    break;\n                }\n            }\n\n            swap(nums,ind1,ind2);\n            // step 3 reverse the rest right half\n            reverse(nums,ind1+1);\n        }\n    }\n    void swap(int[] nums,int i,int j){\n        int temp=nums[i];\n        nums[i]=nums[j];\n        nums[j]=temp;\n    }\n    void reverse(int[] nums,int start){\n        int i=start;\n        int j=nums.length-1;\n        while(i<j){\n            swap(nums,i,j);\n            i++;\n            j--;\n        }\n    }\n}",
   "title_slug": "next-permutation",
   "has_notes": false,
   "flag_type": 1

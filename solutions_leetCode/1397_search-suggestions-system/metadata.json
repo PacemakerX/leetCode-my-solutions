@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Search Suggestions System",
   "memory": "341.1 MB",
-  "code": "class Solution {\npublic:\n\n \n\n\n    vector<string> parse(vector<string>& products, string searchWord){\n        int cnt=0;\n\n        vector<string> v;\n        for(string s : products){\n            if(s.substr(0,searchWord.length())==searchWord){\n                cnt++;\n                if(cnt<=3)\n                    v.push_back(s);\n                else\n                    break;\n            }\n        }\n        return v;\n    }\n    vector<vector<string>> suggestedProducts(vector<string>& products, string searchWord) {\n        \n\n\n        sort(products.begin(),products.end());\n        vector<vector<string>> ans;\n\n        for(int i=1;i<=searchWord.length();i++){\n\n            vector<string> st=parse(products,searchWord.substr(0,i));\n            ans.push_back(st);\n        }\n\n        return ans;\n    }\n};",
   "title_slug": "search-suggestions-system",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Count Elements With Maximum Frequency",
   "memory": "42.2 MB",
-  "code": "class Solution {\n    public int maxFrequencyElements(int[] nums) {\n          int[] freq = new int[101];\n        for (int n : nums)\n            freq[n]++;\n\n        int max = 0, count = 0;\n\n        for (int k : freq) {\n\n            if (k != 0)\n                max=Math.max(max, k);\n\n        }\n\n        for (int j : freq) {\n\n            if (j == max)\n                count+=j;\n        }\n        return count;\n        \n    }\n}",
   "title_slug": "count-elements-with-maximum-frequency",
   "has_notes": false,
   "flag_type": 1

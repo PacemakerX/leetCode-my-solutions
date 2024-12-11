@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Reformat The String",
   "memory": "9.7 MB",
-  "code": "\nusing namespace std;\nclass Solution {\n\npublic:\n    \n    string reformat(string s) {\n        \n        string ch=\"\";\n        string nums=\"\";\n        \n        for(auto c :s){\n            if( isdigit(c))\n                nums+=c;\n            else\n                ch+=c;\n\n        }\n        if (abs(static_cast<int>(nums.size()) - static_cast<int>(ch.size())) > 1)\n           \n            return \"\";\n       \n        string ans=\"\";\n        \n    \n           \n           if(ch.size()>nums.size()){\n               for(int i=0;i<ch.size();i++){\n                   ans+=ch[i];\n                   if(i<nums.size())\n                       ans+=nums[i];\n                   }\n               }\n           else{\n                 for(int i=0;i<nums.size();i++){\n                   ans+=nums[i];\n                   if(i<ch.size())\n                       ans+=ch[i];\n                   }\n               \n           }\n           \n           \n           \n        \n            \nreturn ans;\n            \n        \n    }\n};",
   "title_slug": "reformat-the-string",
   "has_notes": false,
   "flag_type": 1

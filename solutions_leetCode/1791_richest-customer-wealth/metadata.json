@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Richest Customer Wealth",
   "memory": "41.5 MB",
-  "code": "class Solution {\n    public int maximumWealth(int[][] accounts) {\n        int max =Integer.MIN_VALUE;\n        for (int i = 0; i < accounts.length; i++) {\n            int sum=0;\n            for (int j = 0; j < accounts[i].length; j++) {\n                sum+=accounts[i][j];\n            }\n\n            if(sum>max)\n            max=sum;\n            \n        }\n        return max;\n    }\n}",
   "title_slug": "richest-customer-wealth",
   "has_notes": false,
   "flag_type": 1

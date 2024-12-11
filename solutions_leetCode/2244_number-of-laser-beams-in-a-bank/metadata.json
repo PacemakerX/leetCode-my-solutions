@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Number of Laser Beams in a Bank",
   "memory": "45.4 MB",
-  "code": "class Solution {\n    public int numberOfBeams(String[] bank) {\n        \n     int i = 0;\n        int count1 = 0, count2 = 0, mainCount = 0;\n        while (i < bank.length-1 && count1 == 0) {\n            count1 = numOfOnes(bank, i);\n            if (count1 != 0) {\n\n                while (i < bank.length - 1 && count2 == 0) {\n                    count2 = numOfOnes(bank, i + 1);\n                    i++;\n\n                }\n                mainCount += count1 * count2;\n                count1 = 0;\n                count2 = 0;\n            }\n            else\n            i++;\n        }\n        return mainCount;\n\n    }\n\n    public static int numOfOnes(String[] bank, int i) {\n        int count = 0;\n        if (i < bank.length) {\n            for (int j = 0; j < bank[i].length(); j++) {\n                if (bank[i].charAt(j) == '1')\n                    count++;\n\n            }\n        }\n        return count;\n    }\n}",
   "title_slug": "number-of-laser-beams-in-a-bank",
   "has_notes": false,
   "flag_type": 1

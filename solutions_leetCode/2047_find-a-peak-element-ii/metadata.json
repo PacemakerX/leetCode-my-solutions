@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find a Peak Element II",
   "memory": "88.4 MB",
-  "code": "class Solution {\n    public int[] findPeakGrid(int[][] matrix) {\n        int n = matrix.length, m = matrix[0].length, lo = 0, hi = m - 1, mid; \n        while (lo <= hi) {\n            mid = lo + (hi - lo) / 2;\n            int max_row = 0;\n            for (int i = 0; i < n; ++i) {\n                if (matrix[max_row][mid] < matrix[i][mid])\n                    max_row = i;\n            }\n            if ((mid == 0 || matrix[max_row][mid] > matrix[max_row][mid - 1]) && \n                (mid == m - 1 || matrix[max_row][mid] > matrix[max_row][mid + 1]))\n                return new int[] {max_row, mid};\n            else if (mid > 0 && matrix[max_row][mid - 1] > matrix[max_row][mid])\n                hi = mid - 1;\n            else\n                lo = mid + 1;\n        }\n        return new int[] {-1, -1};\n    }\n}",
   "title_slug": "find-a-peak-element-ii",
   "has_notes": false,
   "flag_type": 1

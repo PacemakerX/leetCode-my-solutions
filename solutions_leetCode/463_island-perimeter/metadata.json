@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Island Perimeter",
   "memory": "105.7 MB",
-  "code": "class Solution {\npublic:\ntypedef pair<int,int> pii;\n\nint n,m;\nvector<vector<int>> vis;\nvector<int> dx = {-1, 1, 0, 0};\nvector<int> dy = {0, 0, -1, 1};\nint peri=0;\n\nvoid dfs(pii node,vector<vector<int>>& grid)\n{\n    int x = node.first;\n    int y = node.second;\n    vis[x][y] = 1;\n\n\n    for(int i=0;i<4;i++)\n    {\n\n        int nx = x + dx[i];\n        int ny = y + dy[i];\n\n        if ((nx >= 0 && nx < n) && (ny >= 0 && ny < m) && grid[nx][ny])\n        {\n            if (!vis[nx][ny])\n                dfs(make_pair(nx, ny), grid);\n        }\n        else\n            peri++;\n    }\n}\n    int islandPerimeter(vector<vector<int>>& grid) {\n        n=grid.size();\n        m=grid[0].size();\n\n        vis.assign(n, vector<int>(m,0));\n        \n        for(int i=0;i<n;i++){\n            for(int j=0;j<m;j++){\n                if(grid[i][j] && !vis[i][j])\n                dfs(make_pair(i,j),grid);\n            }\n        }\n        \n        return peri;\n\n    }\n};",
   "title_slug": "island-perimeter",
   "has_notes": false,
   "flag_type": 1

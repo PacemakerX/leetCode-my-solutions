@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find the K-Beauty of a Number",
   "memory": "40.2 MB",
-  "code": "class Solution {\n    public int divisorSubstrings(int num, int k) {\n\n        String str = \"\"+num;\n        int count=0;\n\n        for(int i=k;i<=str.length();i++){\n            int n= Integer.parseInt(str.substring(i-k,i));\n\n            if(n==0)\n                continue;\n            else if(num%n==0)\n                count++;\n        }\n        return count;\n        \n    }\n}",
   "title_slug": "find-the-k-beauty-of-a-number",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Concatenation of Array",
   "memory": "44.8 MB",
-  "code": "class Solution {\n    public int[] getConcatenation(int[] nums) {\n         int[] ans = new int[2 * nums.length];\n        for (int i = 0; i < ans.length; i++) {\n            ans[i] = nums[i % nums.length];\n        }\n        return ans;\n    }\n}",
   "title_slug": "concatenation-of-array",
   "has_notes": false,
   "flag_type": 1

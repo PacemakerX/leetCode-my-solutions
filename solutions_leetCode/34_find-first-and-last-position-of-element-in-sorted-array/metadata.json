@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find First and Last Position of Element in Sorted Array",
   "memory": "44.7 MB",
-  "code": "class Solution {\n    public int[] searchRange(int[] nums, int target) {\n        return new int[] {search(nums, target, true),search(nums, target, false)};\n        // System.out.println(Arrays.toString(ans));\n    }\n\n    public int search(int[] nums, int target, boolean findStart) {\n        int start = 0, end = nums.length - 1;\n        int ans=-1;\n        while (start <= end) {\n            int mid = start + (end - start) / 2;\n\n            if (target > nums[mid])\n                start = mid + 1;\n            else if (target < nums[mid])\n                end = mid - 1;\n            else {\n                ans = mid;\n                if (findStart)\n                    end = mid - 1;\n                else\n                    start = mid + 1;\n\n            }\n\n        }\n        return ans;\n    }\n    }",
   "title_slug": "find-first-and-last-position-of-element-in-sorted-array",
   "has_notes": false,
   "flag_type": 1

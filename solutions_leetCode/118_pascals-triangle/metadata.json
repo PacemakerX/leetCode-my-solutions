@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Pascal's Triangle",
   "memory": "42 MB",
-  "code": "class Solution {\n    public List<List<Integer>> generate(int numRows) {\n        \n         List<List<Integer>> ls = new ArrayList<>();\n\n        for (int i = 0; i < numRows; i++) {\n\n            // if(i==0)\n            ls.add(new ArrayList<>());\n            for (int j = 0; j <= i; j++) {\n\n                if(j-1==-1 || j==ls.get(i-1).size())\n                ls.get(i).add(1);\n                else\n                ls.get(i).add(ls.get(i-1).get(j-1)+ls.get(i-1).get(j));\n            }\n\n        }\n            return ls;\n    }\n}",
   "title_slug": "pascals-triangle",
   "has_notes": false,
   "flag_type": 1

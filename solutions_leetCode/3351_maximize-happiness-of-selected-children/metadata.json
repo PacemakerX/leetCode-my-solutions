@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Maximize Happiness of Selected Children",
   "memory": "61.4 MB",
-  "code": "class Solution {\n    public long maximumHappinessSum(int[] happiness, int k) {\n        \n        Arrays.sort(happiness);\n        \n        int i=happiness.length-1;\n        long sum=0;\n        int n=0;\n        while(n<k){\n            \n            if(happiness[i]-n>0)\n                sum+= happiness[i]-n;\n            \n             i--;\n            n++;\n        }\n        return sum;\n        \n    }\n}",
   "title_slug": "maximize-happiness-of-selected-children",
   "has_notes": false,
   "flag_type": 1

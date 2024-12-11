@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find Smallest Letter Greater Than Target",
   "memory": "44.2 MB",
-  "code": "class Solution {\n    public char nextGreatestLetter(char[] letters, char target) {\n      int start=0;\n      int end=letters.length-1;\n       while(start<=end){\n           int mid=start +(end-start)/2;\n\n           if (target<letters[mid])\n           end=mid-1;\n           else\n           start=mid+1;\n           \n\n       }\n       return letters[start%letters.length];\n}\n}",
   "title_slug": "find-smallest-letter-greater-than-target",
   "has_notes": false,
   "flag_type": 1

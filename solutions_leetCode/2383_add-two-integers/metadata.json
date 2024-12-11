@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Add Two Integers",
   "memory": "40.5 MB",
-  "code": "class Solution {\n    public int sum(int num1, int num2) {\n\n     return num1+num2;   \n    }\n}",
   "title_slug": "add-two-integers",
   "has_notes": false,
   "flag_type": 1

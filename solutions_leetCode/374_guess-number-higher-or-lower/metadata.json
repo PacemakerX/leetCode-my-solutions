@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Guess Number Higher or Lower",
   "memory": "40.3 MB",
-  "code": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * int guess(int num);\n */\n\npublic class Solution extends GuessGame {\n    public int guessNumber(int n) {\n        int start=1,mid=0;\n\n        while(start<=n){\n            mid=start+(n-start)/2;\n            if(guess(mid)<0)\n                n=mid-1;\n            else if(guess(mid)>0)\n                start=mid+1;\n            else\n                return mid;\n        }\n        return -1;\n        \n    }\n}",
   "title_slug": "guess-number-higher-or-lower",
   "has_notes": false,
   "flag_type": 1

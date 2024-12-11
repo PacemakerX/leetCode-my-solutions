@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Spiral Matrix",
   "memory": "41.3 MB",
-  "code": "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        \n               \n        // Define ans list to store the result.\n        List<Integer> ans = new ArrayList<>();\n        \n        int n = matrix.length; // no. of rows\n        int m = matrix[0].length; // no. of columns\n        \n        // Initialize the pointers required for traversal.\n        int top = 0, left = 0, bottom = n - 1, right = m - 1;\n\n        // Loop until all elements are not traversed.\n        while (top <= bottom && left <= right) {\n\n            // For moving left to right\n            for (int i = left; i <= right; i++)\n                ans.add(matrix[top][i]);\n\n            top++;\n\n            // For moving top to bottom.\n            for (int i = top; i <= bottom; i++)\n                ans.add(matrix[i][right]);\n\n            right--;\n\n            // For moving right to left.\n            if (top <= bottom) {\n                for (int i = right; i >= left; i--)\n                    ans.add(matrix[bottom][i]);\n\n                bottom--;\n            }\n\n            // For moving bottom to top.\n            if (left <= right) {\n                for (int i = bottom; i >= top; i--)\n                    ans.add(matrix[i][left]);\n\n                left++;\n            }\n        }\n        return ans;\n    }\n}",
   "title_slug": "spiral-matrix",
   "has_notes": false,
   "flag_type": 1

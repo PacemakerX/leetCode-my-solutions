@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Element Appearing More Than 25% In Sorted Array",
   "memory": "43.2 MB",
-  "code": "import java.util.*;\nclass Solution {\n    public int findSpecialInteger(int[] arr) {\n              int prev = arr[0];\n        int count = 1;\n        if (arr.length == 1)\n            return arr[0];\n        for (int i = 1; i < arr.length; i++) {\n            if (arr[i] == prev) {\n                count++;\n                if (count > (arr.length / 4))\n                    return arr[i];\n            } else\n                count = 1;\n\n            prev = arr[i];\n\n        }\n        return -1;\n    }\n}",
   "title_slug": "element-appearing-more-than-25-in-sorted-array",
   "has_notes": false,
   "flag_type": 1

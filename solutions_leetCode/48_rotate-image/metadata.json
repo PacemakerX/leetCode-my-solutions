@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Rotate Image",
   "memory": "41.9 MB",
-  "code": "class Solution {\n    private void transpose(int[][] matrix) {\n        for(int i=0; i<matrix.length; i++) {\n            for(int j=i; j<matrix[0].length; j++) {\n                int temp = matrix[i][j];\n                matrix[i][j] = matrix[j][i];\n                matrix[j][i] = temp;\n            }\n        }\n    }\n    private void reverseRows(int[][] matrix) {\n        for(int r=0; r<matrix.length; r++) {\n            int left = 0;\n            int right = matrix.length-1;\n\n            while(left < right) {\n                int temp = matrix[r][left];\n                matrix[r][left] = matrix[r][right];\n                matrix[r][right] = temp;\n\n                left++;\n                right--;\n            }\n        }\n\n    }\n    public void rotate(int[][] matrix) {\n        transpose(matrix);\n        reverseRows(matrix);\n    }\n}\n",
   "title_slug": "rotate-image",
   "has_notes": false,
   "flag_type": 1

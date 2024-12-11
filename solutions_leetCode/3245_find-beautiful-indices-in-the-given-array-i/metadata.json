@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find Beautiful Indices in the Given Array I",
   "memory": "46.2 MB",
-  "code": "class Solution {\n    public List<Integer> beautifulIndices(String s, String a, String b, int k) {\n        \n          List<Integer> ls = new ArrayList<>();\n\n        for (int i = 0; i <= s.length() - a.length(); i++) {\n\n            if ((s.substring(i, (i + a.length() - 1) + 1)).equals(a)) {\n                for (int j = i-k<0?0:i-k; j <= (s.length() - b.length()<i+k?s.length() - b.length():i+k); j++) {\n                    if (s.substring(j, (j + b.length() - 1) + 1).equals(b) && Math.abs(j - i) <= k) {\n                        ls.add(i);\n                        break;\n                    }\n\n                }\n            }\n\n        }\n        return ls;\n        \n    }\n}",
   "title_slug": "find-beautiful-indices-in-the-given-array-i",
   "has_notes": false,
   "flag_type": 1

@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Find Common Characters",
   "memory": "45.2 MB",
-  "code": "class Solution {\n    public List<String> commonChars(String[] words) {\n\n        List<String> ls = new ArrayList<>();\n        for(int i=0;i<words[0].length();i++){\n            boolean contains=true;\n        \n            for(int j=1;j<words.length;j++){\n\n                if(!words[j].contains(\"\"+words[0].charAt(i))){\n                    contains=false;\n                    break;\n                }\n                else{\n                        StringBuilder str= new StringBuilder(words[j]);\n                    str.deleteCharAt(words[j].indexOf(words[0].charAt(i)));\n                    words[j]=str.toString();\n                }\n            }\n            if(contains )\n                ls.add(\"\"+words[0].charAt(i));\n\n        }\n\n        return ls;\n        \n    }\n}",
   "title_slug": "find-common-characters",
   "has_notes": false,
   "flag_type": 1

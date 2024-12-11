@@ -11,7 +11,6 @@
   "is_pending": "Not Pending",
   "title": "Distribute Candies",
   "memory": "45.8 MB",
-  "code": "class Solution {\n    public int distributeCandies(int[] candyType) {\n\n        HashSet<Integer> map = new HashSet<Integer>();\n        for(int i : candyType)\n            map.add(i);\n\n        if(candyType.length/2>map.size())\n            return map.size();\n        else\n        return candyType.length/2;\n        \n    }\n}",
   "title_slug": "distribute-candies",
   "has_notes": false,
   "flag_type": 1
