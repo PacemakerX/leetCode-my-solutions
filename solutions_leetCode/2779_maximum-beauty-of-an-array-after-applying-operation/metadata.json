@@ -1,0 +1,17 @@
+{
+  "id": 1476409829,
+  "question_id": 2779,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1734017882,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "83 ms",
+  "url": "/submissions/detail/1476409829/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Beauty of an Array After Applying Operation",
+  "memory": "105.12 MB",
+  "title_slug": "maximum-beauty-of-an-array-after-applying-operation",
+  "has_notes": false,
+  "flag_type": 1
+}
