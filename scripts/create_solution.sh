@@ -12,34 +12,29 @@ create_solution() {
     # Ask for details to populate the README and metadata.json
     read -p "Enter the submission ID: " submission_id
     read -p "Enter the Question ID: " question_id
-    read -p "Enter the language used (e.g., java, cpp): " lang
-    read -p "Enter the language name (e.g., Java, C++): " lang_name
-    read -p "Enter the status (e.g., Accepted, Pending): " status
     read -p "Enter the runtime (e.g., 47 ms): " runtime
     read -p "Enter the memory usage (e.g., 44.4 MB): " memory
     read -p "Enter the title of the problem: " title
-    read -p "Enter the code (wrap in triple quotes for multiline input): " code
 
     # Generate URL using submission ID
     url="/submissions/detail/$submission_id/"
 
-    # Create the metadata.json with the entered details and remove time field
+    # Create the metadata.json without the code field
     metadata_json="$solution_folder/metadata.json"
     cat <<EOF > "$metadata_json"
 {
   "id": $submission_id,
   "question_id": $question_id,
-  "lang": "$lang",
-  "lang_name": "$lang_name",
+  "lang": "cpp",
+  "lang_name": "C++",
   "timestamp": $(date +%s),
   "status": 10,
-  "status_display": "$status",
+  "status_display": "Accepted",
   "runtime": "$runtime",
   "url": "$url",
   "is_pending": "Not Pending",
   "title": "$title",
   "memory": "$memory",
-  "code": "$code",
   "title_slug": "$(echo $title | tr '[:upper:]' '[:lower:]' | tr ' ' '-')",
   "has_notes": false,
   "flag_type": 1
@@ -52,14 +47,14 @@ EOF
 # $title
 
 **Question ID**: $question_id  
-**Language**: $lang_name  
-**Status**: $status  
+**Language**: C++  
+**Status**: Accepted  
 **Runtime**: $runtime  
 **Memory**: $memory  
 
 ## Solution Code
-\`\`\$lang
-$code
+\`\`\`cpp
+// Solution code removed intentionally.
 \`\`\`
 EOF
 
