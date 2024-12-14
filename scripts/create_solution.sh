@@ -17,7 +17,7 @@ create_solution() {
     read -p "Enter the title of the problem: " title
 
     # Generate URL using submission ID
-    url="/submissions/detail/$submission_id/"
+    url="https://leetcode.com/submissions/detail/$submission_id/"
 
     # Create the metadata.json without the code field
     metadata_json="$solution_folder/metadata.json"
@@ -30,11 +30,11 @@ create_solution() {
   "timestamp": $(date +%s),
   "status": 10,
   "status_display": "Accepted",
-  "runtime": "$runtime",
+  "runtime": "$runtime ms",
   "url": "$url",
   "is_pending": "Not Pending",
   "title": "$title",
-  "memory": "$memory",
+  "memory": "$memory MB",
   "title_slug": "$(echo $title | tr '[:upper:]' '[:lower:]' | tr ' ' '-')",
   "has_notes": false,
   "flag_type": 1
@@ -49,17 +49,25 @@ EOF
 **Question ID**: $question_id  
 **Language**: C++  
 **Status**: Accepted  
-**Runtime**: $runtime  
-**Memory**: $memory  
+**Runtime**: $runtime ms 
+**Memory**: $memory  MB
 
 ## Solution Code
 \`\`\`cpp
-// Solution code removed intentionally.
+$url
 \`\`\`
+EOF
+    solution="$solution_folder/solution.cpp"
+    cat <<EOF > "$solution" 
+#include <bits/stdc++.h>
+using namespace std;
+
+$url
+
 EOF
 
     echo "Solution folder created: $solution_folder"
-    echo "README.md and metadata.json files created successfully."
+    echo "README.md , metadata.json solution.cpp files created successfully."
 }
 
 # Run the function to create a solution
