@@ -7,7 +7,7 @@
   "status": 10,
   "status_display": "Accepted",
   "runtime": "5 ms",
-  "url": "/submissions/detail/1234648546/",
+  "url": "https://leetcode.com/submissions/detail/1234648546/",
   "is_pending": "Not Pending",
   "title": "Next Greater Element I",
   "memory": "43 MB",

@@ -7,7 +7,7 @@
   "status": 10,
   "status_display": "Accepted",
   "runtime": "3 ms",
-  "url": "/submissions/detail/1203035020/",
+  "url": "https://leetcode.com/submissions/detail/1203035020/",
   "is_pending": "Not Pending",
   "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
   "memory": "60.5 MB",

@@ -7,7 +7,7 @@
   "status": 10,
   "status_display": "Accepted",
   "runtime": "6 ms",
-  "url": "/submissions/detail/1217619765/",
+  "url": "https://leetcode.com/submissions/detail/1217619765/",
   "is_pending": "Not Pending",
   "title": "Count Subarrays Where Max Element Appears at Least K Times",
   "memory": "65.8 MB",

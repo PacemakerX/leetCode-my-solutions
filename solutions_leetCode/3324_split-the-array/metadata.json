@@ -7,7 +7,7 @@
   "status": 10,
   "status_display": "Accepted",
   "runtime": "1 ms",
-  "url": "/submissions/detail/1234251961/",
+  "url": "https://leetcode.com/submissions/detail/1234251961/",
   "is_pending": "Not Pending",
   "title": "Split the Array",
   "memory": "42.8 MB",
