@@ -17,7 +17,8 @@ create_solution() {
     read -p "Enter the title of the problem: " title
 
     # Generate URL using submission ID
-    url="https://leetcode.com/submissions/detail/$submission_id/"
+    subUrl="https://leetcode.com/submissions/detail/$submission_id/"
+    quesUrl="https://leetcode.com/problems/$(echo $title | tr '[:upper:]' '[:lower:]' | tr ' ' '-')"
 
     # Create the metadata.json without the code field
     metadata_json="$solution_folder/metadata.json"
@@ -31,7 +32,7 @@ create_solution() {
   "status": 10,
   "status_display": "Accepted",
   "runtime": "$runtime ms",
-  "url": "$url",
+  "url": "$subUrl",
   "is_pending": "Not Pending",
   "title": "$title",
   "memory": "$memory MB",
@@ -54,7 +55,7 @@ EOF
 
 ## Solution Code
 \`\`\`cpp
-$url
+//$quesUrl
 \`\`\`
 EOF
     solution="$solution_folder/solution.cpp"
@@ -62,7 +63,7 @@ EOF
 #include <bits/stdc++.h>
 using namespace std;
 
-$url
+//$quesUrl
 
 EOF
 
