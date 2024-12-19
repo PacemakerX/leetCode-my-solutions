@@ -42,6 +42,12 @@ Solutions are written in:
 
 - **Java** (Earlier I used to code in java)
 - **Cpp** (All the recent submissions are in C++)
+  
+## Stats 
+<p align="left">
+  <img src="https://leetcode-badge-showcase.vercel.app/api?username=PacemakerX&theme=tokyonight" alt="LeetCode Badges" width="400" height="100%" />
+  <img src="https://leetcard.jacoblin.cool/PacemakerX?ext=heatmap" alt="LeetCode Heatmap" width="400" />
+</p>
 
 ## Usage
 
