@@ -1,0 +1,17 @@
+{
+  "id": 1482932119,
+  "question_id": 769,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1734616385,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "https://leetcode.com/submissions/detail/1482932119/",
+  "is_pending": "Not Pending",
+  "title": "Max Chunks To Make Sorted",
+  "memory": "9.24 MB",
+  "title_slug": "max-chunks-to-make-sorted",
+  "has_notes": false,
+  "flag_type": 1
+}

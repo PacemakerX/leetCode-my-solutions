@@ -1,0 +1,17 @@
+{
+  "id": 1479691576,
+  "question_id": 1792,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1734615754,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "307 ms",
+  "url": "https://leetcode.com/submissions/detail/1479691576/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Average Pass Ratio",
+  "memory": "97.8 MB",
+  "title_slug": "maximum-average-pass-ratio",
+  "has_notes": false,
+  "flag_type": 1
+}
