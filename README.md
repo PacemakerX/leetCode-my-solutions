@@ -12,6 +12,7 @@
 [![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white)](https://github.com/PacemakerX/leetCode-my-solutions.git)
 [![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=fff)](https://github.com/PacemakerX/leetCode-my-solutions.git)
 [![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)](https://github.com/PacemakerX/leetCode-my-solutions.git)
+[![MySQL](https://img.shields.io/badge/MySQL-%2300f.svg?logo=mysql&logoColor=white)](https://github.com/PacemakerX/leetCode-my-solutions.git)
 [![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)](https://github.com/PacemakerX/leetCode-my-solutions.git)
 
 This repository contains all my **accepted solutions** for LeetCode problems, organized by question ID and problem title. It’s a comprehensive archive to track my progress in problem-solving and to help others learn from my solutions.
