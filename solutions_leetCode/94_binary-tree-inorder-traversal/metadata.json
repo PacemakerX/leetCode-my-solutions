@@ -1,0 +1,17 @@
+{
+  "id": 1488358850,
+  "question_id": 94,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1735166594,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "https://leetcode.com/submissions/detail/1488358850/",
+  "is_pending": "Not Pending",
+  "title": "Binary Tree Inorder Traversal",
+  "memory": "11.02 MB",
+  "title_slug": "binary-tree-inorder-traversal",
+  "has_notes": false,
+  "flag_type": 1
+}

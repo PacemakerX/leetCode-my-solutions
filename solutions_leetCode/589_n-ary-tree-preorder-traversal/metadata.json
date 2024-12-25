@@ -1,0 +1,17 @@
+{
+  "id": 1488361003,
+  "question_id": 589,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1735167057,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "17 ms",
+  "url": "https://leetcode.com/submissions/detail/1488361003/",
+  "is_pending": "Not Pending",
+  "title": "N-ary Tree Preorder Traversal",
+  "memory": "15.74 MB",
+  "title_slug": "n-ary-tree-preorder-traversal",
+  "has_notes": false,
+  "flag_type": 1
+}
