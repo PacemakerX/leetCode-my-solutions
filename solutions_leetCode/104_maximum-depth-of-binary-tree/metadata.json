@@ -1,0 +1,17 @@
+{
+  "id": 1488379812,
+  "question_id": 104,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1735168881,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "https://leetcode.com/submissions/detail/1488379812/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Depth of Binary Tree",
+  "memory": "19.16 MB",
+  "title_slug": "maximum-depth-of-binary-tree",
+  "has_notes": false,
+  "flag_type": 1
+}
