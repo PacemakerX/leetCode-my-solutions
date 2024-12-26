@@ -1,0 +1,17 @@
+{
+  "id": 1485784635,
+  "question_id": 2940,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1735171011,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "74 ms",
+  "url": "https://leetcode.com/submissions/detail/1485784635/",
+  "is_pending": "Not Pending",
+  "title": "Find Building Where Alice and Bob Can Meet",
+  "memory": "262.88 MB",
+  "title_slug": "find-building-where-alice-and-bob-can-meet",
+  "has_notes": false,
+  "flag_type": 1
+}

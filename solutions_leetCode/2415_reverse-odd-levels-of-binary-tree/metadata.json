@@ -1,0 +1,17 @@
+{
+  "id": 1483695779,
+  "question_id": 2415,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1734693759,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "https://leetcode.com/submissions/detail/1483695779/",
+  "is_pending": "Not Pending",
+  "title": "Reverse Odd Levels of Binary Tree",
+  "memory": "77.06 MB",
+  "title_slug": "reverse-odd-levels-of-binary-tree",
+  "has_notes": false,
+  "flag_type": 1
+}

@@ -1,0 +1,17 @@
+{
+  "id": 1484590646,
+  "question_id": 3392,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1735170823,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "https://leetcode.com/submissions/detail/1484590646/",
+  "is_pending": "Not Pending",
+  "title": "Count Subarrays of Length Three With a Condition",
+  "memory": "48.47 MB",
+  "title_slug": "count-subarrays-of-length-three-with-a-condition",
+  "has_notes": false,
+  "flag_type": 1
+}

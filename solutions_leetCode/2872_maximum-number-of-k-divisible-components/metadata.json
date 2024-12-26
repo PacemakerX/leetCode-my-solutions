@@ -1,0 +1,17 @@
+{
+  "id": 1484857437,
+  "question_id": 2872,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1735170912,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "140 ms",
+  "url": "https://leetcode.com/submissions/detail/1484857437/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Number of K-Divisible Components",
+  "memory": "178.12 MB",
+  "title_slug": "maximum-number-of-k-divisible-components",
+  "has_notes": false,
+  "flag_type": 1
+}
