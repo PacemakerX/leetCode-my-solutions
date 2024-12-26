@@ -1,0 +1,17 @@
+{
+  "id": 1489242862,
+  "question_id": 494,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1735249776,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "733 ms",
+  "url": "https://leetcode.com/submissions/detail/1489242862/",
+  "is_pending": "Not Pending",
+  "title": "Target Sum",
+  "memory": "11.56 MB",
+  "title_slug": "target-sum",
+  "has_notes": false,
+  "flag_type": 1
+}
