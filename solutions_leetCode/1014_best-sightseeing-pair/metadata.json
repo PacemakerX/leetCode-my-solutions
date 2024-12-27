@@ -1,0 +1,17 @@
+{
+  "id": 1490134538,
+  "question_id": 1014,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1735332318,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "26 ms",
+  "url": "https://leetcode.com/submissions/detail/1490134538/",
+  "is_pending": "Not Pending",
+  "title": "Best Sightseeing Pair",
+  "memory": "49.7 MB",
+  "title_slug": "best-sightseeing-pair",
+  "has_notes": false,
+  "flag_type": 1
+}
