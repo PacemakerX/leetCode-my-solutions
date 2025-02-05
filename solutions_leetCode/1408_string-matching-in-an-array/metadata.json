@@ -1,0 +1,17 @@
+{
+  "id": 1501165727,
+  "question_id": 1408,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738761555,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "5 ms",
+  "url": "https://leetcode.com/submissions/detail/1501165727/",
+  "is_pending": "Not Pending",
+  "title": "String Matching in an Array",
+  "memory": "12 MB",
+  "title_slug": "string-matching-in-an-array",
+  "has_notes": false,
+  "flag_type": 1
+}

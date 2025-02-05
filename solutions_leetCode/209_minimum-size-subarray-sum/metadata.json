@@ -1,0 +1,17 @@
+{
+  "id": 1501995688,
+  "question_id": 209,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738761842,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "https://leetcode.com/submissions/detail/1501995688/",
+  "is_pending": "Not Pending",
+  "title": "Minimum Size Subarray Sum",
+  "memory": "32.29 MB",
+  "title_slug": "minimum-size-subarray-sum",
+  "has_notes": false,
+  "flag_type": 1
+}

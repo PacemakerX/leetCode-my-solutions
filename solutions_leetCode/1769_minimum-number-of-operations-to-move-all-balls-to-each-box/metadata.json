@@ -1,0 +1,17 @@
+{
+  "id": 1499380439,
+  "question_id": 1769,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738761440,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "148 ms",
+  "url": "https://leetcode.com/submissions/detail/1499380439/",
+  "is_pending": "Not Pending",
+  "title": "Minimum Number of Operations to Move All Balls to Each Box",
+  "memory": "14.5 MB",
+  "title_slug": "minimum-number-of-operations-to-move-all-balls-to-each-box",
+  "has_notes": false,
+  "flag_type": 1
+}
