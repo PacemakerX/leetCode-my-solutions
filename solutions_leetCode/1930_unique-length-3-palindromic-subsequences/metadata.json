@@ -1,0 +1,17 @@
+{
+  "id": 1497730140,
+  "question_id": 1930,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738761016,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "177 ms",
+  "url": "https://leetcode.com/submissions/detail/1497730140/",
+  "is_pending": "Not Pending",
+  "title": "Unique Length-3 Palindromic Subsequences",
+  "memory": "15.98 MB",
+  "title_slug": "unique-length-3-palindromic-subsequences",
+  "has_notes": false,
+  "flag_type": 1
+}

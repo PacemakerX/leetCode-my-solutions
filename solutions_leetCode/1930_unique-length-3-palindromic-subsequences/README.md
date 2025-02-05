@@ -1,0 +1,46 @@
+# Unique Length-3 Palindromic Subsequences
+
+**Question ID**: 1930  
+**Language**: C++  
+**Status**: Accepted  
+**Runtime**: 177 ms 
+**Memory**: 15.98  MB
+
+## Solution Code
+```cpp
+//https://leetcode.com/problems/unique-length-3-palindromic-subsequences
+class Solution {
+public:
+    int countPalindromicSubsequence(string s) {
+        unordered_set<char> letters;
+        for (char c : s) {
+            letters.insert(c);
+        }
+        
+        int ans = 0;
+        for (char letter : letters) {
+            int i = -1;
+            int j = 0;
+            
+            for (int k = 0; k < s.size(); k++) {
+                if (s[k] == letter) {
+                    if (i == -1) {
+                        i = k;
+                    }
+                    
+                    j = k;
+                }
+            }
+            
+            unordered_set<char> between;
+            for (int k = i + 1; k < j; k++) {
+                between.insert(s[k]);
+            }
+            
+            ans += between.size();
+        }
+        
+        return ans;
+    }
+};
+```

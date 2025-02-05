@@ -1,0 +1,17 @@
+{
+  "id": 1493792171,
+  "question_id": 1422,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738760487,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "https://leetcode.com/submissions/detail/1493792171/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Score After Splitting a String",
+  "memory": "8.9 MB",
+  "title_slug": "maximum-score-after-splitting-a-string",
+  "has_notes": false,
+  "flag_type": 1
+}

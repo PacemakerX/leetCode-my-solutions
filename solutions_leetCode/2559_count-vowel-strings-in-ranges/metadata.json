@@ -1,0 +1,17 @@
+{
+  "id": 1495534158,
+  "question_id": 2559,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738760707,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "4 ms",
+  "url": "https://leetcode.com/submissions/detail/1495534158/",
+  "is_pending": "Not Pending",
+  "title": "Count Vowel Strings in Ranges",
+  "memory": "69.37 MB",
+  "title_slug": "count-vowel-strings-in-ranges",
+  "has_notes": false,
+  "flag_type": 1
+}

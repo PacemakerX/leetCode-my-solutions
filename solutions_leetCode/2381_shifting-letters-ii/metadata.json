@@ -1,0 +1,17 @@
+{
+  "id": 1498877452,
+  "question_id": 2381,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738761243,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "49 ms",
+  "url": "https://leetcode.com/submissions/detail/1498877452/",
+  "is_pending": "Not Pending",
+  "title": "Shifting Letters II",
+  "memory": "108.32 MB",
+  "title_slug": "shifting-letters-ii",
+  "has_notes": false,
+  "flag_type": 1
+}
