@@ -1,0 +1,17 @@
+{
+  "id": 1493540592,
+  "question_id": 983,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738760043,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "3 ms",
+  "url": "https://leetcode.com/submissions/detail/1493540592/",
+  "is_pending": "Not Pending",
+  "title": "Minimum Cost For Tickets",
+  "memory": "13.3 MB",
+  "title_slug": "minimum-cost-for-tickets",
+  "has_notes": false,
+  "flag_type": 1
+}

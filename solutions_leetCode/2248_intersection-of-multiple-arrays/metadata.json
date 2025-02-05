@@ -1,0 +1,17 @@
+{
+  "id": 1492829191,
+  "question_id": 2248,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738759649,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "https://leetcode.com/submissions/detail/1492829191/",
+  "is_pending": "Not Pending",
+  "title": "Intersection of Multiple Arrays",
+  "memory": "17.4 MB",
+  "title_slug": "intersection-of-multiple-arrays",
+  "has_notes": false,
+  "flag_type": 1
+}

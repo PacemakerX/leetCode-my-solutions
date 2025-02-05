@@ -1,0 +1,17 @@
+{
+  "id": 1490970839,
+  "question_id": 689,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738759175,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "https://leetcode.com/submissions/detail/1490970839/",
+  "is_pending": "Not Pending",
+  "title": "Maximum Sum of 3 Non-Overlapping Subarrays",
+  "memory": "26.5 MB",
+  "title_slug": "maximum-sum-of-3-non-overlapping-subarrays",
+  "has_notes": false,
+  "flag_type": 1
+}

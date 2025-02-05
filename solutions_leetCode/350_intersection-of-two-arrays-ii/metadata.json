@@ -1,0 +1,17 @@
+{
+  "id": 1492821119,
+  "question_id": 350,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738759516,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "0 ms",
+  "url": "https://leetcode.com/submissions/detail/1492821119/",
+  "is_pending": "Not Pending",
+  "title": "Intersection of Two Arrays II",
+  "memory": "14.1 MB",
+  "title_slug": "intersection-of-two-arrays-ii",
+  "has_notes": false,
+  "flag_type": 1
+}

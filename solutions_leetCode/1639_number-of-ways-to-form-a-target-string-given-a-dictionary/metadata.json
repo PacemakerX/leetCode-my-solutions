@@ -1,0 +1,17 @@
+{
+  "id": 1491904173,
+  "question_id": 1639,
+  "lang": "cpp",
+  "lang_name": "C++",
+  "timestamp": 1738759367,
+  "status": 10,
+  "status_display": "Accepted",
+  "runtime": "32 ms",
+  "url": "https://leetcode.com/submissions/detail/1491904173/",
+  "is_pending": "Not Pending",
+  "title": "Number of Ways to Form a Target String Given a Dictionary",
+  "memory": "58.4 MB",
+  "title_slug": "number-of-ways-to-form-a-target-string-given-a-dictionary",
+  "has_notes": false,
+  "flag_type": 1
+}
